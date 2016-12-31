@@ -1,29 +1,24 @@
 <table>
-
 <tr>
-
 <td>
 
 I am an Assistant Professor of Economics at Temple University.
 
 My primary research interests are Microeconometrics and Labor Economics.
 
-[Curriculum Vitae](http://bc.bmciv.com/files/2016/09/Callaway-CV-9-2016.pdf)
+<b><a href="http://bc.bmciv.com/files/2016/09/Callaway-CV-9-2016.pdf">Curriculum Vitae</a></b>
 
 </td>
 
 <td>
 
-blah
+<img src="http://bc.bmciv.com/files/2016/09/IMG_0873-225x300.jpg">
 
 </td>
-
 </tr>
-
 </table>
 
 
-![Brant](http://bc.bmciv.com/files/2016/09/IMG_0873-225x300.jpg)
 
 **Contact Information:**
 
