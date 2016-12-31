@@ -7,7 +7,7 @@ My primary research interests are Microeconometrics and Labor Economics.
 [**Curriculum Vitae**](http://bc.bmciv.com/files/2016/09/Callaway-CV-9-2016.pdf)
 </td>
 <td>
-![](http://bc.bmciv.com/files/2016/09/IMG_0873-225x300.jpg)
+![Brant](http://bc.bmciv.com/files/2016/09/IMG_0873-225x300.jpg)
 </td>
 </tr>
 </table>
