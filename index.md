@@ -1,6 +1,3 @@
-td {
-    vertical-align: middle;
-}
 
 <table>
 <tr>
