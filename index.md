@@ -3,9 +3,9 @@
 <tr>
 <td width="75%">
 
-I am an Assistant Professor of Economics at Temple University. <p>
+<p>I am an Assistant Professor of Economics at Temple University. </p>
 
-My primary research interests are Microeconometrics and Labor Economics. <p>
+<p>My primary research interests are Microeconometrics and Labor Economics. </p>
 
 <b><a href="http://bc.bmciv.com/files/2016/09/Callaway-CV-9-2016.pdf">Curriculum Vitae</a></b>
 
