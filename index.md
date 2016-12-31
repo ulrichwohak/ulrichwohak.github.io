@@ -1,6 +1,6 @@
 <table>
 <tr>
-<td width="66%">
+<td width="75%">
 
 I am an Assistant Professor of Economics at Temple University.
 
@@ -10,11 +10,11 @@ My primary research interests are Microeconometrics and Labor Economics.
 
 </td>
 
-<td>
+<td width="25%">
 
 <img src="http://bc.bmciv.com/files/2016/09/IMG_0873-225x300.jpg">
 
-</td width="34%">
+</td>
 </tr>
 </table>
 
