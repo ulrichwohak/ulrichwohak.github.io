@@ -1,6 +1,10 @@
+td {
+    vertical-align: middle;
+}
+
 <table>
 <tr>
-<td width="75%", valign="middle">
+<td width="75%">
 
 I am an Assistant Professor of Economics at Temple University.
 
