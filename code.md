@@ -16,6 +16,7 @@ The R `qte` package provides many methods for estimating the Quantile Treatment 
   * [[QDiD]](http://bcallaway11.github.io/qte/articles/QDiD.html)]
 
 **Selection on Observables Methods**
+
   * [[ci.qte]](http://bcallaway11.github.io/qte/articles/ci-qte.html)]
   * [[ci.qtet]](http://bcallaway11.github.io/qte/articles/ci-qtet.html)]
 
