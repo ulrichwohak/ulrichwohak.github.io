@@ -4,13 +4,14 @@ title: Code
 permalink: /code/
 ---
 
-##R `qte` Package
+#R `qte` Package
 
 [[CRAN](https://cran.r-project.org/web/packages/qte/index.html)] [[Github](https://github.com/bcallaway11/qte)]
 
 **Difference in Differences Methods**
 
-[[panel.qtet](https://github.com/bcallaway11/qte/blob/master/vignettes/panel-qtet.html)]
+  * [[panel.qtet](https://github.com/bcallaway11/qte/blob/master/vignettes/panel-qtet.html)]
+  * [[ddid2]]
 
 123
 
