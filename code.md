@@ -10,7 +10,7 @@ The R `qte` package provides many methods for estimating the Quantile Treatment 
 
 **Difference in Differences Methods**
 
-  * `panel.qtet` from Callaway and Li, 2016. [[Tutorial](http://bcallaway11.github.io/qte/articles/panel-qtet.html)] [[Documentation](http://bcallaway11.github.io/qte/reference/panel-qtet.html)]
+  * `panel.qtet` from Callaway and Li, 2016. [[Tutorial](http://bcallaway11.github.io/qte/articles/panel-qtet.html)] [[Documentation](http://bcallaway11.github.io/qte/reference/panel.qtet.html)]
   * `ddid2` from Callaway, Li, and Oka, 2017.  [[Tutorial](http://bcallaway11.github.io/qte/articles/ddid2.html)] [[Documentation](http://bcallaway11.github.io/qte/reference/ddid2.html)]
   * `CiC` from Athey and Imbens, 2006 [[Documentation](http://bcallaway11.github.io/qte/reference/CiC.html)]
   * `QDiD` Quantile Difference in Differences [[Documentation](http://bcallaway11.github.io/qte/reference/QDiD.html)]
