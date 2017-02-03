@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Working Papers
 
-* [Job Displacement of Older Workers during the Great Recession: Tight Bounds on Distributional Treatment Effect Parameters using Panel Data](http://bc.bmciv.com/files/2016/09/dte1.pdf)
+* [Job Displacement of Older Workers during the Great Recession: Tight Bounds on Distributional Treatment Effect Parameters using Panel Data](http://bc.bmciv.com/wp-content/uploads/2016/09/dte1.pdf)
 
 * [Quantile Treatment Effects in Difference in Differences Models with Panel Data](http://bc.bmciv.com/files/2016/11/panel-treatment-effects.pdf) (with Tong Li)
 
