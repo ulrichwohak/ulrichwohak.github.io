@@ -13,7 +13,7 @@
 
 <td width="25%">
 
-<img src="http://bc.bmciv.com/files/2016/09/IMG_0873-225x300.jpg">
+<img src="brant-photo.jpg">
 
 </td>
 </tr>
