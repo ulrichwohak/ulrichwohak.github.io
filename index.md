@@ -14,7 +14,6 @@
 <td width="25%">
 
 <img src="brant-photo.jpg">
-blah
 
 </td>
 </tr>
