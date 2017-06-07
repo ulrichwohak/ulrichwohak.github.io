@@ -20,3 +20,6 @@ The R `qte` package provides many methods for estimating the Quantile Treatment 
     * `ci.qte` from Firpo, 2007.  [[Documentation](http://bcallaway11.github.io/qte/reference/ci-qte.html)]
     * `ci.qtet` from Firpo, 2007 [[Documentation](http://bcallaway11.github.io/qte/reference/ci-qtet.html)]
 
+** R `BMisc` Package** [[Website](http://bcallaway11.github.io/BMisc/)][[CRAN](http://bcallaway11.github.io)] [[Github](https://github.com/bcallaway11/BMisc)]
+
+The `BMisc` package contains various functions that I have found useful in my research and in writing `R` packages.  In particular, it contains functions for working with panel data, quantiles, and printing results.
