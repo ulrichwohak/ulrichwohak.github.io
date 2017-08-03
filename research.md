@@ -10,7 +10,7 @@ permalink: /research/
 
   * Code: [`ddid2` method in R `qte` package](http://bcallaway11.github.io/qte/articles/ddid2.html)
 
-* [Unions, Workers, and Wages at the Peak of the American Labor Movement](http://www.bmciv.com/files/Union%20Wage%20Premium%20at%20the%20Peak%20of%20American%20Unionization%20Feb%202017.pdf) (with William Collins, *Explorations in Economic History*, forthcoming)
+* [Unions, Workers, and Wages at the Peak of the American Labor Movement](http://www.bmciv.com/files/Union%20Wage%20Premium%20at%20the%20Peak%20of%20American%20Unionization%20Feb%202017.pdf) (with William Collins, *Explorations in Economic History*, forthcoming) [[NBER Version]](http://www.nber.org/papers/w23516)
 
 ## Working Papers
 
