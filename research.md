@@ -16,6 +16,8 @@ permalink: /research/
 
 * [Job Displacement of Older Workers during the Great Recession: Tight Bounds on Distributional Treatment Effect Parameters using Panel Data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251) (Submitted)
 
+  * Code: [`csabounds` package](https://bcallaway11.github.io/csabounds/)
+
 * [Quantile Treatment Effects in Difference in Differences Models with Panel Data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341) (with Tong Li, Submitted)
 
   * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)

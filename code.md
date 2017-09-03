@@ -20,6 +20,10 @@ The R `qte` package provides many methods for estimating the Quantile Treatment 
     * `ci.qte` from Firpo, 2007.  [[Documentation](http://bcallaway11.github.io/qte/reference/ci-qte.html)]
     * `ci.qtet` from Firpo, 2007 [[Documentation](http://bcallaway11.github.io/qte/reference/ci-qtet.html)]
 
-**2. R `BMisc` Package** [[Website](http://bcallaway11.github.io/BMisc/)][[CRAN](https://cran.r-project.org/web/packages/BMisc/index.html)] [[Github](https://github.com/bcallaway11/BMisc)] [![](http://cranlogs.r-pkg.org/badges/grand-total/BMisc)](http://cran.rstudio.com/web/packages/BMisc/index.html)
+**2. R `csabounds` Package**[[Website](https://bcallaway11.github.io/csabounds/)] [[CRAN]] [[Github](https:://github.com/bcallaway11/csabounds)]
+
+The csabounds contains functions written for my project ``Job Displacement during the Great Recession: Tight Bounds on Distributional Treatment Effect Parameters using Panel data.''  The main functions are `csa.bounds` which computes bounds on the distribution and quantile of the treatment effect and `attcpo` which computes the average treatment effect conditional on the previous outcome.
+
+**3. R `BMisc` Package** [[Website](http://bcallaway11.github.io/BMisc/)][[CRAN](https://cran.r-project.org/web/packages/BMisc/index.html)] [[Github](https://github.com/bcallaway11/BMisc)] [![](http://cranlogs.r-pkg.org/badges/grand-total/BMisc)](http://cran.rstudio.com/web/packages/BMisc/index.html)
 
 The `BMisc` package contains various functions that I have found useful in my research and in writing `R` packages.  In particular, it contains functions for working with panel data, quantiles, and printing results.
