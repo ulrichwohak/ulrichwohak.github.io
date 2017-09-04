@@ -4,4 +4,5 @@ title: Teaching
 permalink: /teaching/
 ---
 
-I currently teach Econometrics II for Ph.D. students.
+Fall 2017: Introduction to Econometrics
+Spring 2017: Ph.D. Econometrics II
