@@ -17,8 +17,8 @@ The R `qte` package provides many methods for estimating the Quantile Treatment 
 
   * **Selection on Observables Methods**
 
-    * `ci.qte` from Firpo, 2007.  [[Documentation](http://bcallaway11.github.io/qte/reference/ci-qte.html)]
-    * `ci.qtet` from Firpo, 2007 [[Documentation](http://bcallaway11.github.io/qte/reference/ci-qtet.html)]
+    * `ci.qte` from Firpo, 2007.  [[Documentation](http://bcallaway11.github.io/qte/reference/ci.qte.html)]
+    * `ci.qtet` from Firpo, 2007 [[Documentation](http://bcallaway11.github.io/qte/reference/ci.qtet.html)]
 
 **2. R `csabounds` Package**[[Website](https://bcallaway11.github.io/csabounds/)] [[CRAN](https://cran.r-project.org/web/packages/csabounds/index.html)] [[Github](https:://github.com/bcallaway11/csabounds)] [![](http://cranlogs.r-pkg.org/badges/grand-total/BMisc)](http://cran.rstudio.com/web/packages/csabounds/index.html)
 
