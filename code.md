@@ -28,6 +28,6 @@ The csabounds contains functions written for my project ``Job Displacement durin
 
 The `BMisc` package contains various functions that I have found useful in my research and in writing `R` packages.  In particular, it contains functions for working with panel data, quantiles, and printing results.
 
-**4. R `TempleMetrics` Package** [[Website](http://bcallaway11.github.io/TempleMetrics/)][[CRAN](https://cran.r-project.org/web/packages/TempleMetrics/index.html)] [[Github](https://github.com/bcallaway11/TempleMetrics)] [![](http://cranlogs.r-pkg.org/badges/grand-total/TempleMetrics)](http://cran.rstudio.com/web/packages/BMisc/index.html)
+**4. R `TempleMetrics` Package** [[Website](http://bcallaway11.github.io/TempleMetrics/)][[CRAN](https://cran.r-project.org/web/packages/TempleMetrics/index.html)] [[Github](https://github.com/bcallaway11/TempleMetrics)] [![](http://cranlogs.r-pkg.org/badges/grand-total/TempleMetrics)](http://cran.rstudio.com/web/packages/TempleMetrics/index.html)
 
 The `TempleMetrics` package contains various functions that members of the Econometrics Reading Group at Temple University have written and have found useful across projects.  At the moment, it mainly contains code for distribution regression.
