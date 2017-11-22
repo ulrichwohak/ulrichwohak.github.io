@@ -20,14 +20,18 @@ The R `qte` package provides many methods for estimating the Quantile Treatment 
     * `ci.qte` from Firpo, 2007.  [[Documentation](http://bcallaway11.github.io/qte/reference/ci.qte.html)]
     * `ci.qtet` from Firpo, 2007 [[Documentation](http://bcallaway11.github.io/qte/reference/ci.qtet.html)]
 
-**2. R `csabounds` Package**[[Website](https://bcallaway11.github.io/csabounds/)] [[CRAN](https://cran.r-project.org/web/packages/csabounds/index.html)] [[Github](https:://github.com/bcallaway11/csabounds)] [![](http://cranlogs.r-pkg.org/badges/grand-total/BMisc)](http://cran.rstudio.com/web/packages/csabounds/index.html)
+**2. R `csabounds` Package**[[Website](https://bcallaway11.github.io/csabounds/)] [[CRAN](https://cran.r-project.org/web/packages/csabounds/index.html)] [[Github](https:://github.com/bcallaway11/csabounds)] [![](http://cranlogs.r-pkg.org/badges/grand-total/ccfa)](http://cran.rstudio.com/web/packages/csabounds/index.html)
 
 The csabounds contains functions written for my project ``Job Displacement during the Great Recession: Tight Bounds on Distributional Treatment Effect Parameters using Panel data.''  The main functions are `csa.bounds` which computes bounds on the distribution and quantile of the treatment effect and `attcpo` which computes the average treatment effect conditional on the previous outcome.
 
-**3. R `BMisc` Package** [[Website](http://bcallaway11.github.io/BMisc/)][[CRAN](https://cran.r-project.org/web/packages/BMisc/index.html)] [[Github](https://github.com/bcallaway11/BMisc)] [![](http://cranlogs.r-pkg.org/badges/grand-total/BMisc)](http://cran.rstudio.com/web/packages/BMisc/index.html)
+**3. R `ccfa` Package**[[Website](https://bcallaway11.github.io/csabounds/)] [[CRAN](https://cran.r-project.org/web/packages/ccfa/index.html)] [[Github](https:://github.com/WeigeHuangEcon/cfa)] [![](http://cranlogs.r-pkg.org/badges/grand-total/ccfa)](http://cran.rstudio.com/web/packages/ccfa/index.html)
+
+The `ccfa` package contains functions for computing counterfactual distributions with a continuous treatment variable.  Weige Huang and I developed this package in conjunction with our project "Intergenerational Income Mobility: Counterfactual Distributions with a Continuous Treatment." 
+
+**4. R `BMisc` Package** [[Website](http://bcallaway11.github.io/BMisc/)][[CRAN](https://cran.r-project.org/web/packages/BMisc/index.html)] [[Github](https://github.com/bcallaway11/BMisc)] [![](http://cranlogs.r-pkg.org/badges/grand-total/BMisc)](http://cran.rstudio.com/web/packages/BMisc/index.html)
 
 The `BMisc` package contains various functions that I have found useful in my research and in writing `R` packages.  In particular, it contains functions for working with panel data, quantiles, and printing results.
 
-**4. R `TempleMetrics` Package** [[Website](http://bcallaway11.github.io/TempleMetrics/)][[CRAN](https://cran.r-project.org/web/packages/TempleMetrics/index.html)] [[Github](https://github.com/bcallaway11/TempleMetrics)] [![](http://cranlogs.r-pkg.org/badges/grand-total/TempleMetrics)](http://cran.rstudio.com/web/packages/TempleMetrics/index.html)
+**5. R `TempleMetrics` Package** [[Website](http://bcallaway11.github.io/TempleMetrics/)][[CRAN](https://cran.r-project.org/web/packages/TempleMetrics/index.html)] [[Github](https://github.com/bcallaway11/TempleMetrics)] [![](http://cranlogs.r-pkg.org/badges/grand-total/TempleMetrics)](http://cran.rstudio.com/web/packages/TempleMetrics/index.html)
 
 The `TempleMetrics` package contains various functions that members of the Econometrics Reading Group at Temple University have written and have found useful across projects.  At the moment, it mainly contains code for distribution regression.
