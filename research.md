@@ -22,4 +22,8 @@ permalink: /research/
 
   * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
 
+* [Intergenerational Income Mobility:  Counterfactual Distributions with a Continuous Treatment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187) (with Weige Huang)
+
+  * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
+
 * [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](http://www.cesifo-group.de/portal/page/portal/DocBase_Content/WP/WP-CESifo_Working_Papers/wp-cesifo-2012/wp-cesifo-2012-08/cesifo1_wp3925.pdf) (with Vivek Ghosal)
