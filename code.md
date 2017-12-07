@@ -24,7 +24,7 @@ The R `qte` package provides many methods for estimating the Quantile Treatment 
 
 The `csabounds` package contains functions written for my project "Job Displacement during the Great Recession: Tight Bounds on Distributional Treatment Effect Parameters using Panel Data."  The main functions are `csa.bounds` which computes bounds on the distribution and quantile of the treatment effect and `attcpo` which computes the average treatment effect conditional on the previous outcome.
 
-**3. R `ccfa` Package**[[Website](https://WeigeHuangEcon.github.io/ccfa/)] [[CRAN](https://cran.r-project.org/web/packages/ccfa/index.html)] [[Github](https://github.com/WeigeHuangEcon/cfa)] [![](http://cranlogs.r-pkg.org/badges/grand-total/ccfa)](http://cran.rstudio.com/web/packages/ccfa/index.html)
+**3. R `ccfa` Package**[[Website](https://WeigeHuangEcon.github.io/ccfa/)] [[CRAN](https://cran.r-project.org/web/packages/ccfa/index.html)] [[Github](https://github.com/WeigeHuangEcon/ccfa)] [![](http://cranlogs.r-pkg.org/badges/grand-total/ccfa)](http://cran.rstudio.com/web/packages/ccfa/index.html)
 
 The `ccfa` package contains functions for computing counterfactual distributions with a continuous treatment variable.  Weige Huang and I developed this package in conjunction with our project "Intergenerational Income Mobility: Counterfactual Distributions with a Continuous Treatment." 
 

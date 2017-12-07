@@ -4,6 +4,6 @@ title: Teaching
 permalink: /teaching/
 ---
 
-Fall 2017: Introduction to Econometrics
+Introduction to Econometrics (Fall 2017, Spring 2018)
 
-Spring 2017: Ph.D. Econometrics II
+Ph.D. Econometrics II (Spring 2017, Spring 2018)
