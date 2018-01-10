@@ -22,7 +22,7 @@ permalink: /research/
 
   * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
 
-* [Intergenerational Income Mobility:  Counterfactual Distributions with a Continuous Treatment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187) (with Weige Huang)
+* [Intergenerational Income Mobility:  Counterfactual Distributions with a Continuous Treatment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187) (with Weige Huang, Submitted)
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
