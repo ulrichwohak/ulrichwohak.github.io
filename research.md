@@ -14,13 +14,13 @@ permalink: /research/
 
 ## Working Papers
 
+* [Quantile Treatment Effects in Difference in Differences Models with Panel Data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341) (with Tong Li, Revise and Resubmit at \textit{Quantitative Economics})
+
+  * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
+
 * [Job Displacement of Older Workers during the Great Recession: Tight Bounds on Distributional Treatment Effect Parameters using Panel Data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251) (Submitted)
 
   * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
-
-* [Quantile Treatment Effects in Difference in Differences Models with Panel Data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341) (with Tong Li, Submitted)
-
-  * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
 
 * [Intergenerational Income Mobility:  Counterfactual Distributions with a Continuous Treatment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187) (with Weige Huang, Submitted)
 
