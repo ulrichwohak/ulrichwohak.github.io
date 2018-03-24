@@ -10,7 +10,7 @@ permalink: /research/
 
   * Code: [`ddid2` method in R `qte` package](http://bcallaway11.github.io/qte/articles/ddid2.html)
 
-* [Unions, Workers, and Wages at the Peak of the American Labor Movement](http://www.bmciv.com/files/Union%20Wage%20Premium%20at%20the%20Peak%20of%20American%20Unionization%20Feb%202017.pdf) (with William Collins, *Explorations in Economic History*, forthcoming) [[NBER Version]](http://www.nber.org/papers/w23516)
+* [Unions, Workers, and Wages at the Peak of the American Labor Movement](http://www.bmciv.com/files/Union%20Wage%20Premium%20at%20the%20Peak%20of%20American%20Unionization%20Feb%202017.pdf) (with William Collins, *Explorations in Economic History*, forthcoming) [[NBER Version](http://www.nber.org/papers/w23516)]
 
 ## Working Papers
 
@@ -26,7 +26,7 @@ permalink: /research/
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
-* [Difference-in-Differences with Multiple Time Periods and an Application on the Minimum Wage and Employment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) [ [Supplementary Appendix](https://53a854a5-a-62cb3a1a-s-sites.googlegroups.com/site/pedrohcsantanna/supplementary-appendix.pdf?attachauth=ANoY7cr3Tespb7Bon_hO7t6YlB9WGsE43LvgHditmEQjIm2I64PBd3ClH7yadLsu4GUEVaEnr8Mjx8CvnSx1Ky7uU49ANJOVMp5sdYQe34KnLjKHbpUht7ECyVzMujWc5g_s3sekZhAZxJRTnipjYgRT0JGSMgvAVF3kdM2peoUOJrgu9QVZ1cqfx57beA3txLNRwQWLg-TjnD-JwipSo12d8Dg8QjreL-G6YJXqi79JNLTj0xTdFTU%3D&attredirects=0) ]
+* [Difference-in-Differences with Multiple Time Periods and an Application on the Minimum Wage and Employment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) [[Supplementary Appendix](https://53a854a5-a-62cb3a1a-s-sites.googlegroups.com/site/pedrohcsantanna/supplementary-appendix.pdf?attachauth=ANoY7cr3Tespb7Bon_hO7t6YlB9WGsE43LvgHditmEQjIm2I64PBd3ClH7yadLsu4GUEVaEnr8Mjx8CvnSx1Ky7uU49ANJOVMp5sdYQe34KnLjKHbpUht7ECyVzMujWc5g_s3sekZhAZxJRTnipjYgRT0JGSMgvAVF3kdM2peoUOJrgu9QVZ1cqfx57beA3txLNRwQWLg-TjnD-JwipSo12d8Dg8QjreL-G6YJXqi79JNLTj0xTdFTU%3D&attredirects=0)]
 
   * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
