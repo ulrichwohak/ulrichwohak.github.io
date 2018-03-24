@@ -26,4 +26,8 @@ permalink: /research/
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
+* [Difference-in-Differences with Multiple Time Periods and an Application on the Minimum Wage and Employment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) [ [Supplementary Appendix] ](https://sites.google.com/site/pedrohcsantanna/supplementary-appendix.pdf?attredirects=0) (Submitted)
+
+  * Code: [`did` R package](https://bcallaway11.github.io/did/)
+
 * [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](http://www.cesifo-group.de/portal/page/portal/DocBase_Content/WP/WP-CESifo_Working_Papers/wp-cesifo-2012/wp-cesifo-2012-08/cesifo1_wp3925.pdf) (with Vivek Ghosal)
