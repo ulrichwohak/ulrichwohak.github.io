@@ -10,7 +10,7 @@ permalink: /research/
 
   * Code: [`ddid2` method in R `qte` package](http://bcallaway11.github.io/qte/articles/ddid2.html)
 
-* [Unions, Workers, and Wages at the Peak of the American Labor Movement](http://www.bmciv.com/files/Union%20Wage%20Premium%20at%20the%20Peak%20of%20American%20Unionization%20Feb%202017.pdf) (with William Collins, *Explorations in Economic History*, forthcoming) [[NBER Version](http://www.nber.org/papers/w23516)]
+* [Unions, Workers, and Wages at the Peak of the American Labor Movement](https://www.sciencedirect.com/science/article/pii/S0014498317300451) (with William Collins, *Explorations in Economic History*, Vol. 68, pp. 95-118, 2018) [[NBER Version](http://www.nber.org/papers/w23516)]
 
 ## Working Papers
 
@@ -18,7 +18,7 @@ permalink: /research/
 
   * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
 
-* [Job Displacement of Older Workers during the Great Recession: Tight Bounds on Distributional Treatment Effect Parameters using Panel Data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251) (Submitted)
+* [Tight Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251) (Submitted)
 
   * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
