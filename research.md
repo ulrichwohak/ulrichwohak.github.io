@@ -18,11 +18,11 @@ permalink: /research/
 
   * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
 
-* [Tight Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](files/Callaway-Huang-2018/cfa2.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (Submitted)
+* [Tight Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251) (Submitted)
 
   * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
-* [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187) (with Weige Huang, Submitted)
+* [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](files/Callaway-Huang-2018/cfa2.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, Submitted)
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
