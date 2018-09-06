@@ -18,7 +18,7 @@ permalink: /research/
 
   * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
 
-* [Tight Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251) (Submitted)
+* [Tight Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251) (Revise and Resubmit at *Journal of Econometrics*)
 
   * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
