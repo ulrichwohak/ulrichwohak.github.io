@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Publications
 
-* [Quantile Treatment Effects in Difference in Differences Models under Dependence Restrictions and with only Two Time Periods](https://arxiv.org/pdf/1702.03618.pdf) (with Tong Li and Tatsushi Oka, *Journal of Econometrics*, forthcoming)
+* [Quantile Treatment Effects in Difference in Differences Models under Dependence Restrictions and with only Two Time Periods](https://arxiv.org/pdf/1702.03618.pdf) (with Tong Li and Tatsushi Oka, *Journal of Econometrics*, 206(2), pp. 395-413, 2018)
 
   * Code: [`ddid2` method in R `qte` package](http://bcallaway11.github.io/qte/articles/ddid2.html)
 
