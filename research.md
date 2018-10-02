@@ -41,3 +41,5 @@ permalink: /research/
 * Semiparametric Estimation of Oaxaca-Blinder Decompositions with Continuous Groups (with Weige Huang, Preliminary Version available on request)
 
 * Censored Quantile Difference in Differences (with Tong Li and Tatsushi Oka, In progress)
+
+* Difference in Differences with a Continuous Treatment (with Pedro Sant'Anna, In progress)
