@@ -34,7 +34,7 @@ permalink: /research/
 
 * [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](http://www.cesifo-group.de/portal/page/portal/DocBase_Content/WP/WP-CESifo_Working_Papers/wp-cesifo-2012/wp-cesifo-2012-08/cesifo1_wp3925.pdf) (with Vivek Ghosal)
 
-## Works in Progres
+## Works in Progress
 
 * Quantile Treatment Effects with Two-Sided Measurement Error (with Tong Li and Irina Murtazashvili, Preliminary Version available on request)
 
