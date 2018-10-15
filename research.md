@@ -26,7 +26,7 @@ permalink: /research/
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
-* [Difference-in-Differences with Multiple Time Periods and an Application on the Minimum Wage and Employment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Submitted) [[Supplementary Appendix](https://53a854a5-a-62cb3a1a-s-sites.googlegroups.com/site/pedrohcsantanna/supplementary-appendix.pdf?attachauth=ANoY7cr3Tespb7Bon_hO7t6YlB9WGsE43LvgHditmEQjIm2I64PBd3ClH7yadLsu4GUEVaEnr8Mjx8CvnSx1Ky7uU49ANJOVMp5sdYQe34KnLjKHbpUht7ECyVzMujWc5g_s3sekZhAZxJRTnipjYgRT0JGSMgvAVF3kdM2peoUOJrgu9QVZ1cqfx57beA3txLNRwQWLg-TjnD-JwipSo12d8Dg8QjreL-G6YJXqi79JNLTj0xTdFTU%3D&attredirects=0)]
+* [Difference-in-Differences with Multiple Time Periods and an Application on the Minimum Wage and Employment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Submitted) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
 
   * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
@@ -41,5 +41,3 @@ permalink: /research/
 * Semiparametric Estimation of Oaxaca-Blinder Decompositions with Continuous Groups (with Weige Huang, Preliminary Version available on request)
 
 * Censored Quantile Difference in Differences (with Tong Li and Tatsushi Oka, In progress)
-
-* Difference in Differences with a Continuous Treatment (with Pedro Sant'Anna, In progress)
