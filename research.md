@@ -32,7 +32,7 @@ permalink: /research/
 
 * [Local Intergenerational Elasticities](files/Callaway-Huang-LIGE/lige.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3233873)] (with Weige Huang, Submitted)
 
-* [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](http://www.cesifo-group.de/portal/page/portal/DocBase_Content/WP/WP-CESifo_Working_Papers/wp-cesifo-2012/wp-cesifo-2012-08/cesifo1_wp3925.pdf) (with Vivek Ghosal)
+* [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](https://www.econstor.eu/bitstream/10419/64846/1/72645320X.pdf) (with Vivek Ghosal)
 
 ## Works in Progress
 
