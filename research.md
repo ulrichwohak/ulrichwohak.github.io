@@ -22,6 +22,8 @@ permalink: /research/
 
   * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
+* [Local Intergenerational Elasticities](files/Callaway-Huang-LIGE/lige.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3233873)] (with Weige Huang, Revise and Resubmit at *Economics Bulletin*)
+
 * [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](files/Callaway-Huang-2018/cfa2.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, Submitted)
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
@@ -29,8 +31,6 @@ permalink: /research/
 * [Difference-in-Differences with Multiple Time Periods and an Application on the Minimum Wage and Employment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Submitted) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
 
   * Code: [`did` R package](https://bcallaway11.github.io/did/)
-
-* [Local Intergenerational Elasticities](files/Callaway-Huang-LIGE/lige.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3233873)] (with Weige Huang, Submitted)
 
 * [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](https://www.econstor.eu/bitstream/10419/64846/1/72645320X.pdf) (with Vivek Ghosal)
 
