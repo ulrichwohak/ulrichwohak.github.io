@@ -24,7 +24,7 @@ permalink: /research/
 
 * [Local Intergenerational Elasticities](files/Callaway-Huang-LIGE/lige.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3233873)] (with Weige Huang, Revise and Resubmit at *Economics Bulletin*)
 
-* [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](files/Callaway-Huang-2018/cfa2.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, Submitted)
+* [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](files/Callaway-Huang-2018/cfa2.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, Revise and Resubmit at *Oxford Bulletin of Economics and Statistics*)
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
