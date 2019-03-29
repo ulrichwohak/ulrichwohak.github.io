@@ -34,10 +34,3 @@ permalink: /research/
 
 * [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](https://www.econstor.eu/bitstream/10419/64846/1/72645320X.pdf) (with Vivek Ghosal)
 
-## Works in Progress
-
-* Quantile Treatment Effects with Two-Sided Measurement Error (with Tong Li and Irina Murtazashvili, Preliminary Version available on request)
-
-* Semiparametric Estimation of Oaxaca-Blinder Decompositions with Continuous Groups (with Weige Huang, Preliminary Version available on request)
-
-* Censored Quantile Difference in Differences (with Tong Li and Tatsushi Oka, In progress)
