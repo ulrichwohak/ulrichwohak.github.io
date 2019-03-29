@@ -28,7 +28,7 @@ permalink: /research/
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
-* [Difference-in-Differences with Multiple Time Periods and an Application on the Minimum Wage and Employment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Submitted) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
+* [Difference-in-Differences with Multiple Time Periods](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Submitted) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
 
   * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
