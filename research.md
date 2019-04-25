@@ -6,17 +6,18 @@ permalink: /research/
 
 ## Publications
 
+* [Quantile Treatment Effects in Difference in Differences Models with Panel Data](files/Callaway-Li-2019/panel-treatment-effects.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341)] [[Supplementary Appendix](files/Callaway-Li-2019/supplementary-appendix.pdf)] (with Tong Li, forthcoming at *Quantitative Economics*)
+
+  * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
+
+* [Local Intergenerational Elasticities](http://www.accessecon.com/Pubs/EB/2019/Volume39/EB-19-V39-I2-P88.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3233873)] [[Supplementary Appendix](http://www.accessecon.com/pubs/EB/tempPDF/file_Supplemental_0_0_120174_temp.pdf)] (with Weige Huang, *Economics Bulletin*, Vol. 39, No. 2, pp. 919-928, 2019)
+
 * [Quantile Treatment Effects in Difference in Differences Models under Dependence Restrictions and with only Two Time Periods](https://www.sciencedirect.com/science/article/pii/S0304407618301027) (with Tong Li and Tatsushi Oka, *Journal of Econometrics*, 206(2), pp. 395-413, 2018) [[Arxiv Version](https://arxiv.org/pdf/1702.03618.pdf)]
 
   * Code: [`ddid2` method in R `qte` package](http://bcallaway11.github.io/qte/articles/ddid2.html)
 
 * [Unions, Workers, and Wages at the Peak of the American Labor Movement](https://www.sciencedirect.com/science/article/pii/S0014498317300451) (with William Collins, *Explorations in Economic History*, Vol. 68, pp. 95-118, 2018) [[NBER Version](http://www.nber.org/papers/w23516)]
 
-* [Quantile Treatment Effects in Difference in Differences Models with Panel Data](files/Callaway-Li-2019/panel-treatment-effects.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341)] [[Supplementary Appendix](files/Callaway-Li-2019/supplementary-appendix.pdf)] (with Tong Li, forthcoming at *Quantitative Economics*)
-
-  * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
-
-* [Local Intergenerational Elasticities](files/Callaway-Huang-LIGE/lige4.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3233873)] [[Supplementary Appendix](files/Callaway-Huang-LIGE/appendix.pdf)] (with Weige Huang, forthcoming at *Economics Bulletin*)
 
 ## Working Papers
 
