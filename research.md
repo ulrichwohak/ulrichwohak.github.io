@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Publications
 
-* [Quantile Treatment Effects in Difference in Differences Models with Panel Data](files/Callaway-Li-2019/panel-treatment-effects.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341)] [[Supplementary Appendix](files/Callaway-Li-2019/supplementary-appendix.pdf)] (with Tong Li, forthcoming at *Quantitative Economics*)
+* [Quantile Treatment Effects in Difference in Differences Models with Panel Data](files/Callaway-Li-2019/panel-treatment-effects.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341)] [[Supplementary Appendix](files/Callaway-Li-2019/supplementary-appendix.pdf)] [[Replication Materials](files/Callaway-Li-2019/Callaway-Li-2019-replication-files.zip)] (with Tong Li, forthcoming at *Quantitative Economics*)
 
   * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
 
