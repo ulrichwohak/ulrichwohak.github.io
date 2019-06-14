@@ -29,7 +29,7 @@ permalink: /research/
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
-* [Heterogeneous Effects of Job Displacement on Earnings](files/Azadikhah-Callaway-Job-Displacement/DisplacedWorkersv3.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3403849)] (with Afrouz Azadikhah Jahromi)
+* [Heterogeneous Effects of Job Displacement on Earnings](files/Azadikhah-Callaway-Job-Displacement/DisplacedWorkersv3.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3403849)] (with Afrouz Azadikhah Jahromi, Submitted)
 
 * [Difference-in-Differences with Multiple Time Periods](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Submitted) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
 
