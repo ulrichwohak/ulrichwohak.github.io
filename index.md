@@ -3,7 +3,7 @@
 <tr>
 <td width="75%">
 
-<p>I am an Assistant Professor of Economics at Temple University. </p>
+<p>I am an Assistant Professor of Economics at the University of Mississippi. </p>
 
 <p>My primary research interests are Microeconometrics and Labor Economics. </p>
 
@@ -23,9 +23,8 @@
 
 **Contact Information:**
 
-Email: brantly [dot] callaway [at] temple [dot] edu
+Email: bmcallaw [at] olemiss [dot] edu
 
-1301 Cecil B. Moore Avenue
-Ritter Annex 867
-Philadelphia, PA 19122
+374 Holman Hall
+University, MS 38677
 
