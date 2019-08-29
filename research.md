@@ -21,7 +21,7 @@ permalink: /research/
 
 ## Working Papers
 
-* [Tight Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251) (Revise and Resubmit at *Journal of Econometrics*)
+* [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](files/DTE/dte1.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (Revise and Resubmit at *Journal of Econometrics*)
 
   * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
