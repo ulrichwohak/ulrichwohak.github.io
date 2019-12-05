@@ -6,7 +6,11 @@ permalink: /research/
 
 ## Publications
 
-* [Quantile Treatment Effects in Difference in Differences Models with Panel Data](files/Callaway-Li-2019/panel-treatment-effects.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341)] [[Supplementary Appendix](files/Callaway-Li-2019/supplementary-appendix.pdf)] [[Replication Materials](files/Callaway-Li-2019/Callaway-Li-2019-replication-files.zip)] (with Tong Li, forthcoming at *Quantitative Economics*)
+* [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](files/Callaway-Huang-2018/cfa2.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, forthcomingn at *Oxford Bulletin of Economics and Statistics*)
+
+  * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
+
+* [Quantile Treatment Effects in Difference in Differences Models with Panel Data](http://qeconomics.org/ojs/index.php/qe/article/view/704) [[Working Paper Version](files/Callaway-Li-2019/panel-treatment-effects.pdf)] [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341)] [[Supplementary Appendix](files/Callaway-Li-2019/supplementary-appendix.pdf)] [[Replication Materials](files/Callaway-Li-2019/Callaway-Li-2019-replication-files.zip)] (with Tong Li, *Quantitative Economics*, Vol. 10, No. 4, pp. 1579-1618, 2019)
 
   * Code: [`panel.qtet` method in R `qte` package](http://bcallaway11.github.io/qte/articles/panel-qtet.html)
 
@@ -24,10 +28,6 @@ permalink: /research/
 * [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](files/DTE/dte1.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (Revise and Resubmit)
 
   * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
-
-* [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](files/Callaway-Huang-2018/cfa2.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, Revise and Resubmit)
-
-  * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
 * [Difference-in-Differences with Multiple Time Periods](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Revise and Resubmit) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
 
