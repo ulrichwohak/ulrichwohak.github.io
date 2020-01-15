@@ -25,11 +25,11 @@ permalink: /research/
 
 ## Working Papers
 
-* [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](files/DTE/dte1.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (Revise and Resubmit)
+* [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](files/DTE/dte1.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (Revise and Resubmit at *Journal of Econometrics*)
 
   * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
-* [Difference-in-Differences with Multiple Time Periods](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Revise and Resubmit) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
+* [Difference-in-Differences with Multiple Time Periods](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Revise and Resubmit at *Journal of Econometrics*) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
 
   * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
