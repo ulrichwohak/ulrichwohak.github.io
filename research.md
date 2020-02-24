@@ -6,6 +6,10 @@ permalink: /research/
 
 ## Publications
 
+* [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](files/DTE/dte1.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (forthcoming at *Journal of Econometrics*)
+
+  * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
+
 * [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](files/Callaway-Huang-2018/cfa2.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, forthcoming at *Oxford Bulletin of Economics and Statistics*)
 
   * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
@@ -25,15 +29,13 @@ permalink: /research/
 
 ## Working Papers
 
-* [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](files/DTE/dte1.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3028251)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (Revise and Resubmit at *Journal of Econometrics*)
-
-  * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
-
 * [Difference-in-Differences with Multiple Time Periods](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3148250) (with Pedro H.C. Sant'Anna, Revise and Resubmit at *Journal of Econometrics*) [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
 
   * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
 * [Heterogeneous Effects of Job Displacement on Earnings](files/Azadikhah-Callaway-Job-Displacement/DisplacedWorkersv3.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3403849)] (with Afrouz Azadikhah Jahromi, Submitted)
+
+## Resting Papers
 
 * [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](https://www.econstor.eu/bitstream/10419/64846/1/72645320X.pdf) (with Vivek Ghosal)
 
