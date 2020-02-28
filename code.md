@@ -4,7 +4,7 @@ title: Code
 permalink: /code/
 ---
 
-# Main R packages
+## Main R packages
 
 These are my R packages that seem to get the most attention.  These are actively maintained, and I welcome comments, issues, complaints, etc.
 
@@ -29,7 +29,7 @@ The R `qte` package provides many methods for estimating the Quantile Treatment 
 This package contains tools for computing average treatment effect parameters in Difference in Differences models with more than two periods and with variation in treatment timing; it is based on Callaway and Sant'Anna (2019).  The main parameters are group-time average treatment effects which are the average treatment effect for a particular group at a a particular time.  These can be aggregated into a fewer number of treatment effect parameters, and the package deals with the cases where there is selective treatment timing, dynamic treatment effects, calendar time effects, or combinations of these.  There are also functions for testing the Difference in Differences assumption, and plotting group-time average treatment effects.
 
 
-# More Code
+## More Code
 
 **3. R `BMisc` Package** [[Website](http://bcallaway11.github.io/BMisc/)][[CRAN](https://cran.r-project.org/web/packages/BMisc/index.html)] [[Github](https://github.com/bcallaway11/BMisc)] [![](http://cranlogs.r-pkg.org/badges/grand-total/BMisc)](http://cran.rstudio.com/web/packages/BMisc/index.html)
 
