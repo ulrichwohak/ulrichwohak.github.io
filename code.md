@@ -48,6 +48,6 @@ The `csabounds` package contains functions written for my project "Bounds on Dis
 
 The `ccfa` package contains functions for computing counterfactual distributions with a continuous treatment variable.  Weige Huang and I developed this package in conjunction with our project "Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility." 
 
-**4. `kotlarski` code [[Github](https://github.com/bcallaway11/kotlarski)]
+**7. `kotlarski` code** [[Github](https://github.com/bcallaway11/kotlarski)]
 
 This is code for implementing Kotlarski's result (as in Li and Vuong (1998)) for estimating the distribution of a latent variable when repeated observations are available for that variable.  
