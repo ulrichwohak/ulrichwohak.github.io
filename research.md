@@ -35,6 +35,8 @@ permalink: /research/
 
 * [Heterogeneous Effects of Job Displacement on Earnings](files/Azadikhah-Callaway-Job-Displacement/DisplacedWorkersv3.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3403849)] (with Afrouz Azadikhah Jahromi, Conditionally Accepted at *Empirical Economics*)
 
+* [Understanding the Effects of Tennessee's Open Covid-19 Testing Policy: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li)
+
 ## Resting Papers
 
 * [Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics](https://www.econstor.eu/bitstream/10419/64846/1/72645320X.pdf) (with Vivek Ghosal)
