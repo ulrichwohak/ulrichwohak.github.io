@@ -5,7 +5,7 @@ author: "Pedro H. C. Sant'Anna"
 date: "2020-05-28"
 workflowr:
   suppress_report: TRUE
-permalink: /posts/spanish-flu
+permalink: spanish-flu
 tags:
   - DiD
   - Doubly Robust
