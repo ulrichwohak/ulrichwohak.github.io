@@ -33,9 +33,11 @@ permalink: /research/
 
   * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
-* [Heterogeneous Effects of Job Displacement on Earnings](https://arxiv.org/abs/2006.04968) (with Afrouz Azadikhah Jahromi)
+* [Heterogeneous Effects of Job Displacement on Earnings](https://arxiv.org/abs/2006.04968) (with Afrouz Azadikhah Jahromi, Revise and Resubmit at *Empirical Economics*)
 
-* [Understanding the Effects of Tennessee's Open Covid-19 Testing Policy: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li)
+* [Understanding the Effects of Tennessee's Open Covid-19 Testing Policy: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, submitted)
+
+* [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) (with Sonia Karami)
 
 ## Resting Papers
 
