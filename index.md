@@ -3,7 +3,7 @@
 <tr>
 <td width="75%">
 
-<p>I am an Assistant Professor of Economics at the University of Mississippi. </p>
+<p>I am an Assistant Professor of Economics at the University of Georgia. </p>
 
 <p>My primary research interests are Microeconometrics and Labor Economics. </p>
 
@@ -23,9 +23,9 @@
 
 **Contact Information:**
 
-Email: bmcallaw [at] olemiss [dot] edu
+Email: brantly.callaway [at] uga [dot] edu
 
-374 Holman Hall
+B404 Amos Hall
 
-University, MS 38677
+Athens, GA 30605
 
