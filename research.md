@@ -37,7 +37,7 @@ permalink: /research/
 
 * [Understanding the Effects of Tennessee's Open Covid-19 Testing Policy: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, submitted)
 
-* [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) (with Sonia Karami)
+* [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) (with Sonia Karami, submitted)
 
 ## Resting Papers
 
