@@ -10,7 +10,7 @@ permalink: /research/
 
     * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
-2. [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](http://dx.doi.org/10.1111/obes.12355) [Working Paper]](files/Callaway-Huang-2018/cfa2.pdf)] [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, *Oxford Bulletin of Economics and Statistics*, Vol. 82, No. 4, pp. 808-842, 2020)
+2. [Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility](http://dx.doi.org/10.1111/obes.12355) [[Working Paper](files/Callaway-Huang-2018/cfa2.pdf)] [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187)] [[Supplementary Appendix](files/Callaway-Huang-2018/supplementary-appendix.pdf)] (with Weige Huang, *Oxford Bulletin of Economics and Statistics*, Vol. 82, No. 4, pp. 808-842, 2020)
 
     * Code: [`ccfa` R package](https://weigehuangecon.github.io/ccfa/)
 
