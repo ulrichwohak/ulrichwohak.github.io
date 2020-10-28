@@ -9,7 +9,7 @@ permalink: /research/
 1. [Heterogeneous Effects of Job Displacement on Earnings](https://arxiv.org/abs/2006.04968) (with Afrouz Azadikhah Jahromi, forthcoming at *Empirical Economics*)
 
 
-2. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://arxiv.org/abs/2008.08117) [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (forthcoming at *Journal of Econometrics*)
+2. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://doi.org/10.1016/j.jeconom.2020.02.005) [[Arxiv](https://arxiv.org/abs/2008.08117)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (forthcoming at *Journal of Econometrics*)
 
     * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
