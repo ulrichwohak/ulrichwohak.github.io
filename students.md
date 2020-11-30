@@ -7,20 +7,20 @@ permalink: /students/
 
 <table style="width:100%">
   <tr>   
-    <td width="40%"><img src="", alt="Chengye Jia" width="100%" > </td>
+    <td width="40%"><img src="blank.jpg", alt="Chengye Jia" width="100%" > </td>
     <td><p><b><a href="https://chengye-jia.github.io/">Chengye Jia</a></b></p><p>Temple University, Ph.D. Expected 2021</p><p>Research Interests:  Microeconometrics, Labor Economics, Machine Learning</p> </td>
   </tr>
   <tr>   
-    <td width="40%"><img src="", alt="Sonia Karami" width="100%" > </td>
+    <td width="40%"><img src="blank.jpg", alt="Sonia Karami" width="100%" > </td>
     <td><p><b><a href="https://sites.temple.edu/sonia/">Sonia Karami</a></b></p><p>Temple University, Ph.D. Expected 2021</p><p>Research Interests:  Microeconometrics, Labor Economics, and Health Economics</p></td>
   </tr>
   <tr>   
-    <td width="40%"><img src="", alt="Emmanuel Tsyawo" width="100%" > </td>
+    <td width="40%"><img src="blank.jpg", alt="Emmanuel Tsyawo" width="100%" > </td>
     <td><p><b><a href="https://estsyawo.github.io/">Emmanuel Tsyawo</a></b></p><p>Temple University, Ph.D. 2020</p><p>Research Interests:  Microeconometrics and Empirical IO</p><p>First Placement: Assistant Professor, Mohammed VI Polytechnic University</p> </td>
   </tr>
   <tr>   
-    <td width="40%"><img src="", alt="Emmanuel Tsyawo" width="100%" > </td>
-    <td><p><b>Qin Wei</b></p><p>Temple University, Ph.D. 2020</p><p>Research Interests:  Finance and Microeconometrics</p><p>First Placement: Assistant Professor, Mohammed VI Polytechnic University</p> </td>
+    <td width="40%"><img src="blank.jpg", alt="Qin Wei" width="100%" > </td>
+    <td><p><b>Qin Wei</b></p><p>Temple University, Ph.D. 2020</p><p>Research Interests:  Finance and Microeconometrics</p> </td>
   </tr>
   <tr>   
     <td width="40%"><img src="https://bcallaway11.github.io/files/Afrouz.JPG" alt="Afrouz Azadikhah-Jahromi" width="100%" > </td>
