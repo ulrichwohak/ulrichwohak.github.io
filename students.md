@@ -20,7 +20,7 @@ permalink: /students/
   </tr>
   <tr>   
     <td width="40%"><img src="blank.jpg" alt="Qin Wei" width="100%" > </td>
-    <td><p><b>Qin Wei</b></p><p>Temple University, Ph.D. 2020</p><p>Research Interests:  Finance and Microeconometrics</p> </td>
+    <td><p><b>Qin Wei</b></p><p>Temple University, Ph.D. 2020</p><p>Research Interests:  Finance and Microeconometrics</p><p>First Placement: Despository Trust \& Clearing Corporation </td>
   </tr>
   <tr>   
     <td width="40%"><img src="https://bcallaway11.github.io/files/Afrouz.JPG" alt="Afrouz Azadikhah-Jahromi" width="100%" > </td>
