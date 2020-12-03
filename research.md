@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Publications
 
-1. [Heterogeneous Effects of Job Displacement on Earnings](https://arxiv.org/abs/2006.04968) (with Afrouz Azadikhah Jahromi, forthcoming at *Empirical Economics*)
+1. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) (with Afrouz Azadikhah Jahromi, forthcoming at *Empirical Economics*) [[Arxiv](https://arxiv.org/abs/2006.04968)]
 
 
 2. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://doi.org/10.1016/j.jeconom.2020.02.005) [[Arxiv](https://arxiv.org/abs/2008.08117)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (forthcoming at *Journal of Econometrics*)
