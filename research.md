@@ -8,7 +8,7 @@ permalink: /research/
 
 1. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) (with Pedro H.C. Sant'Anna, Forthcoming at *Journal of Econometrics*) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
 
-  * Code: [`did` R package](https://bcallaway11.github.io/did/)
+    * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
 
 2. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) (with Afrouz Azadikhah Jahromi, forthcoming at *Empirical Economics*) [[Arxiv](https://arxiv.org/abs/2006.04968)]
