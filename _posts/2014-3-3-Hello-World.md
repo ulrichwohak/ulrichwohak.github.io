@@ -16,3 +16,9 @@ The easiest way to make your first post is to edit this one. Go into /_posts/ an
 # math
 
 $$1+1=2$$
+
+# r
+
+```{r}
+1+1
+```
