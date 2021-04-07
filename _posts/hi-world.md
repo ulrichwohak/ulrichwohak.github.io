@@ -1,4 +1,3 @@
-<!-- hack to get heading right -->
 ---
 layout: post
 title: You're up and running!
