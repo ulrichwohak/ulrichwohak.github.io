@@ -1,0 +1,33 @@
+---
+output: 
+  md_document: 
+    variant: markdown_github
+---
+
+
+<!-- hack to get heading right -->
+\---\
+layout: post\
+title: You're up and running!\
+permalink: /posts/hi-world\
+\---
+
+<!-- in order to include math -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+# r code
+```{r}
+1+1
+```
+
+# hidden r code
+```{r, echo=FALSE}
+2+2
+```
+
+# some math
+
+\$$
+1+1 = 2
+\$$
