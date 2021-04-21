@@ -1,0 +1,17 @@
+---
+title: ello orld
+output:
+  md_document:
+    variant: gfm
+    preserve_yaml: TRUE
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../_posts") })
+author: "steve"
+date: '2019-08-01'
+excerpt: "Here are two tips for having what I think will be an easier blogging experience in R Markdown and Jekyll."
+layout: post
+categories:
+  - R Markdown
+  - Jekyll
+image: brent-rambo.jpg # for open graph protocol
+---
