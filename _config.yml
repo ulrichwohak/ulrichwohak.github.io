@@ -23,6 +23,7 @@ defaults:
     values:
       layout: single
       author_profile: false
+      comments: true
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
