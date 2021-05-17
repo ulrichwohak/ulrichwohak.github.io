@@ -13,7 +13,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       comments: true
 defaults:
   # _pages
@@ -23,7 +23,7 @@ defaults:
     values:
       layout: single
       author_profile: false
-      comments: true
+      comments: false
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
