@@ -14,6 +14,7 @@ defaults:
     values:
       read_time: true
       show_date: true
+    comments: true
 defaults:
   # _pages
   - scope:
