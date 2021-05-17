@@ -6,6 +6,7 @@ categories:
 - Policy Evaluation
 - Panel Data
 date: '2021-04-20'
+layout: single
 output:
   md_document:
     preserve_yaml: True
