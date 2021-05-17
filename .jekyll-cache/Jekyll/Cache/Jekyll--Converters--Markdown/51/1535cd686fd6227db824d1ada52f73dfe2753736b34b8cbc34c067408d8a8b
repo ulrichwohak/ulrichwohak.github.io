@@ -1,0 +1,57 @@
+I"�<h2 id="main-r-packages">Main R packages</h2>
+
+<p>These are my R packages that seem to get the most attention.  These are actively maintained, and I welcome comments, issues, complaints, etc.</p>
+
+<p><strong>1. R <code class="language-plaintext highlighter-rouge">qte</code> Package</strong> [<a href="http://bcallaway11.github.io/qte/">Website</a>][<a href="https://cran.r-project.org/web/packages/qte/index.html">CRAN</a>] [<a href="https://github.com/bcallaway11/qte">Github</a>] <a href="http://cran.rstudio.com/web/packages/qte/index.html"><img src="http://cranlogs.r-pkg.org/badges/grand-total/qte" alt="" /></a></p>
+
+<p>The R <code class="language-plaintext highlighter-rouge">qte</code> package provides many methods for estimating the Quantile Treatment Effect (QTE) or the Quantile Treatment Effect on the Treated (QTET). This package contains the code to implement the estimators of quantile treatment effects in difference in differences designs that we proposed in Callaway and Li (2019) and Callaway, Li, Oka (2018).  In addition, the package includes code for estimating the QTE and QTET under the assumption of selection on observables (Firpo, 2007), the QTET in the Changes in Changes model (Athey and Imbens, 2006), the QTET in the Quantile Difference in Differences model.</p>
+
+<ul>
+  <li>
+    <p><strong>Difference in Differences Methods</strong></p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">panel.qtet</code> from Callaway and Li, 2019. [<a href="http://bcallaway11.github.io/qte/articles/panel-qtet.html">Tutorial</a>] [<a href="http://bcallaway11.github.io/qte/reference/panel.qtet.html">Documentation</a>]</li>
+      <li><code class="language-plaintext highlighter-rouge">ddid2</code> from Callaway, Li, and Oka, 2017.  [<a href="http://bcallaway11.github.io/qte/articles/ddid2.html">Tutorial</a>] [<a href="http://bcallaway11.github.io/qte/reference/ddid2.html">Documentation</a>]</li>
+      <li><code class="language-plaintext highlighter-rouge">CiC</code> from Athey and Imbens, 2006 [<a href="http://bcallaway11.github.io/qte/reference/CiC.html">Documentation</a>]</li>
+      <li><code class="language-plaintext highlighter-rouge">QDiD</code> Quantile Difference in Differences [<a href="http://bcallaway11.github.io/qte/reference/QDiD.html">Documentation</a>]</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Selection on Observables Methods</strong></p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">ci.qte</code> from Firpo, 2007.  [<a href="http://bcallaway11.github.io/qte/reference/ci.qte.html">Documentation</a>]</li>
+      <li><code class="language-plaintext highlighter-rouge">ci.qtet</code> from Firpo, 2007 [<a href="http://bcallaway11.github.io/qte/reference/ci.qtet.html">Documentation</a>]</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>2. R <code class="language-plaintext highlighter-rouge">did</code> Package</strong> [<a href="http://bcallaway11.github.io/did/">Website</a>][<a href="https://cran.r-project.org/web/packages/did/index.html">CRAN</a>] [<a href="https://github.com/bcallaway11/did">Github</a>] <a href="http://cran.rstudio.com/web/packages/did/index.html"><img src="http://cranlogs.r-pkg.org/badges/grand-total/did" alt="" /></a></p>
+
+<p>This package contains tools for computing average treatment effect parameters in Difference in Differences models with more than two periods and with variation in treatment timing; it is based on Callaway and Sant’Anna (2019).  The main parameters are group-time average treatment effects which are the average treatment effect for a particular group at a a particular time.  These can be aggregated into a fewer number of treatment effect parameters, and the package deals with the cases where there is selective treatment timing, dynamic treatment effects, calendar time effects, or combinations of these.  There are also functions for testing the Difference in Differences assumption, and plotting group-time average treatment effects.</p>
+
+<h2 id="more-r-packages">More R Packages</h2>
+
+<p><strong>3. R <code class="language-plaintext highlighter-rouge">BMisc</code> Package</strong> [<a href="http://bcallaway11.github.io/BMisc/">Website</a>][<a href="https://cran.r-project.org/web/packages/BMisc/index.html">CRAN</a>] [<a href="https://github.com/bcallaway11/BMisc">Github</a>] <a href="http://cran.rstudio.com/web/packages/BMisc/index.html"><img src="http://cranlogs.r-pkg.org/badges/grand-total/BMisc" alt="" /></a></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">BMisc</code> package contains various functions that I have found useful in my research and in writing <code class="language-plaintext highlighter-rouge">R</code> packages.  In particular, it contains functions for working with panel data, distribution and quantile functions, working with formulas, and generating summary statistics.</p>
+
+<p><strong>4. R <code class="language-plaintext highlighter-rouge">distreg</code> Package</strong> [<a href="http://bcallaway11.github.io/distreg/">Website</a>] [<a href="https://github.com/bcallaway11/distreg">Github</a>]</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">distreg</code> package (formerly <code class="language-plaintext highlighter-rouge">TempleMetrics</code>) contains code for distribution regression.</p>
+
+<p><strong>5. R <code class="language-plaintext highlighter-rouge">csabounds</code> Package</strong>[<a href="https://bcallaway11.github.io/csabounds/">Website</a>] [<a href="https://cran.r-project.org/web/packages/csabounds/index.html">CRAN</a>] [<a href="https://github.com/bcallaway11/csabounds">Github</a>] <a href="http://cran.rstudio.com/web/packages/csabounds/index.html"><img src="http://cranlogs.r-pkg.org/badges/grand-total/csabounds" alt="" /></a></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">csabounds</code> package contains functions written for my project “Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement.”  The main functions are <code class="language-plaintext highlighter-rouge">csa.bounds</code> which computes bounds on the distribution and quantile of the treatment effect and <code class="language-plaintext highlighter-rouge">attcpo</code> which computes the average treatment effect conditional on the previous outcome.</p>
+
+<p><strong>6. R <code class="language-plaintext highlighter-rouge">ccfa</code> Package</strong>[<a href="https://WeigeHuangEcon.github.io/ccfa/">Website</a>] [<a href="https://github.com/WeigeHuangEcon/ccfa">Github</a>]</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">ccfa</code> package contains functions for computing counterfactual distributions with a continuous treatment variable.  Weige Huang and I developed this package in conjunction with our project “Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility.”</p>
+
+<h2 id="miscellaneous-perhaps-useful-code">Miscellaneous (perhaps useful) Code</h2>
+
+<p><strong>7. <code class="language-plaintext highlighter-rouge">kotlarski</code> code</strong> [<a href="https://github.com/bcallaway11/kotlarski">Github</a>]</p>
+
+<p>This is code for implementing Kotlarski’s result (as in Li and Vuong (1998)) for estimating the distribution of a latent variable when repeated observations are available for that variable.</p>
+:ET

@@ -1,0 +1,70 @@
+I"*<h2 id="publications">Publications</h2>
+
+<ol>
+  <li>
+    <p><a href="https://doi.org/10.1016/j.jeconom.2020.12.001">Difference-in-Differences with Multiple Time Periods</a> (with Pedro H.C. Sant’Anna, Forthcoming at <em>Journal of Econometrics</em>) [<a href="https://arxiv.org/abs/1803.09015">Arxiv</a>] [<a href="https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf">Supplementary Appendix</a>]</p>
+
+    <ul>
+      <li>Code: <a href="https://bcallaway11.github.io/did/"><code class="language-plaintext highlighter-rouge">did</code> R package</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://doi.org/10.1007/s00181-020-01961-w">Heterogeneous Effects of Job Displacement on Earnings</a> (with Afrouz Azadikhah Jahromi, forthcoming at <em>Empirical Economics</em>) [<a href="https://arxiv.org/abs/2006.04968">Arxiv</a>]</p>
+  </li>
+  <li>
+    <p><a href="https://doi.org/10.1016/j.jeconom.2020.02.005">Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement</a> [<a href="https://arxiv.org/abs/2008.08117">Arxiv</a>] [<a href="files/DTE/supplementary-appendix.pdf">Supplementary Appendix</a>] (<em>Journal of Econometrics</em>, Vol. 222, No. 2, pp. 861-881, 2021.)</p>
+
+    <ul>
+      <li>Code: <a href="https://bcallaway11.github.io/csabounds/"><code class="language-plaintext highlighter-rouge">csabounds</code> R package</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://dx.doi.org/10.1111/obes.12355">Distributional Effects of a Continuous Treatment with an Application on Intergenerational Mobility</a> [<a href="files/Callaway-Huang-2018/cfa2.pdf">Working Paper</a>] [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3078187">SSRN</a>] [<a href="files/Callaway-Huang-2018/supplementary-appendix.pdf">Supplementary Appendix</a>] (with Weige Huang, <em>Oxford Bulletin of Economics and Statistics</em>, Vol. 82, No. 4, pp. 808-842, 2020)</p>
+
+    <ul>
+      <li>Code: <a href="https://weigehuangecon.github.io/ccfa/"><code class="language-plaintext highlighter-rouge">ccfa</code> R package</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://qeconomics.org/ojs/index.php/qe/article/view/704">Quantile Treatment Effects in Difference in Differences Models with Panel Data</a> [<a href="files/Callaway-Li-2019/panel-treatment-effects.pdf">Working Paper Version</a>] [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3013341">SSRN</a>] [<a href="files/Callaway-Li-2019/supplementary-appendix.pdf">Supplementary Appendix</a>] [<a href="files/Callaway-Li-2019/Callaway-Li-2019-replication-files.zip">Replication Materials</a>] (with Tong Li, <em>Quantitative Economics</em>, Vol. 10, No. 4, pp. 1579-1618, 2019)</p>
+
+    <ul>
+      <li>Code: <a href="http://bcallaway11.github.io/qte/articles/panel-qtet.html"><code class="language-plaintext highlighter-rouge">panel.qtet</code> method in R <code class="language-plaintext highlighter-rouge">qte</code> package</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://www.accessecon.com/Pubs/EB/2019/Volume39/EB-19-V39-I2-P88.pdf">Local Intergenerational Elasticities</a> [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3233873">SSRN</a>] [<a href="http://www.accessecon.com/pubs/EB/tempPDF/file_Supplemental_0_0_120174_temp.pdf">Supplementary Appendix</a>] (with Weige Huang, <em>Economics Bulletin</em>, Vol. 39, No. 2, pp. 919-928, 2019)</p>
+  </li>
+  <li>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S0304407618301027">Quantile Treatment Effects in Difference in Differences Models under Dependence Restrictions and with only Two Time Periods</a> (with Tong Li and Tatsushi Oka, <em>Journal of Econometrics</em>, 206(2), pp. 395-413, 2018) [<a href="https://arxiv.org/pdf/1702.03618.pdf">Arxiv Version</a>]</p>
+
+    <ul>
+      <li>Code: <a href="http://bcallaway11.github.io/qte/articles/ddid2.html"><code class="language-plaintext highlighter-rouge">ddid2</code> method in R <code class="language-plaintext highlighter-rouge">qte</code> package</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S0014498317300451">Unions, Workers, and Wages at the Peak of the American Labor Movement</a> (with William Collins, <em>Explorations in Economic History</em>, Vol. 68, pp. 95-118, 2018) [<a href="http://www.nber.org/papers/w23516">NBER Version</a>]</p>
+  </li>
+</ol>
+
+<h2 id="working-papers">Working Papers</h2>
+
+<ul>
+  <li>
+    <p><a href="https://arxiv.org/abs/2105.06927">Policy Evaluation during a Pandemic</a> [<a href="/posts/five-minute-pandemic-policy">5 Minute Summary</a>] [<a href="/files/pandemic-policy/supplementary-appendix.pdf">Supplementary Appendix</a>] (with Tong Li)</p>
+  </li>
+  <li>
+    <p><a href="https://arxiv.org/abs/2005.09605">Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data</a> (with Tong Li, submitted)</p>
+  </li>
+  <li>
+    <p><a href="https://arxiv.org/abs/2006.15780">Treatment Effects in Interactive Fixed Effects Models</a> (with Sonia Karami, Revise and Resubmit at <em>Journal of Econometrics</em>)</p>
+  </li>
+</ul>
+
+<h2 id="resting-papers">Resting Papers</h2>
+
+<ul>
+  <li><a href="https://www.econstor.eu/bitstream/10419/64846/1/72645320X.pdf">Adoption and Diffusion of Health Information Technology: The Case of Primary Care Clinics</a> (with Vivek Ghosal)</li>
+</ul>
+
+:ET

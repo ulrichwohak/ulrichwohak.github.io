@@ -1,0 +1,13 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "CV"
+    url: /cv/
+  - title: "Research"
+    url: /research/
+  - title: "Code"
+    url: /code/
+  - title: "Teaching"
+    url: /teaching/
+  - title: "Students"
+    url: /students/

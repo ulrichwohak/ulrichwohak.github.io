@@ -1,0 +1,36 @@
+---
+title: Rmarkdown Template
+output:
+  md_document:
+    preserve_yaml: TRUE
+author: "brant"
+date: '2021-04-20'
+excerpt: "this is a template"
+layout: post
+permalink: /posts/template
+categories:
+  - Econometrics
+---
+
+
+
+Test some code
+
+```{r}
+1+1
+mean(c(1,2,3))
+```
+
+Test some math: $1+1=2$
+
+$$
+2+2=4
+$$
+
+$$
+	\hat{\beta} = (X'X)^{-1}X'Y
+$$
+
+\begin{align*}
+	9+3 = 11
+\end{align*}

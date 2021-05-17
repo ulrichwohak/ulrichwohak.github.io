@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Research
 permalink: /research/
 ---
@@ -14,7 +14,7 @@ permalink: /research/
 2. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) (with Afrouz Azadikhah Jahromi, forthcoming at *Empirical Economics*) [[Arxiv](https://arxiv.org/abs/2006.04968)]
 
 
-3. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://doi.org/10.1016/j.jeconom.2020.02.005) [[Arxiv](https://arxiv.org/abs/2008.08117)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (forthcoming at *Journal of Econometrics*)
+3. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://doi.org/10.1016/j.jeconom.2020.02.005) [[Arxiv](https://arxiv.org/abs/2008.08117)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (*Journal of Econometrics*, Vol. 222, No. 2, pp. 861-881, 2021.)
 
     * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
@@ -36,6 +36,8 @@ permalink: /research/
 
 
 ## Working Papers
+
+* [Policy Evaluation during a Pandemic](https://arxiv.org/abs/2105.06927) [[5 Minute Summary](/posts/five-minute-pandemic-policy)] [[Supplementary Appendix](/files/pandemic-policy/supplementary-appendix.pdf)] (with Tong Li)     
 
 * [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, submitted)
 

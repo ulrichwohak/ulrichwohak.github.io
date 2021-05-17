@@ -1,0 +1,14 @@
+Brantly Callaway:
+  name        : "Brantly Callaway"
+  bio         : "Assistant Professor, University of Georgia"
+  avatar      : "/assets/images/IMG_0029_cropped.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:brantly.callaway@uga.edu"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://brantlycallaway.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/extravagantman"

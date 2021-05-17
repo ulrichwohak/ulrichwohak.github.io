@@ -1,19 +1,19 @@
 ---
-output: 
-  md_document: 
-    variant: markdown_github
+title: "Thinking about Group-Time Average Treatment Effects"
+output:
+  md_document:
+    variant: "markdown"
+    preserve_yaml: TRUE
+author: "brant"
+date: '2021-04-20'
+layout: posts
+permalink: /posts/group-time-average-treatment-effects
+categories:
+  - Econometrics
+  - Policy Evaluation
+  - Panel Data
 ---
 
-
-\---\
-layout: post\
-title: Group-Time Average Treatment Effects
-permalink: /posts/group-time-treatment-effects\
-\---
-
-<!-- above: hack to get yaml header right. below: hack in order to include math -->
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 # Introduction
 

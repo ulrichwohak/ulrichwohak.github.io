@@ -30,6 +30,6 @@ $$
 2+2=4
 $$
 
-\begin{align*}
+$$
 	\hat{\beta} = (X'X)^{-1}X'Y
-\end{align*}
+$$

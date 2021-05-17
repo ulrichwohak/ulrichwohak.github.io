@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Students
 permalink: /students/
 ---
@@ -8,11 +8,11 @@ permalink: /students/
 <table style="width:100%">
   <tr>   
     <td width="40%"><img src="blank.jpg" alt="Chengye Jia" width="100%" > </td>
-    <td><p><b><a href="https://chengye-jia.github.io/">Chengye Jia</a></b></p><p>Temple University, Ph.D. Expected 2021</p><p>Research Interests:  Microeconometrics, Labor Economics, Machine Learning</p> </td>
+    <td><p><b><a href="https://chengye-jia.github.io/">Chengye Jia</a></b></p><p>Temple University, Ph.D. 2021</p><p>Research Interests:  Microeconometrics, Labor Economics, Machine Learning</p> </td>
   </tr>
   <tr>   
     <td width="40%"><img src="blank.jpg" alt="Sonia Karami" width="100%" > </td>
-    <td><p><b><a href="https://sites.temple.edu/sonia/">Sonia Karami</a></b></p><p>Temple University, Ph.D. Expected 2021</p><p>Research Interests:  Microeconometrics, Labor Economics, and Health Economics</p></td>
+    <td><p><b><a href="https://sites.temple.edu/sonia/">Sonia Karami</a></b></p><p>Temple University, Ph.D. 2021</p><p>Research Interests:  Microeconometrics, Labor Economics, and Health Economics</p></td>
   </tr>
   <tr>   
     <td width="40%"><img src="blank.jpg" alt="Emmanuel Tsyawo" width="100%" > </td>

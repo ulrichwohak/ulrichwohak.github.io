@@ -1,0 +1,147 @@
+I"&<h2 id="introduction">Introduction</h2>
+
+<p><a href="https://my.vanderbilt.edu/tlwebpage/">Tong Li</a> and I just posted a new
+working paper called <a href="https://arxiv.org/abs/2105.06927">Policy Evaluation during a
+Pandemic</a>. This is our second paper
+about policy evaluation in the context of the pandemic. In the first
+paper, <a href="https://arxiv.org/abs/2005.09605">Evaluating Policies Early in a Pandemic: Bounding Policy Effects
+with Nonrandomly Missing Data</a>, we
+were mainly interested in dealing with Covid-19 testing being non-random
+(as well as different testing rates, etc. across different locations).
+In that paper, we ended up proposed a matching estimator, but we got a
+lot of comments asking: <em>Why not difference-in-differences?</em></p>
+
+<p>We became quite interested in answering that question. Originally, we
+just “had the sense” that DID was not the right tool to use here. But
+that has developed into a fully fledged paper now.</p>
+
+<p>And our answer turns out to be the same as before: to us, it seems like
+a lot better idea to carefully condition on pre-treatment pandemic
+related variables (e.g., number of cases, fraction of the population
+still susceptible, population size, and perhaps other variables like
+population density or demographics) rather than try to “difference out”
+location-specific fixed effects. In other words, we think
+unconfoundedness-type identification strategies are likely to be more
+appropriate than DID-type identification strategies when it comes to
+identifying effects of Covid-19 related policies.</p>
+
+<h2 id="did-or-unconfoundedness-for-evaluating-policies-during-a-pandemic">DID or Unconfoundedness for Evaluating Policies during a Pandemic?</h2>
+
+<p>The key issue is that epidemic models from the epidemiology literature
+are highly nonlinear. A leading example is stochastic SIRD model (SIRD
+stands for S=Susceptible, I=Infected, R=Recovered, D=Dead). The key
+equations in this model look like</p>
+
+\[I_{lt}(0) = (1-\lambda-\gamma)I_{lt-1}(0) + \beta \frac{I_{lt-1}(0)}{N_l} S_{lt-1}(0) + U_{lt}\]
+
+<p>where \(\lambda, \gamma,\) and \(\beta\) are parameters related to the
+recovery rate, death rate, and infection rate, respectively; \(N_l\) is
+the number of individuals in a particular location, \(U_{lt}\) is an
+idiosyncratic shock, and variables indexed by \(\bullet(0)\) are
+“potential outcomes” (the values those variables would take if the
+policy were not implemented).</p>
+
+<p>You can immediately see that this is a <em>much different</em> model from the
+one that would typically lead to difference in differences:</p>
+
+\[I_{lt}(0) = \theta_t + \eta_i + U_{lt}\]
+
+<p>where \(\theta_t\) is a time fixed effect and \(\eta_i\) is an
+individual fixed effect.</p>
+
+<p>This shouldn’t be a big surprise either — pandemics are much different
+from many of the panel data sorts of applications that we commonly
+consider in economics. In particular, the spread of a pandemic is not
+really related to a particular location’s “pandemic fixed effect”; this
+is much different from, say, applications in labor economics where it
+seems much more reasonable to think that an individual’s earnings are
+related to their unobserved, time invariant “skill”.</p>
+
+<h2 id="does-the-identification-strategy-actually-matter">Does the identification strategy actually matter?</h2>
+
+<p>The short answer is: yes.</p>
+
+<p>In the paper we consider both simulations related to this and an
+application on shelter-in-place orders. Just to keep things short, let’s
+just consider the simulations here.</p>
+
+<p>For the simulations, for simplicity, we consider the case where the
+policy has no effect on Covid-19 cases (this makes it easy to check if
+the approach is working well as we can just check if estimated policy
+effects are close to 0). In addition, we consider the case where the
+first Covid-19 case tends to show up in treated locations earlier than
+for untreated locations.</p>
+
+<p>To start with, here is a plot of what a pandemic looks like in a
+stochastic SIRD model. The notation here is the same as above; the
+additional variable \(C\) is the cumulative number of cases. The policy
+is implemented when \(t=150\), but it has no effect.</p>
+
+<p><img src="/files/pandemic-policy/sim_example.jpg" alt="" /></p>
+
+<p>Next, is a figure showing estimated effects of the policy on cumulative
+Covid-19 cases using DID. Here, we (incorrectly) estimate that the
+policy decreased cumulative cases. Basically, treated locations (which
+tended to get their first cases earlier) and untreated locations are not
+following the same path of untreated potential outcomes due to the
+nonlinearity of the model. Interestingly, it is possible to make the
+bias positive if you set the timing of the policy differently.</p>
+
+<p><img src="/files/pandemic-policy/did_es_example3.jpg" alt="" /></p>
+
+<p>The last figure involves estimating the effect of the policy by
+comparing locations that have similar pre-treatment pandemic-related
+characteristics (i.e., under unconfoundedness as we suggest doing in the
+paper). You can immediately see that this approach works much better.</p>
+
+<p><img src="/files/pandemic-policy/unc_es_example3.jpg" alt="" /></p>
+
+<h2 id="the-rest-of-the-paper">The Rest of the Paper…</h2>
+
+<ul>
+  <li>
+    <p>We propose doubly robust estimators of policy effects. These sorts
+of estimators are attractive in this case because they provide
+consistent estimates of policy effects if either (i) the propensity
+score (which is related to modeling the probability that a location
+adopts the policy) or (ii) an outcome regression model (related to
+the epidemic model in the absence of the treatment) is correctly
+specified. This setup is very attractive here as it gives a way to
+evaluate policies while partially circumventing the challenge of
+estimating a full pandemic model. Basically, we get to the case
+where you need to compare locations that implemented the policy to
+locations that didn’t implement the policy (or implemented it later)
+conditional on having the same pre-policy characteristics that are
+related to the pandemic — economists know a lot about this
+setting.</p>
+  </li>
+  <li>
+    <p>We also consider the case where a researcher is interested in
+understanding the effect of a Covid-19 related policy on an economic
+outcome (rather than Covid-19 cases) in the particular case when (i)
+the policy can affect the outcome directly, (ii) the policy can
+affect the number of Covid-19 cases, and (iii) the number of
+Covid-19 cases can have its own effect on the economic outcome. We
+show:</p>
+
+    <ul>
+      <li>
+        <p>Neither standard DID nor including number of cases as a
+covariate deliver consistent estimates of ATT-type parameters in
+this case.</p>
+      </li>
+      <li>
+        <p>We propose a way to “adjust” for the policy affecting cases and
+deliver a reasonable ATT-type effect of the policy on economic
+outcomes.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>We also have an application about the effects of shelter-in-place
+orders on Covid-19 cases and recreational travel. We find that the
+results are quite sensitive to which methodological approach one
+chooses.</p>
+  </li>
+</ul>
+:ET
