@@ -9,9 +9,11 @@ author: "Brantly Callaway"
 defaults:
   # _posts
   - scope:
-      path: "/posts/"
+      path: ""
       type: posts
     values:
+      layout: single
+      author_profile: false
       comments: true
 defaults:
   # _pages
