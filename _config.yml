@@ -9,12 +9,10 @@ author: "Brantly Callaway"
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "/posts/"
       type: posts
     values:
       comments: true
-      read_time: true
-      show_date: true
 defaults:
   # _pages
   - scope:

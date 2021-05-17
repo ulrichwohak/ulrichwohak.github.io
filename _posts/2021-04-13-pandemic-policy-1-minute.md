@@ -13,6 +13,7 @@ output:
     variant: markdown
 permalink: '/posts/five-minute-pandemic-policy'
 title: 'Five Minute Summary: Policy Evaluation during a Pandemic'
+comments: true
 ---
 
 Introduction
