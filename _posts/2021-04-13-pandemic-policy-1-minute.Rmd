@@ -5,14 +5,15 @@ output:
     variant: "markdown"
     preserve_yaml: TRUE
 author: "brant"
-date: '2021-04-20'
-layout: posts
+date: '2021-05-16'
+layout: single
 permalink: /posts/five-minute-pandemic-policy
 categories:
   - Econometrics
   - Covid-19
   - Policy Evaluation
   - Panel Data
+comments: true
 ---
 
 ## Introduction

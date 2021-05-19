@@ -37,7 +37,7 @@ permalink: /research/
 
 ## Working Papers
 
-* [Policy Evaluation during a Pandemic](https://arxiv.org/abs/2105.06927) [[5 Minute Summary](/posts/five-minute-pandemic-policy)] [[Supplementary Appendix](/files/pandemic-policy/supplementary-appendix.pdf)] (with Tong Li)     
+* [Policy Evaluation during a Pandemic](https://arxiv.org/abs/2105.06927) [[5 Minute Summary](/posts/five-minute-pandemic-policy)] [[Supplementary Appendix](/files/pandemic-policy/supplementary-appendix.pdf)] (with Tong Li, submitted)     
 
 * [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, submitted)
 
