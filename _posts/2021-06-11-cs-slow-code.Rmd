@@ -71,7 +71,7 @@ proc.time() - current_time
 
 Second, let's try the same thing but with analytical standard errors. 
 
-```
+```{r}
 # with analytical standard errors
 current_time <- proc.time()
 out2 <- att_gt(yname="Y",

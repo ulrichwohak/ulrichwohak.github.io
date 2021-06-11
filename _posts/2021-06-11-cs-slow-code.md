@@ -92,20 +92,25 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.864   0.012   1.875
+    ##   1.870   0.016   1.886
 
 Second, let's try the same thing but with analytical standard errors.
 
-    # with analytical standard errors
-    current_time <- proc.time()
-    out2 <- att_gt(yname="Y",
-                  gname="group",
-                  idname="id",
-                  tname="tp",
-                  data=panel_data,
-                  bstrap=FALSE)
-    dyn2 <- aggte(out, type="dynamic")
-    proc.time() - current_time
+``` {.r}
+# with analytical standard errors
+current_time <- proc.time()
+out2 <- att_gt(yname="Y",
+              gname="group",
+              idname="id",
+              tname="tp",
+              data=panel_data,
+              bstrap=FALSE)
+dyn2 <- aggte(out, type="dynamic")
+proc.time() - current_time
+```
+
+    ##    user  system elapsed 
+    ##   1.367   0.012   1.379
 
 Conclusion
 ==========
