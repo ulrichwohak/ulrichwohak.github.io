@@ -15,12 +15,12 @@ permalink: '/posts/cs-code-slow'
 title: 'Is our code slow...?'
 ---
 
-I just ran into the `did_imputation` [Stata
+I just ran into the [`did_imputation` Stata
 command](https://github.com/borusyak/did_imputation) which, mainly,
 contains the code for implementing the ideas in Borusyak, Jaravel, and
 Spiess (2021). Interestingly, the new package provides calls to recent
 alternatives to two-way fixed effects in de Chaisemartin and
-D'Haultfoeuille (2020), Sun and Abraham (202), and Callaway and
+D'Haultfoeuille (2020), Sun and Abraham (2020), and Callaway and
 Sant'Anna (2020) --- so you can see estimates all in the same plot:
 
 <img src="/assets/images/cs_slow.jpeg">
@@ -92,7 +92,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.845   0.017   1.862
+    ##   2.045   0.015   2.062
 
 Second, let's try the same thing but with analytical standard errors.
 
@@ -110,7 +110,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.289   0.000   1.290
+    ##   1.297   0.000   1.298
 
 Conclusion
 ==========
