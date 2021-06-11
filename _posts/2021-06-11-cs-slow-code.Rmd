@@ -4,6 +4,8 @@ output:
   md_document:
     variant: "markdown"
     preserve_yaml: TRUE
+    toc: true
+toc_depth: 3
 author: "brant"
 date: '2021-06-11'
 layout: single
@@ -22,13 +24,13 @@ I just ran into the [`did_imputation` Stata command](https://github.com/borusyak
 
 What catches *my* eye here though is how slow our code appears to be: taking over two minutes to run compared to about 1 second for other approaches.  This is not even a very complicated simulation either; there are 300 units and 15 time periods.  If our code doesn't run fast in this case, it is a bad sign!
 
-The other thing that I immediately notice is that `did_imputation` is written in Stata, and the main version of our code is written in R.  Our Stata version is, at the moment, a brand new proof-of-concept and still in beta mode.  Let's see what happens if we try the same simulations but in R using the `did` package instead of Stata.
+This is great, as users can display several of these new estimators along the same plot.  The other thing that I immediately notice is that `did_imputation` is written in Stata, and the main version of our code is written in R.  Our Stata version is, at the moment, a brand new proof-of-concept and still in beta mode.  Let's see what happens if we try the same simulations but in R using the `did` package instead of Stata.
 
 # Same simulations but in R
 
 ## Step 1: Generate the same data
 
-```{r}
+```{r, class.source='fold-hide'}
 time.periods <- 15
 n <- 300
 
@@ -51,7 +53,7 @@ panel_data$Y <- panel_data$id + 3*panel_data$tp +
 
 ## Step 2: Use `did` package
 
-For this part, let's try two different things.  First, we'll try the default version of our code where we first compute all possible group-time average treatment effects (including pre-treatment ones), then use these to compute an event study.  In addition, we default to using the multiplier bootstrap which opens up the possiblity of computing uniform confidence (another default for us) that are particularly nice in the context of event studies because they provide robustness to multiple hypothesis testing (since we are estimating effects of the treatment at different lengths of exposure).
+For this part, let's try two different things.  First, we'll try the default version of our code where we first compute all possible group-time average treatment effects (including pre-treatment ones), then use these to compute an event study.  In addition, we default to using the multiplier bootstrap which opens up the possibility of computing uniform confidence (another default for us) that are particularly nice in the context of event studies because they provide robustness to multiple hypothesis testing (since we are estimating effects of the treatment at different lengths of exposure).
 
 ```{r}
 library(did)

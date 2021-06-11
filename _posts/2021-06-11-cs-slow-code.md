@@ -10,10 +10,18 @@ layout: single
 output:
   md_document:
     preserve_yaml: True
+    toc: True
     variant: markdown
 permalink: '/posts/cs-code-slow'
 title: 'Is our code slow...?'
+toc_depth: 3
 ---
+
+-   [Same simulations but in R](#same-simulations-but-in-r)
+    -   [Step 1: Generate the same data](#step-1-generate-the-same-data)
+    -   [Step 2: Use `did` package](#step-2-use-did-package)
+-   [Conclusion](#conclusion)
+-   [References](#references)
 
 I just ran into the [`did_imputation` Stata
 command](https://github.com/borusyak/did_imputation) which, mainly,
@@ -31,11 +39,13 @@ approaches. This is not even a very complicated simulation either; there
 are 300 units and 15 time periods. If our code doesn't run fast in this
 case, it is a bad sign!
 
-The other thing that I immediately notice is that `did_imputation` is
-written in Stata, and the main version of our code is written in R. Our
-Stata version is, at the moment, a brand new proof-of-concept and still
-in beta mode. Let's see what happens if we try the same simulations but
-in R using the `did` package instead of Stata.
+This is great, as users can display several of these new estimators
+along the same plot. The other thing that I immediately notice is that
+`did_imputation` is written in Stata, and the main version of our code
+is written in R. Our Stata version is, at the moment, a brand new
+proof-of-concept and still in beta mode. Let's see what happens if we
+try the same simulations but in R using the `did` package instead of
+Stata.
 
 Same simulations but in R
 =========================
@@ -43,7 +53,7 @@ Same simulations but in R
 Step 1: Generate the same data
 ------------------------------
 
-``` {.r}
+``` {.r .fold-hide}
 time.periods <- 15
 n <- 300
 
@@ -71,7 +81,7 @@ For this part, let's try two different things. First, we'll try the
 default version of our code where we first compute all possible
 group-time average treatment effects (including pre-treatment ones),
 then use these to compute an event study. In addition, we default to
-using the multiplier bootstrap which opens up the possiblity of
+using the multiplier bootstrap which opens up the possibility of
 computing uniform confidence (another default for us) that are
 particularly nice in the context of event studies because they provide
 robustness to multiple hypothesis testing (since we are estimating
@@ -94,7 +104,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.979   0.024   2.003
+    ##   1.994   0.012   2.006
 
 Second, let's try the same thing but with analytical standard errors.
 
@@ -112,7 +122,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.296   0.000   1.295
+    ##   1.293   0.000   1.292
 
 Conclusion
 ==========
