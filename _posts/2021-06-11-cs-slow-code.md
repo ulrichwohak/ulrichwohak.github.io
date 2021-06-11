@@ -12,20 +12,18 @@ output:
     preserve_yaml: True
     variant: markdown
 permalink: '/posts/cs-code-slow'
-title: Is Callaway
+title: 'Is our code slow...?'
 ---
 
-How slow is our code...?
-========================
-
-I just ran into the `did_imputation` Stata command which, mainly,
+I just ran into the `did_imputation` [Stata
+command](https://github.com/borusyak/did_imputation) which, mainly,
 contains the code for implementing the ideas in Borusyak, Jaravel, and
 Spiess (2021). Interestingly, the new package provides calls to recent
 alternatives to two-way fixed effects in de Chaisemartin and
 D'Haultfoeuille (2020), Sun and Abraham (202), and Callaway and
 Sant'Anna (2020) --- so you can see estimates all in the same plot:
 
-![](%22%7B%7B%20site.url%20%7D%7D%7B%7B%20site.baseurl%20%7D%7D/assets/images/cs-slow.jpeg%22)
+![](%22%7B%7B%20site.url%20%7D%7D%7B%7B%20site.baseurl%20%7D%7D/assets/images/cs_slow.jpeg%22)
 
 What catches *my* eye here though is how slow our code appears to be:
 taking over two minutes to run compared to about 1 second for other
@@ -40,6 +38,9 @@ rather than our R `did` package.
 Same simulations but in R
 =========================
 
+Step 1: Generate the same data
+------------------------------
+
 ``` {.r}
 time.periods <- 15
 n <- 300
@@ -50,14 +51,31 @@ group <- sample(seq(10,16), n, replace=TRUE)
 unit_data <- data.frame(id=id, group=group)
 
 # generate panel data
-panel_data <- data.frame(id=sort(rep(id,time.periods)), tp=rep(rep(1:time.periods),n))
+panel_data <- data.frame(id=sort(rep(id,time.periods)),
+                         tp=rep(rep(1:time.periods),n))
 panel_data <- merge(panel_data, unit_data, by="id")
 panel_data$D <- 1*(panel_data$tp >= panel_data$group)
 
 # generate heterogeneous treatment effects by calendar date
 tau <- (panel_data$D==1)*(panel_data$tp - 12.5)
-panel_data$Y <- panel_data$id + 3*panel_data$tp + tau*panel_data$D + rnorm(nrow(panel_data))
+panel_data$Y <- panel_data$id + 3*panel_data$tp +
+  tau*panel_data$D + rnorm(nrow(panel_data))
+```
 
+Step 2: Use `did` package
+-------------------------
+
+For this part, let's try two different things. First, we'll try the
+default version of our code where we first compute all possible
+group-time average treatment effects (including pre-treatment ones),
+then use these to compute an event study. In addition, we default to
+using the multiplier bootstrap which opens up the possiblity of
+computing uniform confidence (another default for us) that are
+particularly nice in the context of event studies because they provide
+robustness to multiple hypothesis testing (since we are estimating
+effects of the treatment at different lengths of exposure).
+
+``` {.r}
 library(did)
 
 # with 1000 bootstrap iterations
@@ -74,23 +92,20 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.822   0.024   1.846
+    ##   1.893   0.016   1.909
 
-``` {.r}
-# with analytical standard errors
-current_time <- proc.time()
-out2 <- att_gt(yname="Y",
-              gname="group",
-              idname="id",
-              tname="tp",
-              data=panel_data,
-              bstrap=FALSE)
-dyn2 <- aggte(out, type="dynamic")
-proc.time() - current_time
-```
+Second, let's try the same thing but with analytical standard errors.
 
-    ##    user  system elapsed 
-    ##   1.286   0.000   1.286
+    # with analytical standard errors
+    current_time <- proc.time()
+    out2 <- att_gt(yname="Y",
+                  gname="group",
+                  idname="id",
+                  tname="tp",
+                  data=panel_data,
+                  bstrap=FALSE)
+    dyn2 <- aggte(out, type="dynamic")
+    proc.time() - current_time
 
 Conclusion
 ==========
@@ -99,7 +114,7 @@ This seems like mostly good news. Our main code is in the R `did`
 package, and, if you run that, our code delivers of all group-time
 average treatment effects and an event study (in about a second if you
 use analytical standard errors) and can additionally provide uniform
-confidence bands if you use the bootstrap (in about 2.5 seconds if you
+confidence bands if you use the bootstrap (in about two seconds if you
 use the our multiplier bootstrap procedure with 1000 bootstrap
 iterations).
 
