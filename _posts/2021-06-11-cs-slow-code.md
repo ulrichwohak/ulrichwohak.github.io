@@ -1,0 +1,123 @@
+---
+author: brant
+categories:
+- Difference in Differences
+- R
+- did package
+comments: True
+date: '2021-06-11'
+layout: single
+output:
+  md_document:
+    preserve_yaml: True
+    variant: markdown
+permalink: '/posts/cs-code-slow'
+title: Is Callaway
+---
+
+How slow is our code...?
+========================
+
+I just ran into the `did_imputation` Stata command which, mainly,
+contains the code for implementing the ideas in Borusyak, Jaravel, and
+Spiess (2021). Interestingly, the new package provides calls to recent
+alternatives to two-way fixed effects in de Chaisemartin and
+D'Haultfoeuille (2020), Sun and Abraham (202), and Callaway and
+Sant'Anna (2020) --- so you can see estimates all in the same plot:
+
+![](%22%7B%7B%20site.url%20%7D%7D%7B%7B%20site.baseurl%20%7D%7D/assets/images/cs-slow.jpeg%22)
+
+What catches *my* eye here though is how slow our code appears to be:
+taking over two minutes to run compared to about 1 second for other
+approaches. This is not even a very complicated simulation either; there
+are 300 units and 15 time periods. If our code doesn't run fast in this
+case, it is a bad sign!
+
+The other thing that I immediately notice is that `did_imputation` is
+written in Stata and makes calls to Stata versions of our approach
+rather than our R `did` package.
+
+Same simulations but in R
+=========================
+
+``` {.r}
+time.periods <- 15
+n <- 300
+
+# unit data
+id <- 1:n
+group <- sample(seq(10,16), n, replace=TRUE)
+unit_data <- data.frame(id=id, group=group)
+
+# generate panel data
+panel_data <- data.frame(id=sort(rep(id,time.periods)), tp=rep(rep(1:time.periods),n))
+panel_data <- merge(panel_data, unit_data, by="id")
+panel_data$D <- 1*(panel_data$tp >= panel_data$group)
+
+# generate heterogeneous treatment effects by calendar date
+tau <- (panel_data$D==1)*(panel_data$tp - 12.5)
+panel_data$Y <- panel_data$id + 3*panel_data$tp + tau*panel_data$D + rnorm(nrow(panel_data))
+
+library(did)
+
+# with 1000 bootstrap iterations
+current_time <- proc.time()
+out <- att_gt(yname="Y",
+              gname="group",
+              idname="id",
+              tname="tp",
+              data=panel_data,
+              bstrap=TRUE,
+              biters=1000)
+dyn <- aggte(out, type="dynamic")
+proc.time() - current_time
+```
+
+    ##    user  system elapsed 
+    ##   1.822   0.024   1.846
+
+``` {.r}
+# with analytical standard errors
+current_time <- proc.time()
+out2 <- att_gt(yname="Y",
+              gname="group",
+              idname="id",
+              tname="tp",
+              data=panel_data,
+              bstrap=FALSE)
+dyn2 <- aggte(out, type="dynamic")
+proc.time() - current_time
+```
+
+    ##    user  system elapsed 
+    ##   1.286   0.000   1.286
+
+Conclusion
+==========
+
+This seems like mostly good news. Our main code is in the R `did`
+package, and, if you run that, our code delivers of all group-time
+average treatment effects and an event study (in about a second if you
+use analytical standard errors) and can additionally provide uniform
+confidence bands if you use the bootstrap (in about 2.5 seconds if you
+use the our multiplier bootstrap procedure with 1000 bootstrap
+iterations).
+
+References
+==========
+
+-   Borusyak, Kirill, Xavier Jaravel, and Jann Spiess. "Revisiting Event
+    Study Designs: Robust and Efficient Estimation." Working Paper
+    (2021).
+
+-   Callaway, Brantly, and Pedro HC Sant’Anna.
+    "Difference-in-differences with multiple time periods." Journal of
+    Econometrics (2020).
+
+-   de Chaisemartin, Clément, and Xavier d'Haultfoeuille. "Two-way fixed
+    effects estimators with heterogeneous treatment effects." American
+    Economic Review 110.9 (2020): 2964-96.
+
+-   Sun, Liyang, and Sarah Abraham. "Estimating dynamic treatment
+    effects in event studies with heterogeneous treatment effects."
+    Journal of Econometrics (2020).
