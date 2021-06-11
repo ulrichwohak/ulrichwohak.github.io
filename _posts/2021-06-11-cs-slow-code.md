@@ -23,7 +23,7 @@ alternatives to two-way fixed effects in de Chaisemartin and
 D'Haultfoeuille (2020), Sun and Abraham (202), and Callaway and
 Sant'Anna (2020) --- so you can see estimates all in the same plot:
 
-![](%7B%7B%20site.url%20%7D%7D%7B%7B%20site.baseurl%20%7D%7D/assets/images/cs_slow.jpeg)
+<img src="/assets/images/cs_slow.jpeg">
 
 What catches *my* eye here though is how slow our code appears to be:
 taking over two minutes to run compared to about 1 second for other
@@ -92,7 +92,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.862   0.020   1.881
+    ##   1.845   0.017   1.862
 
 Second, let's try the same thing but with analytical standard errors.
 
@@ -110,7 +110,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.343   0.000   1.343
+    ##   1.289   0.000   1.290
 
 Conclusion
 ==========
