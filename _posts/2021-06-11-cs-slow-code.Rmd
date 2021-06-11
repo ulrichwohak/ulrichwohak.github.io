@@ -17,7 +17,7 @@ comments: true
 
 I just ran into the `did_imputation` [Stata command](https://github.com/borusyak/did_imputation) which, mainly, contains the code for implementing the ideas in Borusyak, Jaravel, and Spiess (2021).  Interestingly, the new package provides calls to recent alternatives to two-way fixed effects in de Chaisemartin and D'Haultfoeuille (2020), Sun and Abraham (202), and Callaway and Sant'Anna (2020) --- so you can see estimates all in the same plot:
 
-![]("{{ site.url }}{{ site.baseurl }}/assets/images/cs_slow.jpeg")
+![]({{ site.url }}{{ site.baseurl }}/assets/images/cs_slow.jpeg)
 
 
 What catches *my* eye here though is how slow our code appears to be: taking over two minutes to run compared to about 1 second for other approaches.  This is not even a very complicated simulation either; there are 300 units and 15 time periods.  If our code doesn't run fast in this case, it is a bad sign!
