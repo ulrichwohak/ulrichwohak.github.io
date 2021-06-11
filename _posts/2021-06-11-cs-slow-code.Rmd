@@ -22,7 +22,7 @@ I just ran into the [`did_imputation` Stata command](https://github.com/borusyak
 
 What catches *my* eye here though is how slow our code appears to be: taking over two minutes to run compared to about 1 second for other approaches.  This is not even a very complicated simulation either; there are 300 units and 15 time periods.  If our code doesn't run fast in this case, it is a bad sign!
 
-The other thing that I immediately notice is that `did_imputation` is written in Stata and makes calls to Stata versions of our approach rather than our R `did` package.  
+The other thing that I immediately notice is that `did_imputation` is written in Stata, and the main version of our code is written in R.  Our Stata version is, at the moment, a brand new proof-of-concept and still in beta mode.  Let's see what happens if we try the same simulations but in R using the `did` package instead of Stata.
 
 # Same simulations but in R
 

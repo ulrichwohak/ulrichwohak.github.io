@@ -32,8 +32,10 @@ are 300 units and 15 time periods. If our code doesn't run fast in this
 case, it is a bad sign!
 
 The other thing that I immediately notice is that `did_imputation` is
-written in Stata and makes calls to Stata versions of our approach
-rather than our R `did` package.
+written in Stata, and the main version of our code is written in R. Our
+Stata version is, at the moment, a brand new proof-of-concept and still
+in beta mode. Let's see what happens if we try the same simulations but
+in R using the `did` package instead of Stata.
 
 Same simulations but in R
 =========================
@@ -92,7 +94,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   2.045   0.015   2.062
+    ##   1.868   0.008   1.877
 
 Second, let's try the same thing but with analytical standard errors.
 
@@ -110,7 +112,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.297   0.000   1.298
+    ##   1.310   0.000   1.311
 
 Conclusion
 ==========
