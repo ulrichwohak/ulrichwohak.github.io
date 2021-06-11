@@ -94,7 +94,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.868   0.008   1.877
+    ##   1.966   0.028   1.994
 
 Second, let's try the same thing but with analytical standard errors.
 
@@ -112,7 +112,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.310   0.000   1.311
+    ##   1.268   0.000   1.268
 
 Conclusion
 ==========
@@ -124,6 +124,13 @@ second if you use analytical standard errors) and can additionally
 provide uniform confidence bands if you use the bootstrap (in about two
 seconds if you use our multiplier bootstrap procedure with 1000
 bootstrap iterations).
+
+Our Stata code is slower, but we (well, mainly [Fernando
+Rios-Avila](https://friosavila.github.io/playingwithstata/)) has been
+making rapid progress on the Stata implementation. At the moment, it
+uses a different bootstrap procedure than the R code does (which I
+suspect is the main reason for the differences in computational time),
+but I expect the Stata code to be running much faster soon.
 
 References
 ==========
