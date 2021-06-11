@@ -94,7 +94,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.966   0.028   1.994
+    ##   1.979   0.024   2.003
 
 Second, let's try the same thing but with analytical standard errors.
 
@@ -112,7 +112,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.268   0.000   1.268
+    ##   1.296   0.000   1.295
 
 Conclusion
 ==========
@@ -126,7 +126,7 @@ seconds if you use our multiplier bootstrap procedure with 1000
 bootstrap iterations).
 
 Our Stata code is slower, but we (well, mainly [Fernando
-Rios-Avila](https://friosavila.github.io/playingwithstata/)) has been
+Rios-Avila](https://friosavila.github.io/playingwithstata/)) have been
 making rapid progress on the Stata implementation. At the moment, it
 uses a different bootstrap procedure than the R code does (which I
 suspect is the main reason for the differences in computational time),

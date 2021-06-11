@@ -88,7 +88,7 @@ proc.time() - current_time
 
 This seems like mostly good news.  Our main code is in the R `did` package, and, if you run that, our code delivers estimates of all group-time average treatment effects and an event study (in about a second if you use analytical standard errors) and can additionally provide uniform confidence bands if you use the bootstrap (in about two seconds if you use our multiplier bootstrap procedure with 1000 bootstrap iterations).
 
-Our Stata code is slower, but we (well, mainly [Fernando Rios-Avila](https://friosavila.github.io/playingwithstata/)) has been making rapid progress on the Stata implementation.  At the moment, it uses a different bootstrap procedure than the R code does (which I suspect is the main reason for the differences in computational time), but I expect the Stata code to be running much faster soon.
+Our Stata code is slower, but we (well, mainly [Fernando Rios-Avila](https://friosavila.github.io/playingwithstata/)) have been making rapid progress on the Stata implementation.  At the moment, it uses a different bootstrap procedure than the R code does (which I suspect is the main reason for the differences in computational time), but I expect the Stata code to be running much faster soon.
 
 # References
 
