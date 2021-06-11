@@ -92,7 +92,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.870   0.016   1.886
+    ##   1.862   0.020   1.881
 
 Second, let's try the same thing but with analytical standard errors.
 
@@ -110,18 +110,18 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.367   0.012   1.379
+    ##   1.343   0.000   1.343
 
 Conclusion
 ==========
 
 This seems like mostly good news. Our main code is in the R `did`
-package, and, if you run that, our code delivers of all group-time
-average treatment effects and an event study (in about a second if you
-use analytical standard errors) and can additionally provide uniform
-confidence bands if you use the bootstrap (in about two seconds if you
-use the our multiplier bootstrap procedure with 1000 bootstrap
-iterations).
+package, and, if you run that, our code delivers estimates of all
+group-time average treatment effects and an event study (in about a
+second if you use analytical standard errors) and can additionally
+provide uniform confidence bands if you use the bootstrap (in about two
+seconds if you use our multiplier bootstrap procedure with 1000
+bootstrap iterations).
 
 References
 ==========
