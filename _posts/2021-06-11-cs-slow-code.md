@@ -10,18 +10,10 @@ layout: single
 output:
   md_document:
     preserve_yaml: True
-    toc: True
     variant: markdown
 permalink: '/posts/cs-code-slow'
 title: 'Is our code slow...?'
-toc_depth: 3
 ---
-
--   [Same simulations but in R](#same-simulations-but-in-r)
-    -   [Step 1: Generate the same data](#step-1-generate-the-same-data)
-    -   [Step 2: Use `did` package](#step-2-use-did-package)
--   [Conclusion](#conclusion)
--   [References](#references)
 
 I just ran into the [`did_imputation` Stata
 command](https://github.com/borusyak/did_imputation) which, mainly,
@@ -33,19 +25,18 @@ Sant'Anna (2020) --- so you can see estimates all in the same plot:
 
 <img src="/assets/images/cs_slow.jpeg">
 
-What catches *my* eye here though is how slow our code appears to be:
-taking over two minutes to run compared to about 1 second for other
-approaches. This is not even a very complicated simulation either; there
-are 300 units and 15 time periods. If our code doesn't run fast in this
-case, it is a bad sign!
-
 This is great, as users can display several of these new estimators
-along the same plot. The other thing that I immediately notice is that
-`did_imputation` is written in Stata, and the main version of our code
-is written in R. Our Stata version is, at the moment, a brand new
-proof-of-concept and still in beta mode. Let's see what happens if we
-try the same simulations but in R using the `did` package instead of
-Stata.
+along the same plot. What catches *my* eye here though is how slow our
+code appears to be: taking over two minutes to run compared to about 1
+second for other approaches. This is not even a very complicated
+simulation either; there are 300 units and 15 time periods. If our code
+doesn't run fast in this case, it is a bad sign!
+
+The other thing that I immediately notice is that `did_imputation` is
+written in Stata, and the main version of our code is written in R. Our
+Stata version is, at the moment, a brand new proof-of-concept and still
+in beta mode. Let's see what happens if we try the same simulations but
+in R using the `did` package instead of Stata.
 
 Same simulations but in R
 =========================
@@ -53,7 +44,7 @@ Same simulations but in R
 Step 1: Generate the same data
 ------------------------------
 
-``` {.r .fold-hide}
+``` {.r}
 time.periods <- 15
 n <- 300
 
@@ -104,7 +95,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.994   0.012   2.006
+    ##   1.924   0.044   1.968
 
 Second, let's try the same thing but with analytical standard errors.
 
@@ -122,7 +113,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.293   0.000   1.292
+    ##   1.279   0.000   1.280
 
 Conclusion
 ==========
