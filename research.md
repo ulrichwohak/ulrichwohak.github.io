@@ -37,6 +37,8 @@ permalink: /research/
 
 ## Working Papers
 
+* [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/abs/2107.02637) (with Andrew Goodman-Bacon and Pedro H.C. Sant'Anna)
+
 * [Policy Evaluation during a Pandemic](https://arxiv.org/abs/2105.06927) [[5 Minute Summary](/posts/five-minute-pandemic-policy)] [[Supplementary Appendix](/files/pandemic-policy/supplementary-appendix.pdf)] (with Tong Li, submitted)     
 
     * Code: [`ppe` R package, on GitHub](https://github.com/bcallaway11/ppe)
