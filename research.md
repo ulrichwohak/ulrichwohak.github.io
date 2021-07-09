@@ -43,7 +43,7 @@ permalink: /research/
 
     * Code: [`ppe` R package, on GitHub](https://github.com/bcallaway11/ppe)
 	
-* [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, submitted)
+* [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, Revise and Resubmit at *Review of Economics and Statistics*)
 
 * [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) (with Sonia Karami, Revise and Resubmit at *Journal of Econometrics*)
 
