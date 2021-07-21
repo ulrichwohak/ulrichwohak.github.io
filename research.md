@@ -37,7 +37,7 @@ permalink: /research/
 
 ## Working Papers
 
-* [Nonlinear Approaches to Intergenerational Income Mobility allowing for Measurement Error] (with Tong Li and Irina Murtazashvili, submitted)
+* [Nonlinear Approaches to Intergenerational Income Mobility allowing for Measurement Error](http://arxiv.org/abs/2107.09235) (with Tong Li and Irina Murtazashvili, submitted)
 
 * [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/abs/2107.02637) (with Andrew Goodman-Bacon and Pedro H.C. Sant'Anna)
 
