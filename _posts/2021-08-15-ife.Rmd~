@@ -1,0 +1,79 @@
+---
+title: "Five Minute Summary: Treatment Effects in Interactive Fixed Effects Models"
+output:
+  html_document:
+    variant: "markdown"
+    preserve_yaml: TRUE
+author: "brant"
+date: '2021-08-15'
+layout: single
+permalink: /posts/ife
+categories:
+  - treatment effects
+  - interactive fixed effects
+comments: true
+header-includes:
+  - \newcommand{\E}{\mathbb{E}}
+---
+
+
+<style>
+s {text-decoration:none; color: red;}
+</style>
+
+[Sonia Karami](https://sites.temple.edu/soniakarami/) and I just posted a new version of our paper [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780).  I'm very happy about this paper and think that it can be useful in applied work.  
+
+# Connection between Difference in Differences and Interactive Fixed Effects Models
+
+A lot of my research has involved identifying treatment effect parameters in a difference in differences (DID) framework.  For DID, the main identifying assumption is the parallel trends assumption:
+
+**Parallel Trends Assumption**
+$$
+	\E[\Delta Y_t(0) | D=1] = \E[\Delta Y_t(0) | D=0]
+$$
+
+Parallel trends assumptions are very closely related to the following model for untreated potential outcomes:
+
+$$
+	Y_{it}(0) = \theta_t + \eta_i + U_{it}
+$$
+where $\theta_t$ is a time fixed effect, $\eta_i$ is an individual fixed effect, and $U_{it}$ are idiosyncratic time varying unobservables.
+
+An extended version of the parallel trends assumption is the following *conditional parallel trends assumption*
+
+**Conditional Parallel Trends Assumption**
+$$
+	\E[\Delta Y_t(0) | \tilde{Z}, D=1] = \E[\Delta Y_t(0) | \tilde{Z}, D=0]
+$$
+which says that parallel trends holds after conditioning on $\tilde{Z}$.  To give an example, the application in our paper is about job displacement and the outcome is an individual's earnings.  It seems likely that the path of untreated potential outcomes (how outcomes would change over time if an individual were not displaced from their job) likely depends on a person's education, demographic characteristics, etc.  If these are distributed differently across displaced workers and non-displaced workers (which is also likely), then conditioning on these sorts of variables before invoking parallel trends will be important.
+
+This conditional parallel trends assumption is closely related to the following model for untreated potential outcomes
+$$
+	Y_{it}(0) = g_t(\tilde{Z}_i) + \eta_i + U_{it}
+$$
+where $g_t$ is a nonparametric, time-varying function of $\tilde{Z}$, and $\eta_i$ and $U_{it}$ are the same as before (the important thing here is the additive separability of $\eta_i$ which allows for it to be differenced out).  It's common to impose linearity for $g_t$ to get to
+$$
+	Y_{it}(0) = \tilde{Z}_i'\delta_{\tilde{Z},t} + \eta_i + U_{it}
+$$
+where we take $\tilde{Z}_i$ to include an intercept so that the time fixed effect is absorbed into $\tilde{Z}_i'\delta_{\tilde{Z},t}$ from here on out.
+
+I have been a bit purposely vague about $\tilde{Z}$ above.  What variables need to be conditioned on though is largely a theoretical exercise.  The variable that I mentioned above (education and/or demographic characteristics) are commonly observed in many datasets, but one might also think that parallel trends only holds after additionally conditioning on ``ability'' which is unlikely to be observed in most data.  
+
+Let's partition $\tilde{Z} = (Z,\lambda)$ where $Z$ corresponds to the observed components of $\tilde{Z}$ and $\lambda$ corresponds to the unobserved components of $\tilde{Z}$.  Similarly, let's partition $\delta_{\tilde{Z},t} = (\delta_t, F_t)$ where $\delta_t$ corresponds to the elements in $Z$ and $F_t$ corresponds to the elements in $\lambda$.  Plugging this back into the model for untreated potential outcomes above yields
+$$
+	Y_{it}(0) = Z_i'\delta_t + \lambda_i'F_t + \eta_i + U_{it}
+$$
+<s>**This is an interactive fixed effects model for untreated potential outcomes!**</s>
+
+
+# Identification Challenges
+
+# Our Idea
+
+# The Rest of the Paper...
+
+We have a number of extensions to these kind of results in the paper.
+
+* Pretty much the same arguments apply in cases where there are more than one interactive fixed effect.  The main additional requirement is that, for each interactive fixed effect, we need at least one covariate whose effect on untreated potential outcomes is time invariant
+
+* We spend a lot of time thinking about practical issues such as weak instruments, not enough covariates with time invariant effects, and tests for covariates actually having time invariant effects.  Except in one or two very pernicious cases, we think that our approach should either work or that one would be able to successfully detect that it is not working.

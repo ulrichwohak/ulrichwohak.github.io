@@ -1,13 +1,13 @@
 ---
 title: "Five Minute Summary: Difference in Differences with a Continuous Treatment"
 output:
-  html_document:
+  md_document:
     variant: "markdown"
     preserve_yaml: TRUE
 include-before:
 - '$\newcommand{\E}{\mathbb{E}}$'
 author: "brant"
-date: '2021-06-17'
+date: '2021-08-06'
 layout: single
 permalink: /posts/five-minute-did-continuous-treatment
 categories:
