@@ -8,7 +8,7 @@ categories:
 comments: True
 date: '2021-08-06'
 include-before:
-- '$\newcommand{\E}{\mathbb{E}}$'
+- '$$\newcommand{\E}{\mathbb{E}}$$'
 layout: single
 output:
   md_document:
@@ -20,7 +20,7 @@ title: |
     Treatment
 ---
 
-$\newcommand{\E}{\mathbb{E}}$
+$$\newcommand{\E}{\mathbb{E}}$$
 
 <style>
 s {text-decoration:none; color: red;}
@@ -113,7 +113,7 @@ $$
     ATT(d|d) = \E[ \Delta Y_t | D=d] - \E[\Delta Y_t | D=0]
 $$
 
-This seems straightforward, <s>**but there is a big caveat**</s>
+This seems straightforward, <s>but there is a big caveat</s>
 
 While $ATT(d|d)$ is the effect of dose $d$ among units that experienced
 dose $d$, most applications in economics want to answer questions like:
@@ -286,8 +286,8 @@ The Rest of the Paper...
     first three problems with TWFE mentioned above. But that, under a
     standard parallel trends assumption, DID includes selection bias
     terms is a **fundamental problem** in the case with a
-    multi-valued/continuous treatment. In fact, this would be <s>**my
-    main takeaway from our paper --- in a DID setup, comparing effects
-    across different doses likely requires substantially stronger
-    assumptions than what most applied researchers in economics think
-    that they are making.**</s>
+    multi-valued/continuous treatment. In fact, this would be <s>my main
+    takeaway from our paper --- in a DID setup, comparing effects across
+    different doses likely requires substantially stronger assumptions
+    than what most applied researchers in economics think that they are
+    making.</s>
