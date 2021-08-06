@@ -26,9 +26,6 @@ $$\newcommand{\E}{\mathbb{E}}$$
 s {text-decoration:none; color: red;}
 </style>
 
-Introduction
-------------
-
 [Andrew Goodman-Bacon](https://goodman-bacon.com), [Pedro
 Sant'Anna](https://pedrohcgs.github.io), and I have just posted a new
 working paper [Differences in Differences with a Continuous
@@ -63,7 +60,7 @@ treatments. Below, I'll talk about the truly continuous case, but the
 paper has details about the multi-valued discrete treatment case.
 
 Baseline case with two time periods
------------------------------------
+===================================
 
 Let's start with the simplest case for DID where there are two time
 periods, no units participate in the treatment in the first time period,
@@ -72,14 +69,15 @@ continuous "dose" while other units remain untreated.
 
 Here's the notation I'll use:
 
--   Two time periods: $t$ and $t-1$
+-   Two time periods: $$t$$ and $$t-1$$
 
--   Observed outcomes: $Y_{it}$ and $Y_{it-1}$
+-   Observed outcomes: $$Y_{it}$$ and $$Y_{it-1}$$
 
 -   Dose (the amount of treatment that a unit experiences in the second
-    period): $D_i$
+    period): $$D_i$$
 
--   In this setup, $Y_{it} = Y_{it}(D_i)$ and $Y_{it-1} = Y_{it-1}(0)$
+-   In this setup, $$Y_{it} = Y_{it}(D_i)$$ and
+    $$Y_{it-1} = Y_{it-1}(0)$$
 
 **Parameters of Interest**
 
@@ -90,17 +88,17 @@ $$
     ATT(d|d) := \E[Y_t(d) - Y_t(0) | D=d] \quad \textrm{and} \quad ACRT(d|d) := \frac{\partial ATT(l|d)}{\partial l}\Big|_{l=d}
 $$
 
-$ATT(d|d)$ is the *causal effect* of experiencing dose $d$ among units
-that actually experienced dose $d$. $ACRT(d|d)$ is the *causal response*
-of a marginal change in the dose among units that actually experienced
-dose $d$.
+$$ATT(d|d)$$ is the *causal effect* of experiencing dose $$d$$ among
+units that actually experienced dose $$d$$. $$ACRT(d|d)$$ is the *causal
+response* of a marginal change in the dose among units that actually
+experienced dose $$d$$.
 
 **Parallel Trends Assumptions**
 
 With a continuous treatment, the analogue of the "standard" parallel
 trends assumption with a binary treatment is the following
 
-*Standard Parallel Trends:* For all possible values of the dose $d$
+*Standard Parallel Trends:* For all possible values of the dose $$d$$
 
 $$
     \E[Y_t(0) - Y_{t-1}(0) | D=d ] = \E[Y_t(0) - Y_{t-1}(0) | D=0]
@@ -115,24 +113,25 @@ $$
 
 This seems straightforward, <s>but there is a big caveat</s>
 
-While $ATT(d|d)$ is the effect of dose $d$ among units that experienced
-dose $d$, most applications in economics want to answer questions like:
-Does more dose increase outcomes relative to less dose?
+While $$ATT(d|d)$$ is the effect of dose $$d$$ among units that
+experienced dose $$d$$, most applications in economics want to answer
+questions like: Does more dose increase outcomes relative to less dose?
 
-This suggests making comparisons of $ATT(d|d)$ across different values
-of $d$. If we do this for two values of the dose, say, $d_1$ and $d_2$,
-notice that
+This suggests making comparisons of $$ATT(d|d)$$ across different values
+of $$d$$. If we do this for two values of the dose, say, $$d_1$$ and
+$$d_2$$, notice that
 
 $$
     ATT(d_2 | d_2) - ATT(d_1|d_1) = \underbrace{\Big( ATT(d_2|d_2) - ATT(d_1|d_2) \Big)}_{\textrm{causal effect}}  + \underbrace{\Big( ATT(d_1|d_2) - ATT(d_1|d_1) \Big)}_{\textrm{selection bias}}
 $$
 
-In other words, comparisons of $ATT(d|d)$ across different values of the
-dose involve a causal effect (the average effect of moving from dose
-$d_1$ to $d_2$ among units that experienced dose $d_2$) but additionally
-involve a selection bias term (that the average effect of the treatment
-among units that experienced dose $d_2$ and $d_1$ might have been
-different even if they had both experienced the same dose).
+In other words, comparisons of $$ATT(d|d)$$ across different values of
+the dose involve a causal effect (the average effect of moving from dose
+$$d_1$$ to $$d_2$$ among units that experienced dose $$d_2$$) but
+additionally involve a selection bias term (that the average effect of
+the treatment among units that experienced dose $$d_2$$ and $$d_1$$
+might have been different even if they had both experienced the same
+dose).
 
 The standard parallel trends assumption mentioned above is not strong
 enough to rule out this selection bias term because it is only an
@@ -159,11 +158,11 @@ $$
     ATE(d) := \E[Y_t(d) - Y_t(0)] \quad \textrm{and} \quad ACR := \frac{\partial ATE(d)}{\partial d}
 $$
 
-These are similar to $ATT(d|d)$ and $ACRT(d|d)$ above except they are
-causal parameters averaged across all units rather than just those that
-experienced dose $d$.
+These are similar to $$ATT(d|d)$$ and $$ACRT(d|d)$$ above except they
+are causal parameters averaged across all units rather than just those
+that experienced dose $$d$$.
 
-*Strong Parallel Trends Assumption:* For all possible values of $d$,
+*Strong Parallel Trends Assumption:* For all possible values of $$d$$,
 
 $$
     \E[Y_t(d) - Y_{t-1}(0)] = \E[Y_t(d) - Y_{t-1}(0) | D=d]
@@ -173,23 +172,24 @@ Under this assumption, it is straightforward to show that
 
 $$
   ATE(d) = \E[\Delta Y_t | D=d] - \E[\Delta Y_t | D=0]
-$$ which, interestingly, is the same estimand as for $ATT(d|d)$ above,
+$$ which, interestingly, is the same estimand as for $$ATT(d|d)$$ above,
 but just gets a different interpretation here because of the different
 assumptions. Before moving forward, it worth explicitly mentioning that
 strong parallel trends is likely to be a much stronger assumption than
 the standard parallel trends assumption. This is primarily because it
-involves potential outcomes for all values of $d$ rather than just
+involves potential outcomes for all values of $$d$$ rather than just
 untreated potential outcomes. The payoff of making the stronger
 assumption is large though --- it gets rid of the selection bias terms
 that were our main problems above. In particular, if you compare
-$ATE(d)$ for different values of $d$, you just get a causal effect term
+$$ATE(d)$$ for different values of $$d$$, you just get a causal effect
+term
 
 $$
   \underbrace{ATE(d_2) - ATE(d_1)}_{\textrm{causal response}}
 $$
 
 which means that it makes sense to interpret the differences causally.
-Similarly, $ACR(d)$ doesn't include selection bias terms either under
+Similarly, $$ACR(d)$$ doesn't include selection bias terms either under
 strong parallel trends.
 
 What does all this mean? In a DID setup, if researchers want to
@@ -206,24 +206,24 @@ $$
     Y_{it} = \theta_t + \eta_i + \beta D_{it} + v_{it}
 $$
 
-and interpret $\beta$ as an average causal response. In the paper, we
+and interpret $$\beta$$ as an average causal response. In the paper, we
 show that
 
 $$
     \beta = \int_{D_+} w_1(l) \frac{ \partial \E[\Delta Y_t | D=l] - \E[\Delta Y_t|D=0]}{\partial l} \, dl + w_0 \left( \E[\Delta Y_t | D=d_L]  - \E[\Delta Y_t | D=0]\right)
 $$
 
-where $w_1$ and $w_0$ are some weights that are always positive.
+where $$w_1$$ and $$w_0$$ are some weights that are always positive.
 Depending on whether one invokes standard parallel trends or strong
 parallel trends, the difference between expectations terms above can
-either be replaced by $ACRT(l|l) + \textrm{selection bias}(l|l)$ or
-$ACR(l)$.
+either be replaced by $$ACRT(l|l) + \textrm{selection bias}(l|l)$$ or
+$$ACR(l)$$.
 
 That the weights are always positive is a good thing (especially
 compared to recent papers on binary DID with multiple periods). But the
 weights are still driven by the estimation method and have some strange
 properties. The most interesting one is that the weights are maximized
-at $\E[D]$. In other words, causal responses in the middle can get
+at $$\E[D]$$. In other words, causal responses in the middle can get
 substantially more weight than causal responses in the tails regardless
 of the distribution of the dose. This has the potential to lead to very
 poor estimates of the average causal response. Our suggestion is to
@@ -231,7 +231,7 @@ avoid the TWFE regression here and instead just directly estimate the
 parameters of interest.
 
 The Rest of the Paper...
-------------------------
+========================
 
 -   The previous discussion seemed quite negative, but one positive
     thing is that, unlike the binary treatment case, you can still do
