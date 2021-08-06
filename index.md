@@ -24,6 +24,8 @@ At UGA, I teach courses on econometrics, both to graduate and undergraduate stud
 
 **Recent Updates:**
 
+* Andrew Goodman-Bacon, Pedro Sant'Anna, and I just posted a new working paper [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/abs/2107.02637).  We have also posted a [five minute summary of the paper](/posts/five-minute-did-continuous-treatment)
+
 * [Is our code slow...?](/posts/cs-code-slow) A short post on the computation speed of the [`did` R package](https://bcallaway11.github.io/did/).
 
 * Tong Li and I just posted a new working paper [Policy Evaluation during a Pandemic](https://arxiv.org/abs/2105.06927).  We have also posted a [five minute summary of the paper](/posts/five-minute-pandemic-policy).

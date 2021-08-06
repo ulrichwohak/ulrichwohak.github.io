@@ -29,9 +29,10 @@ s {text-decoration:none; color: red;}
 [Andrew Goodman-Bacon](https://goodman-bacon.com), [Pedro
 Sant'Anna](https://pedrohcgs.github.io), and I have just posted a new
 working paper [Differences in Differences with a Continuous
-Treatment](http://brantlycallaway.com). In the paper, we are interested
-in DID strategies when a treatment variable is multi-valued/continuous,
-and, in particular, trying to answer questions like:
+Treatment](https://arxiv.org/abs/2107.02637). In the paper, we are
+interested in DID strategies when a treatment variable is
+multi-valued/continuous, and, in particular, trying to answer questions
+like:
 
 -   What are parameters of interest in this case?
 
