@@ -39,7 +39,7 @@ permalink: /research/
 
 * [Nonlinear Approaches to Intergenerational Income Mobility allowing for Measurement Error](http://arxiv.org/abs/2107.09235) (with Tong Li and Irina Murtazashvili, submitted)
 
-* [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/abs/2107.02637) (with Andrew Goodman-Bacon and Pedro H.C. Sant'Anna)
+* [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/abs/2107.02637) [[5 Minute Summary](/posts/five-minute-did-continuous-treatment)] [[Slides](/files/DID-Continuous-Treatment/slides/did_reading_group.html)] (with Andrew Goodman-Bacon and Pedro H.C. Sant'Anna) 
 
 * [Policy Evaluation during a Pandemic](https://arxiv.org/abs/2105.06927) [[5 Minute Summary](/posts/five-minute-pandemic-policy)] [[Supplementary Appendix](/files/pandemic-policy/supplementary-appendix.pdf)] (with Tong Li, submitted)     
 
