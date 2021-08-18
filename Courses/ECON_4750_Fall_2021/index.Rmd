@@ -13,6 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Course Notes](https://bcallaway11.github.io/econ_4750_notes/)
 
+- [Course Schedule](https://bcallaway11.github.io/Courses/ECON_4750_Fall_2021/tentative_schedule.html)
+
 # Slides
 
 - First Week: [What is Econometrics?](l1.html)
