@@ -1,0 +1,18 @@
+---
+title: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# ECON 4750 Course Material
+
+- [Syllabus](syllabus.pdf)
+
+- [Course Notes](https://bcallaway11.github.io/econ_4750_notes/)
+
+# Slides
+
+- First Week: [What is Econometrics?](l1.html)
