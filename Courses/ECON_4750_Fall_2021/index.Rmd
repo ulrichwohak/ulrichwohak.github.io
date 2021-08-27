@@ -18,3 +18,20 @@ knitr::opts_chunk$set(echo = TRUE)
 # Slides
 
 - First Week: [What is Econometrics?](l1.html)
+
+# Code Challenges
+
+- [Aug 27](code_challenge1.html)
+
+## 1:50pm Standings
+
+| Out of State | Rural | Forsyth/Gwinnet | Cobb | Everyone Else | Professor |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+| 0 | 0 | 0 | 1 | 0 | 0 |
+
+## 3:00pm Standings
+
+| Golf | Tennis | Basketball | Other | Professor |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+| 1 | 0 | 0 | 0 | 0 |
+
