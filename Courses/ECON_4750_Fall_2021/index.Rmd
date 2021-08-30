@@ -19,6 +19,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - First Week: [What is Econometrics?](l1.html)
 
+# Data
+
+This list only includes data that needs to be downloaded from the course website.  Other data is listed in the Course Notes along with steps to access the data and a link to a description of the data.
+
+- [acs](data/acs.RData) [description](data/acs_description.txt)
+
+- [Birthweight_Smoking](data/Birthweight_Smoking.RData) [description](https://www.princeton.edu/~mwatson/Stock-Watson_3u/Students/EE_Datasets/Birthweight_Smoking_Description.pdf)
+
+- [diamond_train](data/diamond_train.RData) [description](https://www.kaggle.com/shivam2503/diamonds/)
+
+- [diamond_test](data/diamond_test.RData) [description](https://www.kaggle.com/shivam2503/diamonds/)
+
+- [fertility_2000](data/fertility_2000.RData) [description](data/fertility_description.txt]
+
+- [fertility_panel](data/fertility_panel.RData) [description](data/fertility_description.txt]
+
+- [titanic_training](data/titanic_training.RData) [description](data/titanic_description.txt)
+
+- [titanic_testing](data/titanic_testing.RData) [description](data/titanic_description.txt)
+
 # Code Challenges
 
 - [Aug 27](code_challenge1.html)
