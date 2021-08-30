@@ -29,13 +29,15 @@ This list only includes data that needs to be downloaded from the course website
 
 - [diamond_test](data/diamond_test.RData) [[description](https://www.kaggle.com/shivam2503/diamonds/)]
 
-- [fertility_2000](data/fertility_2000.RData) [[description](data/fertility_description.txt)]
+- [fertilizer_2000](data/fertilizer_2000.RData) [[description](data/fertilizer_description.txt)]
 
-- [fertility_panel](data/fertility_panel.RData) [[description](data/fertility_description.txt)]
+- [fertilizer_panel](data/fertilizer_panel.RData) [[description](data/fertilizer_description.txt)]
 
-- [titanic_training](data/titanic_training.csv) [[description](data/titanic_description.txt)]
+- [mutual_funds](data/mutual_funds.RData)[[description](data/mutual_funds_description.txt)]
 
-- [titanic_testing](data/titanic_testing.csv) [[description](data/titanic_description.txt)]
+- [titanic_training](data/titanic_training.csv) [[description](https://www.kaggle.com/c/titanic/data)]
+
+- [titanic_testing](data/titanic_testing.csv) [[description](https://www.kaggle.com/c/titanic/data)]
 
 # Code Challenges
 

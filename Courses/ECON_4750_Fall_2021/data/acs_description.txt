@@ -1,4 +1,4 @@
-Description of `intergenerational_mobility`
+Description of `acs`
 
 Source: This data is originally from the 2019 American Community Survey.
 
