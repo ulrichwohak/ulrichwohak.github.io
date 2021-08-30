@@ -1,13 +1,11 @@
 ---
-title: ""
+title: "ECON 4750 Course Material"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-# ECON 4750 Course Material
 
 - [Syllabus](syllabus.pdf)
 
