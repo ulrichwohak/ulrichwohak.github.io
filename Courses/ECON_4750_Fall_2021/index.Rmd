@@ -23,6 +23,8 @@ This list only includes data that needs to be downloaded from the course website
 
 - [acs](data/acs.RData) [[description](data/acs_description.txt)]
 
+- [banks](data/banks.RData) [[description](data/banks_description.txt)]
+
 - [Birthweight_Smoking](data/birthweight_smoking.dta) [[description](https://www.princeton.edu/~mwatson/Stock-Watson_3u/Students/EE_Datasets/Birthweight_Smoking_Description.pdf)]
 
 - [diamond_train](data/diamond_train.RData) [[description](https://www.kaggle.com/shivam2503/diamonds/)]
@@ -33,7 +35,15 @@ This list only includes data that needs to be downloaded from the course website
 
 - [fertilizer_panel](data/fertilizer_panel.RData) [[description](data/fertilizer_description.txt)]
 
-- [mutual_funds](data/mutual_funds.RData)[[description](data/mutual_funds_description.txt)]
+- [house](data/house.RData) [[description](data/house_description.txt)]
+
+- [intergenerational_mobility](data/intergenerational_mobility.RData) [[description](data/intergenerational_mobility_description.txt)]
+
+- [mlda](data/mlda.RData) [[description](data/mlda_description.txt)]
+
+- [mutual_funds](data/mutual_funds.RData) [[description](data/mutual_funds_description.txt)]
+
+- [rand_hie](data/rand_hie.RData) [[description](data/rand_hie_description.txt)]
 
 - [titanic_training](data/titanic_training.csv) [[description](https://www.kaggle.com/c/titanic/data)]
 
