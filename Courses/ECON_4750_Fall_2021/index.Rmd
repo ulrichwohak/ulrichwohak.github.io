@@ -39,6 +39,8 @@ This list only includes data that needs to be downloaded from the course website
 
 - [intergenerational_mobility](data/intergenerational_mobility.RData) [[description](data/intergenerational_mobility_description.txt)]
 
+- [Lead_Mortality](data/Lead_Mortality.RData) [[description](http://www.princeton.edu/~mwatson/Stock-Watson_3u/Students/EE_Datasets/Lead_Mortality_Description.pdf)]
+
 - [mlda](data/mlda.RData) [[description](data/mlda_description.txt)]
 
 - [mutual_funds](data/mutual_funds.RData) [[description](data/mutual_funds_description.txt)]
