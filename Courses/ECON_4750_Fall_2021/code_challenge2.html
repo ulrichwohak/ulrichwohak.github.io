@@ -379,26 +379,43 @@ pre code {
 <p><br><br></p>
 <p><span style="color:red; font-weight:bold">Solution below…</span></p>
 <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<pre class="r"><code>prime &lt;- function(n) {
+<pre class="r"><code># a function to check whether a number is prime or not
+is_prime &lt;- function(x) {
+  possibly_prime &lt;- TRUE
+  
+  # make i go from 2 to x-1
+  for (i in 2:(x-1)) {
+    # check if x mod i == 0 
+    # if this condition holds, then x is not prime
+    if (x %% i == 0) {
+      possibly_prime &lt;- FALSE
+    }
+  }
+  
+  # handle x=2 separately
+  if (x==2) possibly_prime &lt;- TRUE
+  
+  # if we make it all the way to the end, 
+  # and possibly_prime hasn&#39;t been set to FALSE,
+  # then x is a prime number; otherwise, 
+  # is not a prime number
+  possibly_prime
+}
+
+# function to compute all prime numbers up to n
+prime &lt;- function(n) {
   # list of possible prime numbers
   candidates &lt;- seq(2,n)
   
-  # for all numbers between 2 and n
-  for (i in 2:n) {
-    # compute the remainder and make sure we are not dividing by the number itself
-    remove_idx &lt;- ( ( candidates %% i ) == 0 &amp; (candidates != i) )
+  # apply the is_prime function to all of them
+  candidate_prime &lt;- sapply(candidates, is_prime)
   
-    # if the remainder is 0 (and not dividing by self), then this is 
-    # not a prime number, so remove it
-    candidates &lt;- candidates[!remove_idx]
-  }
-  
-  # return whatever is left
-  candidates
+  # return whichever ones were prime
+  candidates[candidate_prime]
 }
 
 
-
+# check that it works
 prime(511)</code></pre>
 <pre><code>##  [1]   2   3   5   7  11  13  17  19  23  29  31  37  41  43  47  53  59  61  67
 ## [20]  71  73  79  83  89  97 101 103 107 109 113 127 131 137 139 149 151 157 163

@@ -87,13 +87,13 @@ build_sim_dataset <- function() {
   Ynames <- paste0("Y",1:time.periods)
   Ynames <- paste0(1:time.periods)
   Y0tmat <- sapply(1:time.periods, function(t) {
-    thet[t] + Ct + dynamics[t] #+ rnorm(nt)
+    thet[t] + Ct + dynamics[t] + rnorm(nt,sd=.1)
   })
   Y0tdf <- as.data.frame(Y0tmat)
   
   # generate treated potential outcomes
   Y1tdf <- sapply(1:time.periods, function(t) {
-    thet[t] + Ct + te + dynamics[t] #+ rnorm(nt)# + (G <= t)*te.e[sapply(1:nt, function(i) max(t-G[i]+1,1))] + te + rnorm(nt) # hack for the dynamic effects but ok
+    thet[t] + Ct + te + dynamics[t] + rnorm(nt,sd=.1)# + (G <= t)*te.e[sapply(1:nt, function(i) max(t-G[i]+1,1))] + te + rnorm(nt) # hack for the dynamic effects but ok
   })
 
   # generate observed data
@@ -114,7 +114,7 @@ build_sim_dataset <- function() {
 
   # generate untreated potential outcomes
   Y0umat <- sapply(1:time.periods, function(t) {
-    thet[t] + Cu #+ rnorm(nu)
+    thet[t] + Cu + rnorm(nu,sd=.1)
   })
   Y0udf <- as.data.frame(Y0umat)
   colnames(Y0udf) <- Ynames
@@ -169,7 +169,7 @@ did_and_reg_es <- function() {
     geom_point() +
     xlab("e") +
     ylab("att") +
-    ylim(c(-1,1)) +
+    #ylim(c(-1,1)) +
     scale_x_continuous(breaks=seq(-9,0)) + 
     theme_bw() +
     theme(legend.position="bottom")
@@ -179,7 +179,7 @@ did_and_reg_es <- function() {
     geom_point() +
     xlab("e") +
     ylab("att") +
-    ylim(c(-1,1)) +
+    #ylim(c(-1,1)) +
     scale_x_continuous(breaks=seq(-9,0)) + 
     theme_bw() +
     theme(legend.position="bottom")
