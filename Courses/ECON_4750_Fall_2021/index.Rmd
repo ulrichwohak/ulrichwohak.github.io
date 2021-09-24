@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [HW 1](hw1.html), due Friday Sept. 10, [solutions](hw1_sol.html)
 
-- [HW 2](hw2.html), due Friday Sept. 24
+- [HW 2](hw2.html), due Friday Sept. 24, [solutions](hw2_sol.html)
 
 # Slides
 
