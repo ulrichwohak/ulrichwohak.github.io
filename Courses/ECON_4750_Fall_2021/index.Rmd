@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - First Week: [What is Econometrics?](l1.html)
 
-# Additional materials for the midterm
+# Additional materials for Midterm 1
 
 - [Study Guide](midterm1_study_guide.html)
 
@@ -82,5 +82,5 @@ This list only includes data that needs to be downloaded from the course website
 
 | Golf | Tennis | Basketball | Other | Professor |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
 
