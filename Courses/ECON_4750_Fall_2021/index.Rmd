@@ -25,6 +25,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Additional materials for the midterm
 
+- [Study Guide](midterm1_study_guide.html)
+
+- [Extra Questions/Practice Exam](midterm1_extra_questions.pdf)
+
 # Data
 
 This list only includes data that needs to be downloaded from the course website.  Other data is listed in the Course Notes along with steps to access the data and a link to a description of the data.
