@@ -71,16 +71,17 @@ This list only includes data that needs to be downloaded from the course website
 - [Sep 3](code_challenge2.html)
 - [Sep 10](code_challenge3.html)
 - [Sep 17](code_challenge4.html)
+- [Sep 24](code_challenge5.html)
 
 ## 1:50pm Standings
 
 | Out of State | Rural | Forsyth/Gwinnet | Cobb | Everyone Else | Professor |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 0 | 1 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 1 | 1 |
 
 ## 3:00pm Standings
 
 | Golf | Tennis | Basketball | Other | Professor |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 0 | 1 | 2 |
 
