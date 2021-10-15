@@ -380,11 +380,12 @@ pre code {
 <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <pre class="r"><code>n &lt;- nrow(mtcars)
 h0 &lt;- c(20, 5, 150, 150, 4, 3, 10, 0.5, 0.5, 4, 4)
-sapply(1:ncol(mtcars), function(i) {
+p &lt;- c()
+for (i in 1:ncol(mtcars)) {
   t &lt;- sqrt(n)*(mean(mtcars[,i])-h0[i])/sqrt(var(mtcars[,i]))
-  p &lt;- 2*pnorm(-abs(t))
-  round(p,6)
-})</code></pre>
+  p[i] &lt;- 2*pnorm(-abs(t))
+}
+round(p,6)</code></pre>
 <pre><code>##  [1] 0.932214 0.000169 0.000229 0.784622 0.000020 0.209113 0.000000 0.483008
 ##  [9] 0.287870 0.016576 0.000032</code></pre>
 
