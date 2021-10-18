@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [HW 2](hw2.html), due Friday Sept. 24, [solutions](hw2_sol.html)
 
-- [HW 3](hw3.html), due Friday Oct. 15
+- [HW 3](hw3.html), due Friday Oct. 15, [solutions](hw3_sol.html)
 
 # Slides
 
@@ -75,16 +75,17 @@ This list only includes data that needs to be downloaded from the course website
 - [Sep 17](code_challenge4.html)
 - [Sep 24](code_challenge5.html)
 - [Oct 1](code_challenge6.html)
+- [Oct 15](code_challenge7.html)
 
 ## 1:50pm Standings
 
 | Out of State | Rural | Forsyth/Gwinnet | Cobb | Everyone Else | Professor |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 0 | 1 | 1 | 2 | 1 | 1 |
+| 0 | 1 | 1 | 2 | 1 | 2 |
 
 ## 3:00pm Standings
 
 | Golf | Tennis | Basketball | Other | Professor |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 1 | 1 | 0 | 2 | 2 |
+| 2 | 1 | 0 | 2 | 2 |
 
