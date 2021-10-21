@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Publications
 
-1. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) (with Pedro H.C. Sant'Anna, Forthcoming at *Journal of Econometrics*) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/did-many-periods-supplementary-appendix.pdf)]
+1. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) (with Pedro H.C. Sant'Anna, *Journal of Econometrics*, Vol. 225, No. 2, pp. 200-230, 2021.) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/Callaway_SantAnna_2020_supp.pdf)]
 
     * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
