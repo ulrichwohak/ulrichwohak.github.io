@@ -21,6 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [HW 3](hw3.html), due Friday Oct. 15, [solutions](hw3_sol.html)
 
+- [HW 4](hw4.html), due Monday Nov. 1
+
 # Slides
 
 - First Week: [What is Econometrics?](l1.html)
