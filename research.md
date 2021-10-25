@@ -6,12 +6,12 @@ permalink: /research/
 
 ## Publications
 
-1. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) (with Pedro H.C. Sant'Anna, *Journal of Econometrics*, Vol. 225, No. 2, pp. 200-230, 2021.) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/Callaway_SantAnna_2020_supp.pdf)]
+1. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/Callaway_SantAnna_2020_supp.pdf)] (with Pedro H.C. Sant'Anna, *Journal of Econometrics*, Vol. 225, No. 2, pp. 200-230, 2021.) 
 
     * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
 
-2. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) (with Afrouz Azadikhah Jahromi, forthcoming at *Empirical Economics*) [[Arxiv](https://arxiv.org/abs/2006.04968)]
+2. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) [[Arxiv](https://arxiv.org/abs/2006.04968)] (with Afrouz Azadikhah Jahromi, forthcoming at *Empirical Economics*) 
 
 
 3. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://doi.org/10.1016/j.jeconom.2020.02.005) [[Arxiv](https://arxiv.org/abs/2008.08117)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (*Journal of Econometrics*, Vol. 222, No. 2, pp. 861-881, 2021.)
@@ -41,13 +41,13 @@ permalink: /research/
 
 * [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/abs/2107.02637) [[5 Minute Summary](/posts/five-minute-did-continuous-treatment)] [[Slides](/files/DID-Continuous-Treatment/slides/did_reading_group.html)] (with Andrew Goodman-Bacon and Pedro H.C. Sant'Anna) 
 
-* [Policy Evaluation during a Pandemic](https://arxiv.org/abs/2105.06927) [[5 Minute Summary](/posts/five-minute-pandemic-policy)] [[Supplementary Appendix](/files/pandemic-policy/supplementary-appendix.pdf)] (with Tong Li, submitted)     
+* [Policy Evaluation during a Pandemic](https://arxiv.org/abs/2105.06927) [[5 Minute Summary](/posts/five-minute-pandemic-policy)] [[Supplementary Appendix](/files/pandemic-policy/supplementary-appendix.pdf)] (with Tong Li, Revise and Resubmit)     
 
     * Code: [`ppe` R package, on GitHub](https://github.com/bcallaway11/ppe)
 	
-* [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, Revise and Resubmit at *Review of Economics and Statistics*)
+* [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, Revise and Resubmit)
 
-* [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) (with Sonia Karami, Revise and Resubmit at *Journal of Econometrics*)
+* [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) (with Sonia Karami, Revise and Resubmit)
 
 ## Resting Papers
 
