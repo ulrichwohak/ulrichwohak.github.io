@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [HW 3](hw3.html), due Friday Oct. 15, [solutions](hw3_sol.html)
 
-- [HW 4](hw4.html), due Monday Nov. 1
+- [HW 4](hw4.html), due Monday Nov. 1, [solutions](hw4_sol.html)
 
 # Slides
 
@@ -37,7 +37,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Study Guide](midterm2_study_guide.html)
 
-- [Extra Questions](midterm2_extra_questions.html)
+- [Extra Questions](midterm2_extra_questions.html), **will post solutions tonight**
 
 # Data
 
