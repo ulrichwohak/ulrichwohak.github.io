@@ -37,7 +37,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Study Guide](midterm2_study_guide.html)
 
-- [Extra Questions](midterm2_extra_questions.html), **will post solutions tonight**
+- [Extra Questions](midterm2_extra_questions.html), [Solutions](midterm2_extra_questions_sol.html)
 
 # Data
 
