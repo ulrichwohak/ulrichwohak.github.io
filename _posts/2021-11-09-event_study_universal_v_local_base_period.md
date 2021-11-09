@@ -195,5 +195,5 @@ notice the linear difference in trends in the right panel. If you are
 careful, you can still interpret the results using a varying base
 period. Particularly, in every pre-treatment period, we would have
 over-estimated the effect of participating in the treatment (if the
-treatment had started in that period) -- this happpens because of the
+treatment had started in that period) -- this happens because of the
 linear violations of parallel trends in all periods.
