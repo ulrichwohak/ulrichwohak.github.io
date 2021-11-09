@@ -12,8 +12,8 @@ output:
   md_document:
     preserve_yaml: True
     variant: markdown
-permalink: '/posts/event\_study\_universal\_v\_local\_base\_period'
-title: 'Universal vs. Local Base Period in Event Studies'
+permalink: '/posts/event-study-universal-v-varying-base-period'
+title: 'Universal vs. Varying Base Period in Event Studies'
 ---
 
 Introduction

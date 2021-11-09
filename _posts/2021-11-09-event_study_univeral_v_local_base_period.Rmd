@@ -1,5 +1,5 @@
 ---
-title: "Universal vs. Local Base Period in Event Studies"
+title: "Universal vs. Varying Base Period in Event Studies"
 output:
   md_document:
     variant: "markdown"
@@ -7,7 +7,7 @@ output:
 author: "brant"
 date: '2021-11-09'
 layout: single
-permalink: /posts/event_study_universal_v_local_base_period
+permalink: /posts/event-study-universal-v-varying-base-period
 categories:
   - Econometrics
   - Policy Evaluation
