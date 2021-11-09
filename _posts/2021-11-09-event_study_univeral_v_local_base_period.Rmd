@@ -16,6 +16,16 @@ categories:
 comments: true
 ---
 
+
+```{r echo=FALSE}
+base.dir <- "~/Dropbox/website/"
+base.url <- "/"
+fig.path <- "files/figures/event-study-universal-v-varying-base-period/"
+# set knitr parameters
+knitr::opts_knit$set(base.dir = base.dir, base.url = base.url)
+knitr::opts_chunk$set(fig.path = fig.path) 
+```
+
 ## Introduction
 
 One of the main ways that researchers use our `did` package is to plot event studies.  These are quite useful in order to think about (i) dynamic effects of participating in the treatment and (ii) to "pre-test" the parallel trends assumption.  

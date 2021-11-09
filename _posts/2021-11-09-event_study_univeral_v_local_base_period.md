@@ -140,7 +140,7 @@ p1_universal <- ggdid(dynamic1_universal, ylim=c(-2,2))
 ggpubr::ggarrange(p1_varying, p1_universal, nrow=1)
 ```
 
-<img src="2021-11-09-event_study_univeral_v_local_base_period_files/figure-markdown/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="/files/figures/event-study-universal-v-varying-base-period/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 The plot on the left uses a varying base period while the plot on the
 right uses a universal base period. The estimated treatment effects when
@@ -194,7 +194,7 @@ p2_universal <- ggdid(dynamic2_universal, ylim=c(-2,3))
 ggpubr::ggarrange(p2_varying, p2_universal, nrow=1)
 ```
 
-<img src="2021-11-09-event_study_univeral_v_local_base_period_files/figure-markdown/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="/files/figures/event-study-universal-v-varying-base-period/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 As before, the results using a varying base period are in the panel on
 the left, and the results using a universal base period are on the
@@ -245,7 +245,7 @@ p3_universal <- ggdid(dynamic3_universal, ylim=c(-5,2))
 ggpubr::ggarrange(p3_varying, p3_universal, nrow=1)
 ```
 
-<img src="2021-11-09-event_study_univeral_v_local_base_period_files/figure-markdown/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="/files/figures/event-study-universal-v-varying-base-period/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 As in the earlier two cases, the panel on the left contains results
 using a varying base period, and the panel on the right contains results
