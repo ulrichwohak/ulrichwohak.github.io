@@ -144,14 +144,14 @@ ggpubr::ggarrange(p1_varying, p1_universal, nrow=1)
 
 The plot on the left uses a varying base period while the plot on the
 right uses a universal base period. The estimated treatment effects when
-$e=0$ are numerically identical. The pre-treatment estimates are not
+$$e=0$$ are numerically identical. The pre-treatment estimates are not
 numerically identical (they are based on different paths of outcomes in
 pre-treatment periods for the treated group relative to the untreated
 group), but (as expected) neither provides any evidence against parallel
 trends. Finally, notice that using a varying base period provides an
-estimate when $e=0$, but does not provide an estimate when $e=-4$; using
-a universal base period provides an estimate when $e=-4$ but not when
-$e=-1$.
+estimate when $$e=0$$, but does not provide an estimate when $$e=-4$$;
+using a universal base period provides an estimate when $$e=-4$$ but not
+when $$e=-1$$.
 
 **Example 2: Anticipation Effects**
 
@@ -160,7 +160,7 @@ happening here is that there is a group that becomes treated in the last
 period and a group that never participates in the treatment (in order to
 not clutter the post with code, let me just point you to the [complete
 code for this
-post](files/2021-11-09-event_study_universal_v_local_base_period.R)...it
+post](/files/2021-11-09-event_study_universal_v_local_base_period.R)...it
 is very similar to the code above). Parallel trends holds in all periods
 except the period right before treatment when the treated group
 experiences a negative "anticipation" effect of participating in the
