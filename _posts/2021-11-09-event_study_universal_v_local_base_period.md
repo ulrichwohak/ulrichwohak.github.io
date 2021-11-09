@@ -159,10 +159,12 @@ Next, we generate data where there anticipation effects. What is
 happening here is that there is a group that becomes treated in the last
 period and a group that never participates in the treatment (in order to
 not clutter the post with code, let me just point you to the [complete
-code for this post](files/event-study-post-code.R)...it is very similar
-to the code above). Parallel trends holds in all periods except the
-period right before treatment when the treated group experiences a
-negative "anticipation" effect of participating in the treatment.
+code for this
+post](files/2021-11-09-event_study_universal_v_local_base_period.R)...it
+is very similar to the code above). Parallel trends holds in all periods
+except the period right before treatment when the treated group
+experiences a negative "anticipation" effect of participating in the
+treatment.
 
 <img src="/files/figures/event-study-universal-v-varying-base-period/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
