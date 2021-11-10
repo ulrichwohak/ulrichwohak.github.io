@@ -23,6 +23,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [HW 4](hw4.html), due Monday Nov. 1, [solutions](hw4_sol.html)
 
+# Projects
+
+- [Project 1](project1.html), due Friday, Nov. 19
+
+   - [house_price_train.csv](house_price_train.csv)
+   
+   - [house_price_test.csv](house_price_test.csv)
+   
+   - [data_description.txt](data_description.txt)
+   
 # Slides
 
 - First Week: [What is Econometrics?](l1.html)
