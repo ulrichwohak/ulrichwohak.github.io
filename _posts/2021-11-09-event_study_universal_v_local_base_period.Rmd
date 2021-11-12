@@ -2,7 +2,7 @@
 title: "Universal vs. Varying Base Period in Event Studies"
 output:
   md_document:
-    variant: "markdown"
+    variant: "markdown_github"
     preserve_yaml: TRUE
 author: "brant"
 date: '2021-11-09'
