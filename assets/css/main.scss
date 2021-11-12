@@ -46,5 +46,5 @@ html {
 
 
 code {
-  background-color: mix(#000, $background-color, 15%) !default;
+  $background-color: mix(#000, $background-color, 15%) !default;
 }		  
