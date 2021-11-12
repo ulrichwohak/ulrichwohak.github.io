@@ -3,3 +3,7 @@
    ========================================================================== */
 
 // Intentionally left blank
+// brant updated below
+
+$code-background-color: mix(#000, $background-color, 15%) !default;
+$code-background-color-dark: mix(#000, $background-color, 20%) !default;
