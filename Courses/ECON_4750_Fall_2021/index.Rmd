@@ -94,12 +94,14 @@ This list only includes data that needs to be downloaded from the course website
 - [Sep 24](code_challenge5.html)
 - [Oct 1](code_challenge6.html)
 - [Oct 15](code_challenge7.html)
+- [Oct 22](code_challenge8.html)
+- [Nov 5](code_challenge9.html)
 
 ## 1:50pm Standings
 
 | Out of State | Rural | Forsyth/Gwinnet | Cobb | Everyone Else | Professor |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 0 | 1 | 1 | 2 | 1 | 3 |
+| 0 | 2 | 1 | 2 | 1 | 3 |
 
 ## 3:00pm Standings
 

@@ -71,7 +71,7 @@ devtools::load_all("~/Dropbox/did")
 
 Let's start with the simplest case where there are no violations of parallel trends in pre-treatment periods.
 
-```{r eval=FALSE, class.source="highlighter-rouge"}
+```{r eval=FALSE}
 library(did) # need to load version 2.1 of package
 ```
 
