@@ -33,6 +33,9 @@ knitr::opts_chunk$set(echo = TRUE)
    
    - [data_description.txt](data_description.txt)
    
+   - Code for predicting diamond prices: [[1:50pm code](predicting_diamond_prices150.html)] [[3:00pm code](predicting_diamond_prices300.html)]
+
+   
 # Slides
 
 - First Week: [What is Econometrics?](l1.html)
@@ -100,13 +103,25 @@ This list only includes data that needs to be downloaded from the course website
 
 ## 1:50pm Standings
 
-| Out of State | Rural | Forsyth/Gwinnet | Cobb | Everyone Else | Professor |
+```{r echo=FALSE}
+library(fontawesome)
+regular_season_champ <- fa(name = "award", fill="red")
+```
+
+`r regular_season_champ` = regular season champ
+
+| Out of State | Rural | Forsyth/Gwinnet | Cobb | Everyone Else | Professor `r regular_season_champ`|
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 0 | 2 | 1 | 2 | 1 | 4 |
+| 1 | 2 | 1 | 2 | 1 | 4 |
+
+<center><img src="bracket150.png" width=600></center>
 
 ## 3:00pm Standings
 
-| Golf | Tennis | Basketball | Other | Professor |
-|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 3 | 1 | 0 | 3 | 3 |
+`r regular_season_champ` = regular season champ
 
+| Golf | Tennis | Basketball | Other | Professor `r regular_season_champ`|
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+| 3 | 2 | 0 | 3 | 3 |
+
+<center><img src="bracket300.png" width=600></center>
