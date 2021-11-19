@@ -23,6 +23,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [HW 4](hw4.html), due Monday Nov. 1, [solutions](hw4_sol.html)
 
+- [HW 5](hw5.html), due Tuesday Dec. 7
+
 # Projects
 
 - [Project 1](project1.html), due Friday, Nov. 19
@@ -35,6 +37,11 @@ knitr::opts_chunk$set(echo = TRUE)
    
    - Code for predicting diamond prices: [[1:50pm code](predicting_diamond_prices150.html)] [[3:00pm code](predicting_diamond_prices300.html)]
 
+- [Project 2](project2.html), due Tuesday, Dec. 7
+
+    - [jtrain_observational.dta](jtrain_observational.dta)   [[description](jtrain_observational_description.txt)]
+    
+    - [jtrain_experimental.dta](jtrain_experimental.dta)    [[description](jtrain_experimental_description.txt)]
    
 # Slides
 
