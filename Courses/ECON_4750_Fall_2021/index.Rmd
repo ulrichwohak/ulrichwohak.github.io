@@ -121,7 +121,7 @@ regular_season_champ <- fa(name = "award", fill="red")
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
 | 1 | 2 | 1 | 2 | 1 | 4 |
 
-<center><img src="bracket150.png" width=600></center>
+<center><img src="bracket150-2.png" width=400></center>
 
 ## 3:00pm Standings
 
@@ -131,4 +131,4 @@ regular_season_champ <- fa(name = "award", fill="red")
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
 | 3 | 2 | 0 | 3 | 3 |
 
-<center><img src="bracket300.png" width=600></center>
+<center><img src="bracket300-2.png" width=400></center>
