@@ -59,6 +59,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Extra Questions](midterm2_extra_questions.html), [Solutions](midterm2_extra_questions_sol.html)
 
+# Additional materials for Final Exam
+
+- [Study Guide](final_study_guide.html)
+
+- [Extra Questions](final_extra_questions.html)
+
 # Data
 
 This list only includes data that needs to be downloaded from the course website.  Other data is listed in the Course Notes along with steps to access the data and a link to a description of the data.
