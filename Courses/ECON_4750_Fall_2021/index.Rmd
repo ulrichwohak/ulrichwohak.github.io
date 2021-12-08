@@ -63,7 +63,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Study Guide](final_study_guide.html)
 
-- [Extra Questions](final_extra_questions.html)
+- [Extra Questions](final_extra_questions.html), [Solutions](final_extra_questions_sol.html)
 
 # Data
 
