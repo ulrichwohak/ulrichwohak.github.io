@@ -20,7 +20,7 @@ on GitHub and should be on CRAN in a day or two. This version contains a
 lot of behind-the-scenes improvement such as better error handling and
 substantially more thorough testing. It also allows users to [use a
 universal base period in event
-studies](posts/event-study-universal-v-varying-base-period).
+studies](/posts/event-study-universal-v-varying-base-period).
 
 This post though is about speed improvements in the new version of the
 `did` package. These are almost all coming from improved performance of
