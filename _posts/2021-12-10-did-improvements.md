@@ -15,9 +15,6 @@ permalink: '/posts/did-improvements'
 title: Faster did Code
 ---
 
-Introduction
-============
-
 We just put out a big update to the `did` package (version 2.1). It is
 on GitHub and should be on CRAN in a day or two. This version contains a
 lot of behind-the-scenes improvement such as better error handling and
