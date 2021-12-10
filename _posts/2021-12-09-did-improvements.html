@@ -11,7 +11,7 @@
 
 <meta name="author" content="brant" />
 
-<meta name="date" content="2021-11-09" />
+<meta name="date" content="2021-11-10" />
 
 <title>Faster did Code</title>
 
@@ -348,7 +348,7 @@ pre code {
 
 <h1 class="title toc-ignore">Faster did Code</h1>
 <h4 class="author">brant</h4>
-<h4 class="date">2021-11-09</h4>
+<h4 class="date">2021-11-10</h4>
 
 </div>
 
@@ -356,203 +356,68 @@ pre code {
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>We just put out a big update to the <code>did</code> package (version 2.1). It is on GitHub and should be on CRAN in a day or two. This version contains a lot of behind-the-scenes improvement such as better error handling and substantially more thorough testing. It also allows users to <a href="posts/event-study-universal-v-varying-base-period">use a universal base period in event studies</a>.</p>
-<p>This post though is about speed improvements in the new version of the <code>did</code> package. Here is some code</p>
-<div id="example-1-balanced-panel-data" class="section level2">
-<h2>Example 1: Balanced Panel Data</h2>
-<pre class="r"><code>library(did)
-packageVersion(&quot;did&quot;) # version 2.1.0</code></pre>
-<pre><code>## [1] &#39;2.1.0&#39;</code></pre>
-<pre class="r"><code>n &lt;- 5000
-time.periods &lt;- 8
-sp &lt;- reset.sim(n=n, time.periods=time.periods)
-
-data &lt;- build_sim_dataset(sp)
-N &lt;- nrow(data)
-# add some more spurious columns to data:
-data$X1 &lt;- sample(1:25, size=N, replace=TRUE)
-data$X1 &lt;- as.factor(data$X1)
-data$X2 &lt;- rnorm(N)
-data$X3 &lt;- rnorm(N)
-data$X4 &lt;- rnorm(N)
-data$X5 &lt;- rnorm(N)
-
-pt &lt;- proc.time()
-new_dr &lt;- att_gt(yname=&quot;Y&quot;, xformla=~X, data=data, tname=&quot;period&quot;, idname=&quot;id&quot;,
-                  gname=&quot;G&quot;, est_method=&quot;dr&quot;)
-new_time &lt;- proc.time() - pt
-
-# currently on CRAN
-detach(&quot;package:did&quot;)
-library(did, lib.loc=&quot;~/R/old_packages&quot;) 
-packageVersion(&quot;did&quot;) # should be 2.0.0</code></pre>
-<pre><code>## [1] &#39;2.0.0&#39;</code></pre>
-<pre class="r"><code>pt &lt;- proc.time()
-old_dr &lt;- att_gt(yname=&quot;Y&quot;, xformla=~X, data=data, tname=&quot;period&quot;, idname=&quot;id&quot;,
-                  gname=&quot;G&quot;, est_method=&quot;dr&quot;)
-old_time &lt;- proc.time() - pt
-
-# check that estimates are the same
-all(new_dr$att == old_dr$att)</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code># compare actual times
-new_time</code></pre>
-<pre><code>##    user  system elapsed 
-##   1.853   0.032   1.885</code></pre>
-<pre class="r"><code>old_time</code></pre>
-<pre><code>##    user  system elapsed 
-##   5.224   0.064   5.287</code></pre>
-<p>There is may be a little bit of variation due to compiling the source file for this post, but I get about a 70% reduction in computational time with the new code (from 4.6 to 1.3 seconds).</p>
-</div>
-<div id="example-2-unbalanced-panel-data" class="section level2">
-<h2>Example 2: Unbalanced Panel Data</h2>
-<pre class="r"><code>detach(&quot;package:did&quot;)
-library(did)
-packageVersion(&quot;did&quot;) # version 2.1.0</code></pre>
-<pre><code>## [1] &#39;2.1.0&#39;</code></pre>
-<pre class="r"><code>n &lt;- 5000
-time.periods &lt;- 8
-sp &lt;- reset.sim(n=n, time.periods=time.periods)
-
-data &lt;- build_sim_dataset(sp)
-N &lt;- nrow(data)
-# add some more spurious columns to data:
-data$X1 &lt;- sample(1:25, size=N, replace=TRUE)
-data$X1 &lt;- as.factor(data$X1)
-data$X2 &lt;- rnorm(N)
-data$X3 &lt;- rnorm(N)
-data$X4 &lt;- rnorm(N)
-data$X5 &lt;- rnorm(N)
-data &lt;- data[-1, ] # drop first row
-
-pt &lt;- proc.time()
-new_dr &lt;- att_gt(yname=&quot;Y&quot;, xformla=~X, data=data, tname=&quot;period&quot;, idname=&quot;id&quot;,
-                  gname=&quot;G&quot;, est_method=&quot;dr&quot;, allow_unbalanced_panel = TRUE)
-new_time &lt;- proc.time() - pt
-
-# currently on CRAN
-detach(&quot;package:did&quot;)
-library(did, lib.loc=&quot;~/R/old_packages&quot;) 
-packageVersion(&quot;did&quot;) # should be 2.0.0</code></pre>
-<pre><code>## [1] &#39;2.0.0&#39;</code></pre>
-<pre class="r"><code>pt &lt;- proc.time()
-old_dr &lt;- att_gt(yname=&quot;Y&quot;, xformla=~X, data=data, tname=&quot;period&quot;, idname=&quot;id&quot;,
-                  gname=&quot;G&quot;, est_method=&quot;dr&quot;, allow_unbalanced_panel = TRUE)
-old_time &lt;- proc.time() - pt
-
-# check that estimates are the same
-all(new_dr$att == old_dr$att)</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code># compare actual times
-new_time</code></pre>
-<pre><code>##    user  system elapsed 
-##   1.124   0.000   1.124</code></pre>
-<pre class="r"><code>old_time</code></pre>
-<pre><code>##    user  system elapsed 
-##  36.244   3.476  39.722</code></pre>
-<p>Again, there may be variation due to compiling the document, but here I get about a 97% reduction in computation time (from 52 seconds to about 1.5 seconds).</p>
-</div>
-<div id="example-3-repeated-cross-sections-data" class="section level2">
-<h2>Example 3: Repeated cross sections data</h2>
-<pre class="r"><code>detach(&quot;package:did&quot;)
-library(did)
-packageVersion(&quot;did&quot;) # version 2.1.0</code></pre>
-<pre><code>## [1] &#39;2.1.0&#39;</code></pre>
-<pre class="r"><code>n &lt;- 5000
-time.periods &lt;- 8
-sp &lt;- reset.sim(n=n, time.periods=time.periods)
-
-data &lt;- build_sim_dataset(sp, panel=FALSE)
-N &lt;- nrow(data)
-# add some more spurious columns to data:
-data$X1 &lt;- sample(1:25, size=N, replace=TRUE)
-data$X1 &lt;- as.factor(data$X1)
-data$X2 &lt;- rnorm(N)
-data$X3 &lt;- rnorm(N)
-data$X4 &lt;- rnorm(N)
-data$X5 &lt;- rnorm(N)
-data &lt;- data[-1, ] # drop first row
-
-pt &lt;- proc.time()
-new_dr &lt;- att_gt(yname=&quot;Y&quot;, xformla=~X, data=data, tname=&quot;period&quot;, idname=&quot;id&quot;,
-                  gname=&quot;G&quot;, est_method=&quot;dr&quot;, panel=FALSE)
-new_time &lt;- proc.time() - pt
-
-# currently on CRAN
-detach(&quot;package:did&quot;)
-library(did, lib.loc=&quot;~/R/old_packages&quot;) 
-packageVersion(&quot;did&quot;) # should be 2.0.0</code></pre>
-<pre><code>## [1] &#39;2.0.0&#39;</code></pre>
-<pre class="r"><code>pt &lt;- proc.time()
-old_dr &lt;- att_gt(yname=&quot;Y&quot;, xformla=~X, data=data, tname=&quot;period&quot;, idname=&quot;id&quot;,
-                  gname=&quot;G&quot;, est_method=&quot;dr&quot;, panel=FALSE)
-old_time &lt;- proc.time() - pt
-
-# check that estimates are the same
-all(new_dr$att == old_dr$att)</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code># compare actual times
-new_time</code></pre>
-<pre><code>##    user  system elapsed 
-##   0.612   0.000   0.614</code></pre>
-<pre class="r"><code>old_time</code></pre>
-<pre><code>##    user  system elapsed 
-##   2.867   0.020   2.894</code></pre>
-<p>In this case, I get about a 75% reduction in computation time (from 2.8 to 0.6 seconds).</p>
-</div>
-<div id="example-4-bigger-data" class="section level2">
-<h2>Example 4: Bigger data</h2>
-<pre class="r"><code>detach(&quot;package:did&quot;)
-library(did)
-packageVersion(&quot;did&quot;) # version 2.1.0</code></pre>
-<pre><code>## [1] &#39;2.1.0&#39;</code></pre>
-<pre class="r"><code>n &lt;- 25000
-time.periods &lt;- 20
-sp &lt;- reset.sim(n=n, time.periods=time.periods)
-
-data &lt;- build_sim_dataset(sp)
-N &lt;- nrow(data)
-# add some more spurious columns to data:
-data$X1 &lt;- sample(1:25, size=N, replace=TRUE)
-data$X1 &lt;- as.factor(data$X1)
-data$X2 &lt;- rnorm(N)
-data$X3 &lt;- rnorm(N)
-data$X4 &lt;- rnorm(N)
-data$X5 &lt;- rnorm(N)
-data &lt;- data[-1, ] # drop first row
-
-pt &lt;- proc.time()
-new_dr &lt;- att_gt(yname=&quot;Y&quot;, xformla=~X, data=data, tname=&quot;period&quot;, idname=&quot;id&quot;,
-                  gname=&quot;G&quot;, est_method=&quot;dr&quot;)</code></pre>
-<pre><code>## Warning in pre_process_did(yname = yname, tname = tname, idname = idname, :
-## Dropped 1 observations while converting to balanced panel.</code></pre>
-<pre class="r"><code>new_time &lt;- proc.time() - pt
-
-# currently on CRAN
-detach(&quot;package:did&quot;)
-library(did, lib.loc=&quot;~/R/old_packages&quot;) 
-packageVersion(&quot;did&quot;) # should be 2.0.0</code></pre>
-<pre><code>## [1] &#39;2.0.0&#39;</code></pre>
-<pre class="r"><code>pt &lt;- proc.time()
-old_dr &lt;- att_gt(yname=&quot;Y&quot;, xformla=~X, data=data, tname=&quot;period&quot;, idname=&quot;id&quot;,
-                  gname=&quot;G&quot;, est_method=&quot;dr&quot;)
-old_time &lt;- proc.time() - pt
-
-# check that estimates are the same
-all(new_dr$att == old_dr$att)</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code># compare actual times
-new_time</code></pre>
-<pre><code>##    user  system elapsed 
-##  40.791  12.337  53.208</code></pre>
-<pre class="r"><code>old_time</code></pre>
-<pre><code>##    user  system elapsed 
-## 161.698  25.957 187.836</code></pre>
-<p>This is about a 73% reduction in computation time (from 155 to 42 seconds for me).</p>
-</div>
-<div id="conclusion" class="section level2">
-<h2>Conclusion</h2>
-<p>I hope you’ll find the code useful. As always, feel free to contact me if you run into issues.</p>
-</div>
+<p>This post though is about speed improvements in the new version of the <code>did</code> package. These are almost all coming from improved performance of our bootstrap procedure. As a side-comment: we have always used the multiplier bootstrap, which is much, much faster than the empirical bootstrap to begin with, but we implemented the new version in C++ which results in notable improvements in computation time. Using the multiplier bootstrap is what allows the <code>did</code> package to report, for example, uniform confidence bands for group-time average treatment effects and event studies; that is, they tend to be somewhat wider than pointwise confidence intervals but are robust to the multiple testing arising in both of these cases.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="14%"></col>
+<col width="14%"></col>
+<col width="14%"></col>
+<col width="14%"></col>
+<col width="14%"></col>
+<col width="14%"></col>
+<col width="14%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Type</th>
+<th align="center"># units</th>
+<th align="center"># time periods</th>
+<th align="center">rows of data</th>
+<th align="center">old computation time</th>
+<th align="center">new computation time</th>
+<th align="center">percentage reduction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Balanced Panel</td>
+<td align="center">5000</td>
+<td align="center">8</td>
+<td align="center">40,000</td>
+<td align="center">12.5</td>
+<td align="center">3.5</td>
+<td align="center">72%</td>
+</tr>
+<tr class="even">
+<td align="center">Unbalanced Panel</td>
+<td align="center">5000</td>
+<td align="center">8</td>
+<td align="center">39,999</td>
+<td align="center">283.4</td>
+<td align="center">3.4</td>
+<td align="center">99%</td>
+</tr>
+<tr class="odd">
+<td align="center">Repeated Cross Sections</td>
+<td align="center">5000</td>
+<td align="center">8</td>
+<td align="center">5000</td>
+<td align="center">9.3</td>
+<td align="center">3.4</td>
+<td align="center">63%</td>
+</tr>
+<tr class="even">
+<td align="center">Larger Panel Data</td>
+<td align="center">20,000</td>
+<td align="center">20</td>
+<td align="center">400,000</td>
+<td align="center">328.5</td>
+<td align="center">97.2</td>
+<td align="center">70%</td>
+</tr>
+</tbody>
+</table>
+<p>For the full code for this post, see: <a href="https://github.com/bcallaway11/did/blob/master/tests/code_profiling.Rmd">https://github.com/bcallaway11/did/blob/master/tests/code_profiling.Rmd</a></p>
 </div>
 
 

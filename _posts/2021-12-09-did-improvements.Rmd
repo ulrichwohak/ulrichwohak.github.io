@@ -1,11 +1,11 @@
 ---
 title: "Faster did Code"
 output:
-  html_document:
+  md_document:
     variant: "markdown_github"
     preserve_yaml: TRUE
 author: "brant"
-date: '2021-11-09'
+date: '2021-11-10'
 layout: single
 permalink: /posts/did-improvements
 categories:
@@ -29,195 +29,14 @@ knitr::opts_chunk$set(fig.path = fig.path)
 
 We just put out a big update to the `did` package (version 2.1).  It is on GitHub and should be on CRAN in a day or two.  This version contains a lot of behind-the-scenes improvement such as better error handling and substantially more thorough testing.  It also allows users to [use a universal base period in event studies](posts/event-study-universal-v-varying-base-period).
 
-This post though is about speed improvements in the new version of the `did` package.  Here is some code
+This post though is about speed improvements in the new version of the `did` package.  These are almost all coming from improved performance of our bootstrap procedure.  As a side-comment: we have always used the multiplier bootstrap, which is much, much faster than the empirical bootstrap to begin with, but we implemented the new version in C++ which results in notable improvements in computation time.  Using the multiplier bootstrap is what allows the `did` package to report, for example, uniform confidence bands for group-time average treatment effects and event studies; that is, they tend to be somewhat wider than pointwise confidence intervals but are robust to the multiple testing arising in both of these cases.
 
 
-## Example 1: Balanced Panel Data
+| Type | \# units | \# time periods | rows of data | old computation time | new computation time | percentage reduction | 
+| :---: | :---: | :---:  | :---: | :---: | :---: | :---: |
+| Balanced Panel | 5000 | 8 | 40,000 | 12.5 | 3.5 | 72% | 
+| Unbalanced Panel | 5000 | 8 | 39,999 | 283.4 | 3.4 | 99% |
+| Repeated Cross Sections | 5000 | 8 | 5000 | 9.3 | 3.4 | 63% |
+| Larger Panel Data | 20,000 | 20 | 400,000 | 328.5 | 97.2 | 70% |
 
-```{r}
-library(did)
-packageVersion("did") # version 2.1.0
-
-n <- 5000
-time.periods <- 8
-sp <- reset.sim(n=n, time.periods=time.periods)
-
-data <- build_sim_dataset(sp)
-N <- nrow(data)
-# add some more spurious columns to data:
-data$X1 <- sample(1:25, size=N, replace=TRUE)
-data$X1 <- as.factor(data$X1)
-data$X2 <- rnorm(N)
-data$X3 <- rnorm(N)
-data$X4 <- rnorm(N)
-data$X5 <- rnorm(N)
-
-pt <- proc.time()
-new_dr <- att_gt(yname="Y", xformla=~X, data=data, tname="period", idname="id",
-                  gname="G", est_method="dr")
-new_time <- proc.time() - pt
-
-# currently on CRAN
-detach("package:did")
-library(did, lib.loc="~/R/old_packages") 
-packageVersion("did") # should be 2.0.0
-
-pt <- proc.time()
-old_dr <- att_gt(yname="Y", xformla=~X, data=data, tname="period", idname="id",
-                  gname="G", est_method="dr")
-old_time <- proc.time() - pt
-
-# check that estimates are the same
-all(new_dr$att == old_dr$att)
-
-# compare actual times
-new_time
-old_time
-```
-
-There is may be a little bit of variation due to compiling the source file for this post, but I get about a 70% reduction in computational time with the new code (from 4.6 to 1.3 seconds).
-
-## Example 2: Unbalanced Panel Data
-
-```{r}
-detach("package:did")
-library(did)
-packageVersion("did") # version 2.1.0
-
-n <- 5000
-time.periods <- 8
-sp <- reset.sim(n=n, time.periods=time.periods)
-
-data <- build_sim_dataset(sp)
-N <- nrow(data)
-# add some more spurious columns to data:
-data$X1 <- sample(1:25, size=N, replace=TRUE)
-data$X1 <- as.factor(data$X1)
-data$X2 <- rnorm(N)
-data$X3 <- rnorm(N)
-data$X4 <- rnorm(N)
-data$X5 <- rnorm(N)
-data <- data[-1, ] # drop first row
-
-pt <- proc.time()
-new_dr <- att_gt(yname="Y", xformla=~X, data=data, tname="period", idname="id",
-                  gname="G", est_method="dr", allow_unbalanced_panel = TRUE)
-new_time <- proc.time() - pt
-
-# currently on CRAN
-detach("package:did")
-library(did, lib.loc="~/R/old_packages") 
-packageVersion("did") # should be 2.0.0
-
-pt <- proc.time()
-old_dr <- att_gt(yname="Y", xformla=~X, data=data, tname="period", idname="id",
-                  gname="G", est_method="dr", allow_unbalanced_panel = TRUE)
-old_time <- proc.time() - pt
-
-# check that estimates are the same
-all(new_dr$att == old_dr$att)
-
-# compare actual times
-new_time
-old_time
-```
-
-Again, there may be variation due to compiling the document, but here I get about a 97% reduction in computation time (from 52 seconds to about 1.5 seconds).
-
-## Example 3: Repeated cross sections data
-
-```{r}
-detach("package:did")
-library(did)
-packageVersion("did") # version 2.1.0
-
-n <- 5000
-time.periods <- 8
-sp <- reset.sim(n=n, time.periods=time.periods)
-
-data <- build_sim_dataset(sp, panel=FALSE)
-N <- nrow(data)
-# add some more spurious columns to data:
-data$X1 <- sample(1:25, size=N, replace=TRUE)
-data$X1 <- as.factor(data$X1)
-data$X2 <- rnorm(N)
-data$X3 <- rnorm(N)
-data$X4 <- rnorm(N)
-data$X5 <- rnorm(N)
-data <- data[-1, ] # drop first row
-
-pt <- proc.time()
-new_dr <- att_gt(yname="Y", xformla=~X, data=data, tname="period", idname="id",
-                  gname="G", est_method="dr", panel=FALSE)
-new_time <- proc.time() - pt
-
-# currently on CRAN
-detach("package:did")
-library(did, lib.loc="~/R/old_packages") 
-packageVersion("did") # should be 2.0.0
-
-pt <- proc.time()
-old_dr <- att_gt(yname="Y", xformla=~X, data=data, tname="period", idname="id",
-                  gname="G", est_method="dr", panel=FALSE)
-old_time <- proc.time() - pt
-
-# check that estimates are the same
-all(new_dr$att == old_dr$att)
-
-# compare actual times
-new_time
-old_time
-```
-
-In this case, I get about a 75% reduction in computation time (from 2.8 to 0.6 seconds).
-
-## Example 4: Bigger data
-
-```{r}
-detach("package:did")
-library(did)
-packageVersion("did") # version 2.1.0
-
-n <- 25000
-time.periods <- 20
-sp <- reset.sim(n=n, time.periods=time.periods)
-
-data <- build_sim_dataset(sp)
-N <- nrow(data)
-# add some more spurious columns to data:
-data$X1 <- sample(1:25, size=N, replace=TRUE)
-data$X1 <- as.factor(data$X1)
-data$X2 <- rnorm(N)
-data$X3 <- rnorm(N)
-data$X4 <- rnorm(N)
-data$X5 <- rnorm(N)
-data <- data[-1, ] # drop first row
-
-pt <- proc.time()
-new_dr <- att_gt(yname="Y", xformla=~X, data=data, tname="period", idname="id",
-                  gname="G", est_method="dr")
-new_time <- proc.time() - pt
-
-# currently on CRAN
-detach("package:did")
-library(did, lib.loc="~/R/old_packages") 
-packageVersion("did") # should be 2.0.0
-
-pt <- proc.time()
-old_dr <- att_gt(yname="Y", xformla=~X, data=data, tname="period", idname="id",
-                  gname="G", est_method="dr")
-old_time <- proc.time() - pt
-
-# check that estimates are the same
-all(new_dr$att == old_dr$att)
-
-# compare actual times
-new_time
-old_time
-```
-
-This is about a 73% reduction in computation time (from 155 to 42 seconds for me).
-
-## Conclusion
-
-I hope you'll find the code useful.  As always, feel free to contact me if you run into issues.
+For the full code for this post, see: [https://github.com/bcallaway11/did/blob/master/tests/code_profiling.Rmd](https://github.com/bcallaway11/did/blob/master/tests/code_profiling.Rmd)
