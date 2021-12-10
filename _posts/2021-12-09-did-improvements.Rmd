@@ -5,7 +5,7 @@ output:
     variant: "markdown_github"
     preserve_yaml: TRUE
 author: "brant"
-date: '2021-11-10'
+date: '2021-12-10'
 layout: single
 permalink: /posts/did-improvements
 categories:
