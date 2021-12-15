@@ -14,7 +14,7 @@ Ph.D. Econometrics II (Spring 2017, Spring 2018, Spring 2019, Spring 2020, Sprin
 
 **Short Courses**
 
-"Modern Approaces to Difference in Differences" 
+"Modern Approaches to Difference in Differences" 
 
 - University of Louisiana at Lafayette, 2020
 
