@@ -2,7 +2,7 @@
 # This file contains configuration flags to customize your site
 #
 
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "default"
 title: Brantly Callaway
 subtitle: ""
