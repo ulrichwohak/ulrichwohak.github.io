@@ -1,0 +1,43 @@
+---
+title: "ECON 8080 Course Material"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- [Syllabus](syllabus.pdf)
+
+# Homeworks
+
+none yet
+
+# Course Material
+
+We will cover the following topics:
+
+(<span style="color: red; font-weight: bold;">Note:</span> Some of the material will be updated/expanded as we move through the semester.  Some of the topics at the end of the semester are tentative.)
+
+1. [Linear Regression](01_linear_regression.html)
+
+2. [Hypothesis Testing]
+
+3. [Resampling Methods]
+
+4. [Alternative Approaches to Causal Inference]
+
+5. [Introduction to Nonlinear Models]
+
+6. [Panel Data Models]
+
+7. [Causal Inference with Panel Data]
+
+8. If we have time, an introduction to [Quantile Regression]
+
+9. If we have time, an introduction to [Nonparametric Regression]
+
+# Slides
+
+- First Week: [Introduction to ECON 8080](introduction_slides.html)
+
