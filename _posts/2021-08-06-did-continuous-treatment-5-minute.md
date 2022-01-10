@@ -1,0 +1,294 @@
+---
+author: brant
+categories:
+- Econometrics
+- Difference in Differences
+- Continuous Treatment
+- Panel Data
+comments: True
+date: '2021-08-06'
+include-before:
+- '$$\newcommand{\E}{\mathbb{E}}$$'
+layout: single
+output:
+  md_document:
+    preserve_yaml: True
+    variant: markdown
+permalink: '/posts/five-minute-did-continuous-treatment'
+title: |
+    Five Minute Summary: Difference in Differences with a Continuous
+    Treatment
+---
+
+$$\newcommand{\E}{\mathbb{E}}$$
+
+<style>
+s {text-decoration:none; color: red;}
+</style>
+
+[Andrew Goodman-Bacon](https://goodman-bacon.com), [Pedro
+Sant'Anna](https://pedrohcgs.github.io), and I have just posted a new
+working paper [Differences in Differences with a Continuous
+Treatment](https://arxiv.org/abs/2107.02637). In the paper, we are
+interested in DID strategies when a treatment variable is
+multi-valued/continuous, and, in particular, trying to answer questions
+like:
+
+-   What are parameters of interest in this case?
+
+-   What assumptions do researchers need to make in order to identify
+    these parameters?
+
+-   Do TWFE regressions do a good job at targetting these parameters?
+
+-   Can we propose alternative estimators with better properties?
+
+This has been an exciting collaboration as I have learned a whole lot
+from [Bacon's work on understanding two-way fixed effects (TWFE)
+regressions with a staggered, binary
+treatment](https://doi.org/10.1016/j.jeconom.2021.03.014). Our (Pedro
+and me) [earlier paper](https://doi.org/10.1016/j.jeconom.2020.12.001)
+proposed some alternatives to get around the issues with TWFE
+regressions in this context. Our new paper has both kinds of results all
+in one place.
+
+A note on terminology: what we mean by "continuous" is more like
+"continuous enough" that a researcher would include a single regressor
+in their model rather than a sequence of dummy variables. So our results
+are applicable to treatments such as "years of education" (which takes a
+fairly large number of discrete values) in addition to truly continuous
+treatments. Below, I'll talk about the truly continuous case, but the
+paper has details about the multi-valued discrete treatment case.
+
+Baseline case with two time periods
+===================================
+
+Let's start with the simplest case for DID where there are two time
+periods, no units participate in the treatment in the first time period,
+and some units become treated in the second time period with a
+continuous "dose" while other units remain untreated.
+
+Here's the notation I'll use:
+
+-   Two time periods: $$t$$ and $$t-1$$
+
+-   Observed outcomes: $$Y_{it}$$ and $$Y_{it-1}$$
+
+-   Dose (the amount of treatment that a unit experiences in the second
+    period): $$D_i$$
+
+-   In this setup, $$Y_{it} = Y_{it}(D_i)$$ and
+    $$Y_{it-1} = Y_{it-1}(0)$$
+
+**Parameters of Interest**
+
+With a continuous treatment, there are more potential parameters of
+interest than in the case with a binary treatment.
+
+$$
+    ATT(d|d) := \E[Y_t(d) - Y_t(0) | D=d] \quad \textrm{and} \quad ACRT(d|d) := \frac{\partial ATT(l|d)}{\partial l}\Big|_{l=d}
+$$
+
+$$ATT(d|d)$$ is the *causal effect* of experiencing dose $$d$$ among
+units that actually experienced dose $$d$$. $$ACRT(d|d)$$ is the *causal
+response* of a marginal change in the dose among units that actually
+experienced dose $$d$$.
+
+**Parallel Trends Assumptions**
+
+With a continuous treatment, the analogue of the "standard" parallel
+trends assumption with a binary treatment is the following
+
+*Standard Parallel Trends:* For all possible values of the dose $$d$$
+
+$$
+    \E[Y_t(0) - Y_{t-1}(0) | D=d ] = \E[Y_t(0) - Y_{t-1}(0) | D=0]
+$$
+
+Under this assumption (and using exactly the same arguments as in the
+case with a binary treatment), you can show that
+
+$$
+    ATT(d|d) = \E[ \Delta Y_t | D=d] - \E[\Delta Y_t | D=0]
+$$
+
+This seems straightforward, <s>but there is a big caveat</s>
+
+While $$ATT(d|d)$$ is the effect of dose $$d$$ among units that
+experienced dose $$d$$, most applications in economics want to answer
+questions like: Does more dose increase outcomes relative to less dose?
+
+This suggests making comparisons of $$ATT(d|d)$$ across different values
+of $$d$$. If we do this for two values of the dose, say, $$d_1$$ and
+$$d_2$$, notice that
+
+$$
+    ATT(d_2 | d_2) - ATT(d_1|d_1) = \underbrace{\Big( ATT(d_2|d_2) - ATT(d_1|d_2) \Big)}_{\textrm{causal effect}}  + \underbrace{\Big( ATT(d_1|d_2) - ATT(d_1|d_1) \Big)}_{\textrm{selection bias}}
+$$
+
+In other words, comparisons of $$ATT(d|d)$$ across different values of
+the dose involve a causal effect (the average effect of moving from dose
+$$d_1$$ to $$d_2$$ among units that experienced dose $$d_2$$) but
+additionally involve a selection bias term (that the average effect of
+the treatment among units that experienced dose $$d_2$$ and $$d_1$$
+might have been different even if they had both experienced the same
+dose).
+
+The standard parallel trends assumption mentioned above is not strong
+enough to rule out this selection bias term because it is only an
+assumption about untreated potential outcomes.
+
+This same sort of issue carries over to trying to identify causal
+responses: $$
+    \frac{\partial \E[\Delta Y_t | D=d] - \E[\Delta Y_t | D=0]}{\partial d} = ACRT(d|d) + \underbrace{\frac{\partial ATT(d|l)}{\partial l}\Big|_{l=d}}_{\textrm{selection bias}}
+$$ In other words, derivatives of paths of outcomes also include both a
+causal response and a selection bias term.
+
+This seems like a big issue.
+
+**Alternative Approaches**
+
+How can one get around the selection bias terms that show up above? We
+discuss a few possibilities in the paper (and it would also be
+interesting to think about partial identification in this context), but
+let's consider here making alternative identifying assumptions. Before
+doing that, let's introduce a couple of new possible parameters of
+interest:
+
+$$
+    ATE(d) := \E[Y_t(d) - Y_t(0)] \quad \textrm{and} \quad ACR := \frac{\partial ATE(d)}{\partial d}
+$$
+
+These are similar to $$ATT(d|d)$$ and $$ACRT(d|d)$$ above except they
+are causal parameters averaged across all units rather than just those
+that experienced dose $$d$$.
+
+*Strong Parallel Trends Assumption:* For all possible values of $$d$$,
+
+$$
+    \E[Y_t(d) - Y_{t-1}(0)] = \E[Y_t(d) - Y_{t-1}(0) | D=d]
+$$
+
+Under this assumption, it is straightforward to show that
+
+$$
+  ATE(d) = \E[\Delta Y_t | D=d] - \E[\Delta Y_t | D=0]
+$$ which, interestingly, is the same estimand as for $$ATT(d|d)$$ above,
+but just gets a different interpretation here because of the different
+assumptions. Before moving forward, it worth explicitly mentioning that
+strong parallel trends is likely to be a much stronger assumption than
+the standard parallel trends assumption. This is primarily because it
+involves potential outcomes for all values of $$d$$ rather than just
+untreated potential outcomes. The payoff of making the stronger
+assumption is large though --- it gets rid of the selection bias terms
+that were our main problems above. In particular, if you compare
+$$ATE(d)$$ for different values of $$d$$, you just get a causal effect
+term
+
+$$
+  \underbrace{ATE(d_2) - ATE(d_1)}_{\textrm{causal response}}
+$$
+
+which means that it makes sense to interpret the differences causally.
+Similarly, $$ACR(d)$$ doesn't include selection bias terms either under
+strong parallel trends.
+
+What does all this mean? In a DID setup, if researchers want to
+interpret comparisons of treatment effect parameters across different
+values of the dose as causal effects, it likely requires substantially
+stronger assumptions than standard parallel trends assumptions.
+
+**TWFE Regressions**
+
+In applied work, most economists implement difference in differences
+with a continuous dose using a TWFE regression:
+
+$$
+    Y_{it} = \theta_t + \eta_i + \beta D_{it} + v_{it}
+$$
+
+and interpret $$\beta$$ as an average causal response. In the paper, we
+show that
+
+$$
+    \beta = \int_{D_+} w_1(l) \frac{ \partial \E[\Delta Y_t | D=l] - \E[\Delta Y_t|D=0]}{\partial l} \, dl + w_0 \left( \E[\Delta Y_t | D=d_L]  - \E[\Delta Y_t | D=0]\right)
+$$
+
+where $$w_1$$ and $$w_0$$ are some weights that are always positive.
+Depending on whether one invokes standard parallel trends or strong
+parallel trends, the difference between expectations terms above can
+either be replaced by $$ACRT(l|l) + \textrm{selection bias}(l|l)$$ or
+$$ACR(l)$$.
+
+That the weights are always positive is a good thing (especially
+compared to recent papers on binary DID with multiple periods). But the
+weights are still driven by the estimation method and have some strange
+properties. The most interesting one is that the weights are maximized
+at $$\E[D]$$. In other words, causal responses in the middle can get
+substantially more weight than causal responses in the tails regardless
+of the distribution of the dose. This has the potential to lead to very
+poor estimates of the average causal response. Our suggestion is to
+avoid the TWFE regression here and instead just directly estimate the
+parameters of interest.
+
+The Rest of the Paper...
+========================
+
+-   The previous discussion seemed quite negative, but one positive
+    thing is that, unlike the binary treatment case, you can still do
+    DID even if there are no units that never participate in the
+    treatment by making comparisons across units that experience
+    different doses (since, under either parallel trends assumption, the
+    path of untreated potential outcomes is the same and therefore
+    cancels out when making cross-dose comparisons).
+
+-   Another complication is that, since the estimands under standard
+    parallel trends and strong parallel trends are exactly the same, it
+    is not possible to use pre-tests (i.e., estimate pseudo treatment
+    effects in pre-treatment periods) in order to distinguish between
+    them.
+
+-   We extend all of these results to the case with multiple time
+    periods and variation in treatment timing.
+
+-   With multiple periods and variation in treatment timing, TWFE:
+
+    1.  Is sensitive to treatment effect dynamics (this is similar to
+        the binary treatment case and occurs because already-treated
+        units sometimes serve as controls for late-treated units in
+        periods where the already-treated units treatment status does
+        not change over time). This can lead to the negative weights
+        issue that is prominent in the binary treatment literature.
+
+    2.  Is additionally sensitive to heterogeneous causal responses
+        across groups. That is, suppose that one timing group
+        experiences more dose on average than another timing group, but
+        that the causal response is greater for the second group than
+        the first. This can lead to a version of the negative weighting
+        problem. This sort of issue does not show up in the binary
+        treatment case.
+
+    3.  Even if you were willing to make assumptions that rule out
+        treatment effect dynamics and heterogeneous causal responses
+        (which would be very strong assumptions in my view), how TWFE
+        combines different causal response parameters is still driven by
+        the estimation method. The weights will all be positive in this
+        case, but they could still have undesirable properties.
+
+    4.  In my view, most importantly, besides the negative weighting
+        issue, unless a researcher is willing to impose a substantially
+        stronger assumption (such as a multi-period version of the
+        strong parallel trends assumption above), then the TWFE
+        regression continues to contain the "selection bias" terms
+        above.
+
+-   With multiple periods and variation in treatment timing, we propose
+    alternative estimation strategies to TWFE. These can alleviate the
+    first three problems with TWFE mentioned above. But that, under a
+    standard parallel trends assumption, DID includes selection bias
+    terms is a **fundamental problem** in the case with a
+    multi-valued/continuous treatment. In fact, this would be <s>my main
+    takeaway from our paper --- in a DID setup, comparing effects across
+    different doses likely requires substantially stronger assumptions
+    than what most applied researchers in economics think that they are
+    making.</s>
