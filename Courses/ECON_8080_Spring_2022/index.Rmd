@@ -21,7 +21,7 @@ We will cover the following topics:
 
 (<span style="color: red; font-weight: bold;">Note:</span> Some of the material will be updated/expanded as we move through the semester.  Some of the topics at the end of the semester are tentative.)
 
-0. [R Review/Introduction]
+0. [R Review/Introduction](introduction_to_R.html)
 
 1. [Linear Regression](01_linear_regression.html)
 
