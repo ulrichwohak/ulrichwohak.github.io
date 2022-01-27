@@ -11,9 +11,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Homeworks
 
-[HW 1](hw1.html), due Tuesday, Jan. 19
+[HW 1](hw1.html), due Thursday, Jan. 20 [[[solutions](hw1_sol.pdf)]]
 
   - Data: [fertilizer_2000.RData](fertilizer_2000.RData) [[[description](fertilizer_description.txt)]]
+  
+  - If you are interested, here is my [Rmarkdown file](hw1_sol.Rmd) for generating the homework solutions.
+
+[HW 2](hw2.html), due Thursday, Feb. 3
 
 # Course Material
 
