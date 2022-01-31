@@ -6,13 +6,11 @@ permalink: /research/
 
 ## Publications
 
-1. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/Callaway_SantAnna_2020_supp.pdf)] (with Pedro H.C. Sant'Anna, *Journal of Econometrics*, Vol. 225, No. 2, pp. 200-230, 2021.) 
+1. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) [[Arxiv](https://arxiv.org/abs/2006.04968)] (with Afrouz Azadikhah Jahromi, *Empirical Economics*, Vol. 62, No. 1, pp. 213-245, 2022.) 
+
+2. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/Callaway_SantAnna_2020_supp.pdf)] (with Pedro H.C. Sant'Anna, *Journal of Econometrics*, Vol. 225, No. 2, pp. 200-230, 2021.) 
 
     * Code: [`did` R package](https://bcallaway11.github.io/did/)
-
-
-2. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) [[Arxiv](https://arxiv.org/abs/2006.04968)] (with Afrouz Azadikhah Jahromi, forthcoming at *Empirical Economics*) 
-
 
 3. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://doi.org/10.1016/j.jeconom.2020.02.005) [[Arxiv](https://arxiv.org/abs/2008.08117)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (*Journal of Econometrics*, Vol. 222, No. 2, pp. 861-881, 2021.)
 
