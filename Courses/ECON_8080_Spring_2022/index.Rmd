@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
   
   - If you are interested, here is my [Rmarkdown file](hw1_sol.Rmd) for generating the homework solutions.
 
-[HW 2](hw2.html), due Thursday, Feb. 3
+[HW 2](hw2.html), due Thursday, Feb. 3 [[[solutions]](hw2_sol.pdf)]
 
 # Course Material
 
