@@ -99,11 +99,11 @@ Most work on DID under conditional parallel trends (e.g., [Abadie (2005)](https:
    
   where we take $$Z$$ to include an intercept.  The $$\beta_t$$ is perhaps non-standard (see discussion in next paragraph).  Taking the difference over time implies 
   
-    $$
-      \begin{aligned}
-      \Delta Y_{it^*}(0) = Z_i'\delta^*_{t^*} + \Delta X_{it^*}(0) \beta_{t^*} + X_{it^*-1}(0) \beta^*_{t^*} + \Delta v_{it^*}
-      \end{aligned}
-    $$
+  $$
+    \begin{aligned}
+    \Delta Y_{it^*}(0) = Z_i'\delta^*_{t^*} + \Delta X_{it^*}(0) \beta_{t^*} + X_{it^*-1}(0) \beta^*_{t^*} + \Delta v_{it^*}
+    \end{aligned}
+  $$
     
     where we define $$\delta^*_{t^*} := (\delta_{t^*} - \delta_{t^*-1})$$ and $$\beta^*_{t^*} := (\beta_{t^*} - \beta_{t^*-1})$$.  In my view, this is particularly attractive specification for untreated potential outcomes in terms of time-varying covariates.  It includes both the initial level of the covariates (which is similar to including the "pre-treatment" value of the covariate) as well as the change in covariates over time.  And, for example, (up to the parametric assumptions) this expression would avoid the issues of comparing counties with similar changes in population over time but very dissimilar overall populations.
     
