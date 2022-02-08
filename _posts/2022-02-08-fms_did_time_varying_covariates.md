@@ -204,7 +204,9 @@ weighted average of conditional ATTs as in (5).
        \begin{aligned}
        X_{t^*}(0) \perp D | X_{t^*-1}, Z
        \end{aligned}
-     $$ where $$X_{t^*}(0)$$ is the value that $$X$$ would take in time
+     $$
+
+    where $$X_{t^*}(0)$$ is the value that $$X$$ would take in time
     period $$t^*$$ if the treatment had not occurred and $$Z$$ is the
     vector of time-invariant covariates in the parallel trends
     assumption. This is an unconfoundedness assumption, but for
@@ -268,53 +270,32 @@ weighted average of conditional ATTs as in (5).
      \begin{aligned}
      Y_{it}(0) = Z_i'\delta_t + \eta_i + X_{it}(0) \beta_t + v_{it}
      \end{aligned}
-    $$ where we take $$Z$$ to include an intercept. The $$\beta_t$$ is
-    perhaps non-standard (see discussion in next paragraph). Taking the
-    difference over time implies
+    $$
+
+where we take $$Z$$ to include an intercept. The $$\beta_t$$ is perhaps
+non-standard (see discussion in next paragraph). Taking the difference
+over time implies
 
     $$
-       \begin{aligned}
-       \Delta Y_{it^*}(0) = Z_i'\delta^*_{t^*} + \Delta X_{it^*}(0) \beta_{t^*} + X_{it^*-1}(0) \beta^*_{t^*} + \Delta v_{it^*}
-       \end{aligned}
-     $$ where we define
-    $$\delta^*_{t^*} := (\delta_{t^*} - \delta_{t^*-1})$$ and
-    $$\beta^*_{t^*} := (\beta_{t^*} - \beta_{t^*-1})$$. In my view, this
-    is particularly attractive specification for untreated potential
-    outcomes in terms of time-varying covariates. It includes both the
-    initial level of the covariates (which is similar to including the
-    "pre-treatment" value of the covariate) as well as the change in
-    covariates over time. And, for example, (up to the parametric
-    assumptions) this expression would avoid the issues of comparing
-    counties with similar changes in population over time but very
-    dissimilar overall populations.
+      \begin{aligned}
+      \Delta Y_{it^*}(0) = Z_i'\delta^*_{t^*} + \Delta X_{it^*}(0) \beta_{t^*} + X_{it^*-1}(0) \beta^*_{t^*} + \Delta v_{it^*}
+      \end{aligned}
+    $$
 
-    Moreover, since we observe untreated potential outcomes and
-    covariates for the untreated group, we can recover all of the
-    parameters from the regression of $$\Delta Y_{t^*}$$ on $$Z$$,
-    $$\Delta X_{t^*}$$, and $$X_{t^*-1}$$ using the untreated group.
-    Next, notice that
+    where we define $$\delta^*_{t^*} := (\delta_{t^*} - \delta_{t^*-1})$$ and $$\beta^*_{t^*} := (\beta_{t^*} - \beta_{t^*-1})$$.  In my view, this is particularly attractive specification for untreated potential outcomes in terms of time-varying covariates.  It includes both the initial level of the covariates (which is similar to including the "pre-treatment" value of the covariate) as well as the change in covariates over time.  And, for example, (up to the parametric assumptions) this expression would avoid the issues of comparing counties with similar changes in population over time but very dissimilar overall populations.
+
+    Moreover, since we observe untreated potential outcomes and covariates for the untreated group, we can recover all of the parameters from the regression of $$\Delta Y_{t^*}$$ on $$Z$$, $$\Delta X_{t^*}$$, and $$X_{t^*-1}$$ using the untreated group.  Next, notice that
 
     $$
-     \begin{aligned}
-       ATT &= \E[\Delta Y_{t^*} | D=1] - \E[\Delta Y_{t^*}(0) | D=1] \\
-       &= \E[\Delta Y_{t^*} | D=1] - \Big(\E[Z|D=1]'\delta^*_{t^*} + \E[\Delta X_{t^*}(0) | D=1] \beta_{t^*} + \E[X_{t^*-1}|D=1]\beta^*_{t^*} \Big) \\
-     \end{aligned}
-     $$ where the second equality holds by plugging in the expression
-    for $$\Delta Y_{t^*}(0)$$ from the previous display. Everything is
-    identified in the last line except for
-    $$\E[\Delta X_{t^*}(0) | D=1]$$. If we believe that covariates
-    evolve exogenously though, it means that this term is equal to
-    $$\E[\Delta X_{t^*} | D=1]$$ which is identified. We consider 5
-    additional scenarios for recovering $$\E[\Delta X_{t^*}(0) | D=1]$$
-    in the paper.
+    \begin{aligned}
+      ATT &= \E[\Delta Y_{t^*} | D=1] - \E[\Delta Y_{t^*}(0) | D=1] \\
+      &= \E[\Delta Y_{t^*} | D=1] - \Big(\E[Z|D=1]'\delta^*_{t^*} + \E[\Delta X_{t^*}(0) | D=1] \beta_{t^*} + \E[X_{t^*-1}|D=1]\beta^*_{t^*} \Big) \\
+    \end{aligned}
+    $$
 
-    To summarize, this suggests a simple two-step estimation
-    procedure: (i) estimate a regression using untreated observations
-    and recover the estimates of the parameters in the model for
-    untreated potential outcomes, (ii) combine these with estimates of
-    the averages of the change in outcomes over time and averages of
-    covariates for the treated group (as in the previous display) to
-    compute the ATT.
+    where the second equality holds by plugging in the expression for $$\Delta Y_{t^*}(0)$$ from the previous display.  Everything is identified in the last line except for $$\E[\Delta X_{t^*}(0) | D=1]$$.  If we believe that covariates evolve exogenously though, it means that this term is equal to $$\E[\Delta X_{t^*} | D=1]$$ which is identified.  We consider 5 additional scenarios for recovering $$\E[\Delta X_{t^*}(0) | D=1]$$ in the paper.
+
+    To summarize, this suggests a simple two-step estimation procedure: (i) estimate a regression using untreated observations and recover the estimates of the parameters in the model for untreated potential outcomes, (ii) combine these with estimates of the averages of the change in outcomes over time and averages of covariates for the treated group (as in the previous display) to compute the ATT.
 
 **Conclusion**
 
