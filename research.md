@@ -48,6 +48,8 @@ permalink: /research/
 * [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) [[Supplementary Appendix](files/IFE/ife_supplementary_appendix.pdf)] (with Sonia Karami, Revise and Resubmit)
 
     * Code: [`ife` R package, on GitHub](https://github.com/bcallaway11/ife)
+	
+* [Difference in Differences with Time Varying Covariates]((https://arxiv.org/abs/2202.02903) (with Carolina Caetano, Stroud Payne, and Hugo Sant'Anna Rodrigues)
 
 ## Resting Papers
 
