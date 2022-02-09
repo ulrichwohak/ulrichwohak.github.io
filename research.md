@@ -35,6 +35,8 @@ permalink: /research/
 
 ## Working Papers
 
+* [Difference in Differences with Time Varying Covariates](https://arxiv.org/abs/2202.02903) (with Carolina Caetano, Stroud Payne, and Hugo Sant'Anna Rodrigues)
+
 * [Nonlinear Approaches to Intergenerational Income Mobility allowing for Measurement Error](http://arxiv.org/abs/2107.09235) (with Tong Li and Irina Murtazashvili, submitted)
 
 * [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/abs/2107.02637) [[5 Minute Summary](/posts/five-minute-did-continuous-treatment)] [[Slides](/files/DID-Continuous-Treatment/slides/did_reading_group.html)] (with Andrew Goodman-Bacon and Pedro H.C. Sant'Anna) 
@@ -48,8 +50,6 @@ permalink: /research/
 * [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) [[Supplementary Appendix](files/IFE/ife_supplementary_appendix.pdf)] (with Sonia Karami, Revise and Resubmit)
 
     * Code: [`ife` R package, on GitHub](https://github.com/bcallaway11/ife)
-	
-* [Difference in Differences with Time Varying Covariates](https://arxiv.org/abs/2202.02903) (with Carolina Caetano, Stroud Payne, and Hugo Sant'Anna Rodrigues)
 
 ## Resting Papers
 

@@ -33,6 +33,7 @@ $$
   Y_{it} = \theta_t + \eta_i + \alpha D_{it} + X_{it}'\beta + v_{it}
 \end{aligned}
 $$
+
 where $$Y_{it}$$ is the outcome of interest (for unit $$i$$ in time period $$t$$), $$\theta_t$$ is a time fixed effect, $$\eta_i$$ is an individual fixed effect, $$D_{it}$$ is a treatment dummy variable, $$\alpha$$ is what will be reported as *the* causal effect of the treatment (or, maybe loosely as some kind of average causal effect), $$X_{it}$$ are the time-varying covariates, and $$v_{it}$$ are idiosyncratic time-varying unobservables.
 
 We show that there are a number of potential limitations with using this two-way fixed effects (TWFE) regression:

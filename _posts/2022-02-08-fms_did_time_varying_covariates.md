@@ -5,17 +5,16 @@ categories:
 - Policy Evaluation
 - Panel Data
 - TWFE Regressions
-comments: True
-date: '2022-02-08'
+comments: true
+date: 2022-02-08
 layout: single
 output:
   md_document:
-    preserve_yaml: True
+    preserve_yaml: true
     variant: markdown
-permalink: '/posts/fms-did-time-varying-covariates'
-title: |
-    Five Minute Summary: Difference in differences with time-varying
-    covariates
+permalink: /posts/fms-did-time-varying-covariates
+title: "Five Minute Summary: Difference in differences with time-varying
+  covariates"
 ---
 
 $$\newcommand{\E}{\mathbb{E}}$$
@@ -59,7 +58,9 @@ $$
 \begin{aligned}
   Y_{it} = \theta_t + \eta_i + \alpha D_{it} + X_{it}'\beta + v_{it}
 \end{aligned}
-$$ where $$Y_{it}$$ is the outcome of interest (for unit $$i$$ in time
+$$
+
+where $$Y_{it}$$ is the outcome of interest (for unit $$i$$ in time
 period $$t$$), $$\theta_t$$ is a time fixed effect, $$\eta_i$$ is an
 individual fixed effect, $$D_{it}$$ is a treatment dummy variable,
 $$\alpha$$ is what will be reported as *the* causal effect of the
