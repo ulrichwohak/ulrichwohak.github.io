@@ -49,7 +49,7 @@ permalink: /research/
 
     * Code: [`ife` R package, on GitHub](https://github.com/bcallaway11/ife)
 	
-* [Difference in Differences with Time Varying Covariates]((https://arxiv.org/abs/2202.02903) (with Carolina Caetano, Stroud Payne, and Hugo Sant'Anna Rodrigues)
+* [Difference in Differences with Time Varying Covariates](https://arxiv.org/abs/2202.02903) (with Carolina Caetano, Stroud Payne, and Hugo Sant'Anna Rodrigues)
 
 ## Resting Papers
 
