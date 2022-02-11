@@ -17,9 +17,9 @@ knitr::opts_chunk$set(echo = TRUE)
   
   - If you are interested, here is my [Rmarkdown file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_8080_Spring_2022/hw1_sol.Rmd) for generating the homework solutions.
 
-* [HW 2](hw2.html), due Thursday, Feb. 3 [[[solutions]](hw2_sol.pdf)], [[[Rmarkdown file]](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_8080_Spring_2022/hw2_sol.Rmd)]
+* [HW 2](hw2.html), due Thursday, Feb. 3 [[[solutions](hw2_sol.pdf)]], [[[Rmarkdown file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_8080_Spring_2022/hw2_sol.Rmd)]]
 
-* [Additional Problems for Midterm 1](additional_practice1.html) <span style="color: red; font-weight: bold;">you do not need to turn these in</span>
+* [Additional Problems for Midterm 1](additional_practice1.html), [[[solutions](additional_practice1_sol.pdf)]] <span style="color: red; font-weight: bold;">you do not need to turn these in</span>
 
 # Course Material
 
