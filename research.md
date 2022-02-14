@@ -6,6 +6,11 @@ permalink: /research/
 
 ## Publications
 
+* [Treatment Effects in Interactive Fixed Effects Models with a Small Number of Time Periods](https://arxiv.org/abs/2006.15780) [[Supplementary Appendix](files/IFE/Callaway_Karami_2022_appendix.pdf)] (with Sonia Karami, Forthcoming at *Journal of Econometrics*)
+
+    * Code: [`ife` R package, on GitHub](https://github.com/bcallaway11/ife)
+
+
 1. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) [[Arxiv](https://arxiv.org/abs/2006.04968)] (with Afrouz Azadikhah Jahromi, *Empirical Economics*, Vol. 62, No. 1, pp. 213-245, 2022.) 
 
 2. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/Callaway_SantAnna_2020_supp.pdf)] (with Pedro H.C. Sant'Anna, *Journal of Econometrics*, Vol. 225, No. 2, pp. 200-230, 2021.) 
@@ -47,9 +52,6 @@ permalink: /research/
 	
 * [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, Revise and Resubmit)
 
-* [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780) [[Supplementary Appendix](files/IFE/ife_supplementary_appendix.pdf)] (with Sonia Karami, Revise and Resubmit)
-
-    * Code: [`ife` R package, on GitHub](https://github.com/bcallaway11/ife)
 
 ## Resting Papers
 
