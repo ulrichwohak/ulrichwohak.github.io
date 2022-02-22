@@ -5,7 +5,7 @@ output:
     variant: "markdown"
     preserve_yaml: TRUE
 author: "brant"
-date: '2021-08-15'
+date: '2022-02-16'
 layout: single
 permalink: /posts/ife
 categories:
@@ -21,9 +21,24 @@ header-includes:
 s {text-decoration:none; color: red;}
 </style>
 
-[Sonia Karami](https://sites.temple.edu/soniakarami/) and I just posted a new version of our paper [Treatment Effects in Interactive Fixed Effects Models](https://arxiv.org/abs/2006.15780).  
+[Sonia Karami](https://sites.temple.edu/soniakarami/) and I just had our paper [Treatment Effects in Interactive Fixed Effects Models with a Small Number of Time Periods](https://arxiv.org/abs/2006.15780) accepted at *Journal of Econometrics*.  
 
-# Connection between Difference in Differences and Interactive Fixed Effects Models
+One of the things that I have been very interested in over the past couple of years is trying to identify treatment effect parameters when (i) parallel trends assumptions are violated and (ii) the number of time periods is "small".
+
+Parallel trends assumptions are very closely related to the following model for untreated potential outcomes: 
+
+$$
+	Y_{it}(0) = \theta_t + \eta_i + U_{it}
+$$
+where $\theta_t$ is a time fixed effect, $\eta_i$ is an individual fixed effect, and $U_{it}$ are idiosyncratic time varying unobservables.
+
+But the additive separability between the time-period and unit fixed effects is important here.  
+
+**cite other IFE papers**
+
+**cite manski, roth, and try to connect motivation**
+
+## Connection between Difference in Differences and Interactive Fixed Effects Models
 
 A lot of my research has involved identifying treatment effect parameters in a difference in differences (DID) framework.  For DID, the main identifying assumption is the parallel trends assumption:
 
@@ -32,7 +47,7 @@ $$
 	\E[\Delta Y_t(0) | D=1] = \E[\Delta Y_t(0) | D=0]
 $$
 
-Parallel trends assumptions are very closely related to the following model for untreated potential outcomes:
+As discussed above, parallel trends assumptions are very closely related to the following model for untreated potential outcomes:
 
 $$
 	Y_{it}(0) = \theta_t + \eta_i + U_{it}
@@ -55,9 +70,9 @@ where $g_t$ is a nonparametric, time-varying function of $\tilde{Z}$, and $\eta_
 $$
 	Y_{it}(0) = \tilde{Z}_i'\tilde{\delta}_t + \eta_i + U_{it}
 $$
-where we take $\tilde{Z}_i$ to include an intercept so that the time fixed effect is absorbed into $\tilde{Z}_i'\delta_{\tilde{Z},t}$ from here on out.
+where we take $\tilde{Z}_i$ to include an intercept so that the time fixed effect is absorbed into $\tilde{Z}_i'\tilde{\delta}_{t}$ from here on out.
 
-I have been a bit purposely vague about $\tilde{Z}$ above.  What variables need to be conditioned on though is largely a theoretical exercise.  The variable that I mentioned above (education and/or demographic characteristics) are commonly observed in many datasets, but one might also think that parallel trends only holds after additionally conditioning on ``ability'' which is unlikely to be observed in most data.  
+I have been a bit purposely vague about $\tilde{Z}$ above.  What variables need to be conditioned on though is largely a theoretical exercise.  The variable that I mentioned above (education and/or demographic characteristics) are commonly observed in many datasets, but one might also think that parallel trends only holds after additionally conditioning on "ability" which is unlikely to be observed in most data.  
 
 Let's partition $\tilde{Z} = (Z,\lambda)$ where $Z$ corresponds to the observed components of $\tilde{Z}$ and $\lambda$ corresponds to the unobserved components of $\tilde{Z}$.  Similarly, let's partition $\tilde{\delta}_t = (\delta_t, F_t)$ where $\delta_t$ corresponds to the elements in $Z$ and $F_t$ corresponds to the elements in $\lambda$.  Plugging this back into the model for untreated potential outcomes above yields
 $$
@@ -66,23 +81,43 @@ $$
 <s>**This is an interactive fixed effects model for untreated potential outcomes!**</s>
 
 
-# Identification Challenges
+## Identification Challenges
 
 Even if we like the interactive fixed effects model for untreated potential outcomes, it is still not clear if we can recover any causal effect parameters of interest under palatable identifying assumptions.  
 
 For one thing, like DID, we'd like to identify causal effect parameters when the number of time periods is small, and much of the interactive fixed effects literature involves arguments where the number of time periods goes to infinity.  
 
-To make things concrete, let's consider the case with 3 time periods: $t$, $t-1$, and $t-2$.  And let's suppose that no one is treated until the last period.  We also define $D_i$ as a variable that it is equal to one for individuals in the treated group (i.e., that become treated in the last period) and is equal to 0 otherwise.  Like most of the literature on treatment effects with panel data, we'll target identifying the average treatment effect on the treated (ATT) which is given by
+To make things concrete, let's consider the case with 3 time periods: $t^*$, $t^*-1$, and $t^*-2$.  And let's suppose that no one is treated until the last period.  We also define $D_i$ as a variable that it is equal to one for individuals in the treated group (i.e., that become treated in the last period) and is equal to 0 otherwise.  Like most of the literature on treatment effects with panel data, we'll target identifying the average treatment effect on the treated (ATT) which is given by
 $$
-	ATT = \E[Y_t(1) - Y_t(0) | D=1]
+	ATT = \E[Y_{t^*}(1) - Y_{t^*}(0) | D=1]
 $$
-which is the difference between treated and untreated potential outcomes on average among individuals in the treated group.  Given the interactive fixed effects model, notice that we can write 
+which is the difference between treated and untreated potential outcomes on average among individuals in the treated group.  Our main identification challenge is therefore to recover $\E[Y_{t^*}(0)|D=1]$.  
+
+Towards this end, we use a "quasi-differencing" approach to difference out $\eta_i$ and $\lambda_i$ (see, for example, Holtz-Eakin, Newey, and Rosen (1988) and Ahn, Lee, and Schmidt (2013)); that is,
+
+$$
+Y_{it^*-1}(0) - Y_{it^*-2}(0) = \lambda_i \big(F_{t^*-1} - F_{t^*-2}\big) + Z_i' \big(\delta_{t^*-1} - \delta_{t^*-2} \big) + U_{it^*-1} - U_{it^*-2}
+$$
+
+which implies 
+
+$$
+\lambda_i = \Big( \big( Y_{it^*-1}(0) - Y_{it^*-2}(0) \big)  - Z_i' \big(\delta_{t^*-1} - \delta_{t^*-2}\big) - \big(U_{it^*-1}-U_{it^*-2}\big) \Big) \Big/ (F_{t^*-1} - F_{t^*-2})
+$$
+
+Similarly,
+$$
+\begin{aligned}
+Y_{it}(0) - Y_{it^*-2}(0) &= \lambda_i(F_t - F_{t^*-2}) + Z_i'(\delta_t - \delta_{t^*-2}) + U_{it} - U_{it^*-2} \nonumber \\
+    &= Z_i'\delta^*_t + F^*_t (Y_{it^*-1} - Y_{it^*-2}) + V_{it}
+\end{aligned}
+$$
 
 <!--There are papers that identify parameters in interactive fixed effects models with short panels, but these often involve using lags of covariates as instruments or making assumptions about $U_{it}$ being serially uncorrelated --- neither of these paths are particularly attractive in our case.-->
 
-# Our Idea
+## Our Idea
 
-# The Rest of the Paper...
+## The Rest of the Paper...
 
 We have a number of extensions to these kind of results in the paper.
 
