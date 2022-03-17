@@ -1,0 +1,295 @@
+---
+output:  pdf_document
+fontsize: 11pt
+indent: true
+header-includes:
+ - \usepackage{amsmath,amssymb,setspace}
+ - \newcommand{\E}{\textrm{E}}
+ - \newcommand{\var}{\textrm{var}}
+ - \newcommand{\cov}{\textrm{cov}}
+ - \newcommand{\independent}{\perp}
+ - \usepackage[margin=1in]{geometry}
+ - \usepackage{setspace}
+ - \usepackage[most]{tcolorbox}
+ - \newtcolorbox{discussionbox}[1][]{sharp corners, enhanced, colback=white, attach title to upper,#1}
+ - \usepackage{bm}
+---
+
+\onehalfspacing
+
+# Homework 3 Solutions
+
+## Hansen 3.23
+
+I'll use the notation $\mathbf{P}_X$ for the projection matrix of $\mathbf{X}$ and $\mathbf{P}_Z$ for the the projection matrix of $\mathbf{Z}$ (and use similar notation for each annihilator matrix).  
+
+Notice that we can write
+\begin{align*}
+  \mathbf{Z} = \mathbf{X}\Gamma
+\end{align*}
+where
+\begin{align*}
+  \Gamma = \begin{bmatrix} \mathbf{I} & -\mathbf{I} \\ \mathbf{0} & \mathbf{I} \end{bmatrix}
+\end{align*}
+which implies that
+\begin{align*}
+  \mathbf{P}_X \mathbf{Z} = \mathbf{P}_X \mathbf{X} \Gamma = \mathbf{X} \Gamma = \mathbf{Z} \\
+  \mathbf{M}_X \mathbf{Z} = (\mathbf{I} - \mathbf{P}_X) \mathbf{Z} = \mathbf{0}
+\end{align*}
+that is, if you project $\mathbf{Z}$ on $\mathbf{X}$, you get $\mathbf{Z}$, and the residuals from this projection are equal to 0.  This implies that $\mathbf{P}_X \mathbf{P}_Z = \mathbf{P}_Z$ which we use below (to see this, you can expand the definition of $\mathbf{P}_Z$ and use the result in the previous display).
+
+Similarly, notice that we can write $\mathbf{X} = \mathbf{Z}\Gamma^{-1}$ which, similar to above, implies that
+\begin{align*}
+  \mathbf{P}_Z \mathbf{X} = \mathbf{P}_Z \mathbf{Z} \Gamma^{-1} = \mathbf{Z}\Gamma^{-1} = \mathbf{X} \\
+  \mathbf{M}_Z \mathbf{X} = (\mathbf{I} - \mathbf{P}_Z) \mathbf{X} = \mathbf{0}
+\end{align*}
+so that if you project $\mathbf{X}$ on $\mathbf{Z}$, then you get $\mathbf{X}$, and the residuals from this projection are equal to 0.  Similar to above, this implies that $\mathbf{P}_Z \mathbf{P}_X = \mathbf{P}_X$ which we use below.
+
+Next, notice that
+\begin{align}
+  \mathbf{M}_X \mathbf{M}_Z = (\mathbf{I} - \mathbf{P}_X)(\mathbf{I}-\mathbf{P}_Z) = \mathbf{I} - \mathbf{P}_X - \mathbf{P}_Z + \mathbf{P}_X \mathbf{P}_Z = \mathbf{I}-\mathbf{P}_X = \mathbf{M}_X \label{eqn:1}\\
+  \mathbf{M}_Z \mathbf{M}_X = (\mathbf{I} - \mathbf{P}_Z)(\mathbf{I}-\mathbf{P}_X) = \mathbf{I} - \mathbf{P}_Z - \mathbf{P}_X + \mathbf{P}_Z \mathbf{P}_X = \mathbf{I} - \mathbf{P}_Z = \mathbf{M}_Z \label{eqn:2}
+\end{align}
+
+Finally, notice that
+\begin{align*}
+  n \hat{\sigma}^2 &= \mathbf{Y}'\mathbf{M}_X \mathbf{Y} \\
+  &= (\mathbf{M}_X \mathbf{Y})' \mathbf{M}_X \mathbf{Y} \\
+  &= (\mathbf{M}_X \mathbf{M}_Z \mathbf{Y})' \mathbf{M}_X \mathbf{M}_Z \mathbf{Y} \\
+  &= \mathbf{Y}'\mathbf{M}_Z \mathbf{M}_X \mathbf{M}_X \mathbf{M}_Z \mathbf{Y} \\
+  &= \mathbf{Y}'\mathbf{M}_Z \mathbf{M}_X \mathbf{M}_Z \mathbf{Y} \\
+  &= \mathbf{Y}'\mathbf{M}_Z \mathbf{M}_Z \mathbf{Y} \\ 
+  &= n \tilde{\sigma}^2
+\end{align*}
+where the first equality holds from the definition of $\hat{\sigma}^2$; the second equality holds because $\mathbf{M}_X$ is idempotent and symmetric, the third equality uses Equation \ref{eqn:1}; the fourth equality applies the transpose to the term on the left and uses that $\mathbf{M}_Z$ and $\mathbf{M}_X$ are symmetric; the fifth equality holds because $\mathbf{M}_X$ is idempotent; the sixth equality holds by Equation \ref{eqn:2}; and the last equality holds by the definition of $\tilde{\sigma}^2$.  This implies that $\hat{\sigma}^2 = \tilde{\sigma}^2$.
+
+## Hansen 3.24
+
+### Part a
+
+```{r}
+# read data
+library(haven)
+cps <- read_dta("cps09mar.dta")
+
+# construct subset of single, Asian men
+data <- subset(cps, marital==7 & race==4 & female==0)
+
+# ...not totally clear if this is exactly right subset
+# confirm same number of rows as mentioned in textbook
+nrow(data)
+
+# construct experience and wage
+data$exp <- data$age - data$education - 6
+data$wage <- data$earnings/(data$hours*data$week)
+
+# also construct subset with < 45 years of experience
+data <- subset(data, exp < 45)
+
+# run regression
+Y <- log(data$wage)
+X <- cbind(1, data$education, data$exp, data$exp^2/100)
+bet <- solve(t(X)%*%X)%*%t(X)%*%Y
+round(bet,3)
+```
+
+### Part b
+```{r}
+# residual regression
+X1 <- data$education
+X2 <- cbind(1, data$exp, data$exp^2/100)
+ycoef <- solve(t(X2)%*%X2)%*%t(X2)%*%Y
+yresid <- Y - X2%*%ycoef
+x1coef <- solve(t(X2)%*%X2)%*%t(X2)%*%X1
+x1resid <- X1 - X2%*%x1coef
+fw_bet <- solve(t(x1resid)%*%x1resid)%*%t(x1resid)%*%yresid
+round(fw_bet,3)
+```
+
+This is the same as the estimate from part a.  This is expected due to the Frisch-Waugh theorem.
+
+## Hansen 3.25
+
+```{r}
+# a)
+ehat <- Y - X%*%bet
+round(sum(ehat),5)
+
+# b)
+round(sum(data$education*ehat),5)
+
+# c)
+round(sum(data$exp*ehat),5)
+
+# d)
+round(sum(data$education^2 * ehat),5)
+
+# e)
+round(sum(data$exp^2 * ehat),5)
+
+# f)
+Yhat <- X%*%bet
+round(sum(Yhat*ehat),5)
+
+# g) 
+round(sum(ehat^2),5)
+```
+
+Yes, these calculations are consistent with the theoretical properties of OLS.  Parts a, b, c, e, and f all hold due to the property that $\sum_{i=1}^n X_i \hat{e}_i = 0$.  Part d is not equal to 0 because $X_1^2$ is not an included regressor.  Part g provides the sum of squared errors which is not generally equal to 0.
+
+## Hansen 4.1
+
+\paragraph{Part (a):} 
+\begin{align*}
+  \hat{\mu}_k = \frac{1}{n} \sum_{i=1}^n Y_i^k
+\end{align*}
+
+\paragraph{Part (b):}
+
+\begin{align*}
+  \E\left[\hat{\mu}_k\right] &= \E\left[\frac{1}{n} \sum_{i=1}^n Y_i^k \right]\\
+  &= \frac{1}{n} \sum_{i=1}^n \E[Y_i^k] \\ 
+  &= \frac{1}{n} \sum_{i=1}^n \E[Y^k] \\
+  &= \E[Y^k]
+\end{align*}
+where the third equality holds because the $Y_i$ are identically distributed (implying the mean is the same across $i$).  This result implies that $\hat{\mu}_k$ is unbiased for $\mu_k$.
+
+\paragraph{Part (c):}
+
+\begin{align*}
+  \var\left(\hat{\mu}_k\right) &= \var\left(\frac{1}{n} \sum_{i=1}^n Y_i^k\right) \\
+  &= \frac{1}{n^2} \var\left(\sum_{i=1}^n Y_i^k\right) \\
+  &= \frac{1}{n} \sum_{i=1}^n \var(Y^k) \\
+  &= \frac{\var(Y^k)}{n}
+\end{align*}
+For $\var(\hat{\mu}_k)$ to exist, we need for $\var(Y^k)$ to exist.  Notice that,
+\begin{align*}
+  \var(Y^k) = \E[(Y^k)^2] - \E[Y^k]^2
+\end{align*}
+Thus, the condition that we need is that $\E[(Y^k)^2] = \E[Y^{2k}] < \infty$.
+
+\paragraph{Part (d):}  We can estimate by
+\begin{align*}
+  \widehat{\var}(\hat{\mu}_k) = \frac{\widehat{\var}(Y^k)}{n} = \frac{\frac{1}{n} \displaystyle \sum_{i=1}^n Y_i^{2k} - \left( \frac{1}{n}\displaystyle \sum_{i=1}^n Y_i^k \right)^2}{n}  
+\end{align*}
+
+## Hansen 4.5
+
+First (and notice that this is exactly the same as what we showed in class...because unbiasedness did not rely on homoskedasticity),
+
+\begin{align*}
+  \E[\hat{\beta}|\mathbf{X}] &= \E[(\mathbf{X}'\mathbf{X})^{-1} \mathbf{X}'\mathbf{Y} | \mathbf{X}] \\
+  &= (\mathbf{X}'\mathbf{X})^{-1} \mathbf{X}' \E[\mathbf{Y}|\mathbf{X}] \\
+  &= (\mathbf{X}'\mathbf{X})^{-1} \mathbf{X}' \mathbf{X} \beta \\
+  &= \beta
+\end{align*}
+
+Next,
+\begin{align*}
+  \var(\hat{\beta}|\mathbf{X}) &= \var((\mathbf{X}'\mathbf{X})^{-1} \mathbf{X}'\mathbf{Y} | \mathbf{X}) \\
+  &= \var((\mathbf{X}'\mathbf{X})^{-1} \mathbf{X}'(\mathbf{X}\beta + \mathbf{e}) | \mathbf{X}) \\
+  &= \var((\mathbf{X}'\mathbf{X})^{-1} \mathbf{X}'\mathbf{e} | \mathbf{X}) \\
+  &= (\mathbf{X}'\mathbf{X})^{-1} \mathbf{X}' \var(\mathbf{e}|\mathbf{X}) \mathbf{X} (\mathbf{X}'\mathbf{X})^{-1} \\
+  &= \sigma^2 (\mathbf{X}'\mathbf{X})^{-1} \mathbf{X}' \mathbf{\Sigma} \mathbf{X} (\mathbf{X}'\mathbf{X})^{-1}
+\end{align*} 
+where the first equality holds by the definition of $\hat{\beta}$, the second equality substitutes for $\mathbf{Y}$, the third equality holds because the first term is equal to $\beta$ and therefore doesn't contribute to the variance, the fourth equality holds because the variance is conditional on $\mathbf{X}$ (so the terms involving $\mathbf{X}$ can come out but need to be "squared"), and the last equality holds by the definition of $\var(\mathbf{e}|\mathbf{X})$ given in the problem.  This is the result we were trying to show.
+
+## Hansen 4.6
+
+Recall that the restriction to linear estimators implies that we can write any estimator in this class as $\tilde{\beta} = \mathbf{A}'\mathbf{Y}$ for an $n \times k$ matrix $\mathbf{A}$ that is a function of $\mathbf{X}$.  Unbiasedness implies that, it must be the case that $\E[\tilde{\beta}|\mathbf{X}] = \beta$.  Then, notice that under linearity, we have that
+\begin{align*}
+  \E[\tilde{\beta}|\mathbf{X}] = \E[\mathbf{A}'\mathbf{Y}|\mathbf{X}] = \mathbf{A}' \E[\mathbf{Y}|\mathbf{X}] = \mathbf{A}' \mathbf{X} \beta 
+\end{align*}    
+where the second equality holds because $\mathbf{A}$ is a function of $\mathbf{X}$.  Therefore, together linearity and unbiasedness imply that $\mathbf{A}'\mathbf{X} = \mathbf{I}_k$.  Next, notice that
+\begin{align*}
+  \var(\tilde{\beta}|\mathbf{X}) = \var(\mathbf{A}'\mathbf{Y}|\mathbf{X}) = \mathbf{A}'\var(\mathbf{Y}|\mathbf{X}) \mathbf{A} = \mathbf{A}'\var(\mathbf{X}\beta + \mathbf{e} |\mathbf{X}) \mathbf{A} = \mathbf{A}'\var(\mathbf{e}|\mathbf{X}) \mathbf{A} = \sigma^2 \mathbf{A}'\mathbf{\Sigma} \mathbf{A}
+\end{align*}
+We aim to show that $\var(\tilde{\beta}|\mathbf{X}) - \sigma^2 (\mathbf{X}'\mathbf{\Sigma}^{-1} \mathbf{X})^{-1} \geq \mathbf{0}$.  Notice that
+\begin{align*}
+  \var(\tilde{\beta}|\mathbf{X}) - \sigma^2 (\mathbf{X}'\mathbf{\Sigma}^{-1} \mathbf{X})^{-1} &= \sigma^2 \left( \mathbf{A}'\mathbf{\Sigma} \mathbf{A} - (\mathbf{X}'\mathbf{\Sigma}^{-1} \mathbf{X})^{-1} \right) \\
+  &= \sigma^2 \left( \mathbf{A}'\mathbf{\Sigma} \mathbf{A} - \mathbf{A}' \mathbf{\Sigma}^{1/2} \mathbf{\Sigma}^{-1/2} \mathbf{X}  (\mathbf{X}'\mathbf{\Sigma}^{-1} \mathbf{X})^{-1}  \mathbf{X}' \mathbf{\Sigma}^{-1/2} \mathbf{\Sigma}^{1/2} \mathbf{A} \right) \\
+  &= \sigma^2\mathbf{A}'\mathbf{\Sigma}^{1/2} \underbrace{\left(\mathbf{I}-\mathbf{\Sigma}^{-1/2} \mathbf{X}  \Big((\mathbf{\Sigma}^{-1/2} \mathbf{X})'\mathbf{\Sigma}^{-1/2} \mathbf{X}\Big)^{-1}  \mathbf{X}' \mathbf{\Sigma}^{-1/2}\right)}_{= \mathbf{M}_{\Sigma^{-1/2}X}} \mathbf{\Sigma}^{1/2} \mathbf{A} \\
+  &= \sigma^2\mathbf{A}'\mathbf{\Sigma}^{1/2} \mathbf{M}_{\Sigma^{-1/2}X} \mathbf{\Sigma}^{1/2} \mathbf{A} \\
+  &= \sigma^2 \left( \mathbf{M}_{\Sigma^{-1/2}X} \mathbf{\Sigma}^{1/2} \mathbf{A} \right)' \mathbf{M}_{\Sigma^{-1/2}X} \mathbf{\Sigma}^{1/2} \mathbf{A} \\
+  & \geq 0
+\end{align*}
+where the above result repeatedly uses $\mathbf{\Sigma}$ is positive definite and symmetric (which implies that it has a positive definite and symmetric inverse, and that it has a positive definite and symmetric square root matrix, and so does its inverse).  In particular, the second equality holds because (i) $\mathbf{\Sigma}^{-1/2} \mathbf{\Sigma}^{1/2} = \mathbf{I}_n$, and $\mathbf{A}'\mathbf{X}=\mathbf{I}_k$ (due to linearity and unbiasedness as discussed above); the third equality holds by factoring out $\mathbf{A}'\mathbf{\Sigma}^{1/2}$ and from a slight manipulation of the inside term; the fourth equality holds by the definition of $\mathbf{M}_{\Sigma^{-1/2}X}$ (which is annihilator matrix); the fifth equality holds because $\mathbf{M}_{\Sigma^{-1/2}X}$ is idempotent and symmetric; and the last equality holds because the previous expression is a quadratic form.
+
+## Hansen 4.23
+
+Notice that
+\begin{align*}
+  \E[\hat{\beta}_{ridge} | \mathbf{X}] &= \E\left[(\mathbf{X}'\mathbf{X} + \mathbf{I}_k \lambda)^{-1} \mathbf{X}' \mathbf{Y}\right] \\
+  &= (\mathbf{X}'\mathbf{X} + \mathbf{I}_k \lambda)^{-1} \mathbf{X}' \E[\mathbf{Y}|\mathbf{X}] \\
+  &= (\mathbf{X}'\mathbf{X} + \mathbf{I}_k \lambda)^{-1} \mathbf{X}' \mathbf{X} \beta \\
+  & \neq \beta
+\end{align*}
+This implies that $\hat{\beta}_{ridge}$ is not unbiased for $\beta$.
+
+## Extra Question
+
+```{r}
+# function to run a single simulation
+sim <- function() {
+  # draw X1
+  X1 <- rexp(n)
+  
+  # draw the error term
+  e <- mixtools::rnormmix(n, lambda=c(.5,.5), mu=c(-2,2), sigma=c(1,1))
+  
+  ## TODO: construct Y
+  Y <- b0 + b1*X1 + e 
+
+  ## TODO: use X1 and Y to estimate bet0 and bet1
+  X <- cbind(1,X1)
+  bet <- solve(t(X)%*%X)%*%t(X)%*%Y
+  bet1 <- bet[2,1]
+
+  # TODO: return estimated value of bet1
+  bet1
+}
+
+# function to run many simulations
+# @param n_sims is the number of simulations to run
+run_mc <- function(n_sims=1000) {
+  
+  # run n_sims simulations and store in a vector
+  mc_res <- sapply(1:n_sims, function(s) {
+    sim()
+  })
+  
+  # print number of observations
+  cat("n = ", n, "....\n")
+  
+  # print the mean of b1
+  cat("mean b1  : ", mean(mc_res), "\n")
+  
+  # print the variance of b1
+  cat("var b1   : ", var(mc_res), "\n")
+}
+```
+
+```{r}
+# run the simulations
+# set values of parameters and number of observations
+set.seed(1234) # so can reproduce
+b0 <- 0
+b1 <- 1
+
+n <- 2
+run_mc()
+
+n <- 10
+run_mc()
+
+n <- 50
+run_mc()
+
+n <- 100
+run_mc()
+
+n <- 500
+run_mc()
+```
+
+It looks like our theory is holding here.  $\hat{\beta}_1$ appears to be unbiased --- recall unbiasedness is a finite sample property --- so this should hold for all values of $n$ (the only case where there are issues is when $n=2$; in this case, you can see that the variance is extremely high, and I think that we are not doing enough simulations to see that it is actually unbiased in this case).  The other interesting thing to note is that, as expected, the variance of $\hat{\beta}_1$ is decreasing for larger sample sizes.

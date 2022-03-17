@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Additional Problems for Midterm 1](additional_practice1.html), [[[solutions](additional_practice1_sol.pdf)]] <span style="color: red; font-weight: bold;">you do not need to turn these in</span>
 
-* [HW 3](hw3.html), due Thursday, March 3
+* [HW 3](hw3.html), due Thursday, March 3 [[[solutions](hw3_sol.pdf)]], [[[Rmarkdown file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_8080_Spring_2022/hw3_sol.Rmd)]]
 
 * [HW 4](hw4.html), due Thursday, March 24
 
