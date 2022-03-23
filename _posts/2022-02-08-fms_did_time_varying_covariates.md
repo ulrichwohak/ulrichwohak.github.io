@@ -367,20 +367,17 @@ comments/questions, please feel free to get in touch.
     effects are heterogeneous: Smaller groups get larger weights." The
     Review of Economics and Statistics (2020): 1-27.
 
-```{=html}
-<!-- -->
-```
-    <script src="https://giscus.app/client.js"
-            data-repo="bcallaway11/bcallaway11.github.io"
-            data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
-            data-category="Announcements"
-            data-category-id="DIC_kwDOBG-Tgc4COCq4"
-            data-mapping="pathname"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="light"
-            data-lang="en"
-            crossorigin="anonymous"
-            async>
-    </script>
+<script src="https://giscus.app/client.js"
+        data-repo="bcallaway11/bcallaway11.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOBG-Tgc4COCq4"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
