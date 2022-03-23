@@ -180,3 +180,20 @@ ggpubr::ggarrange(p3_varying, p3_universal, nrow=1)
 ```
 
 As in the earlier two cases, the panel on the left contains results using a varying base period, and the panel on the right contains results using a universal base period; likewise, the post-treatment estimates are numerically identical.  In this case, to me, it seems easier to notice the linear difference in trends in the right panel.  If you are careful, you can still interpret the results using a varying base period.  Particularly, in every pre-treatment period, we would have over-estimated the effect of participating in the treatment (if the treatment had started in that period) -- this happens because of the linear violations of parallel trends in all periods.
+
+```{=markdown}
+<script src="https://giscus.app/client.js"
+        data-repo="bcallaway11/bcallaway11.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOBG-Tgc4COCq4"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+```

@@ -5,27 +5,27 @@ categories:
 - Difference in Differences
 - Continuous Treatment
 - Panel Data
-comments: True
-date: '2021-08-06'
+comments: true
+date: 2021-08-06
 include-before:
-- '$$\newcommand{\E}{\mathbb{E}}$$'
+- $$\newcommand{\E}{\mathbb{E}}$$
 layout: single
 output:
   md_document:
-    preserve_yaml: True
+    preserve_yaml: true
     variant: markdown
-permalink: '/posts/five-minute-did-continuous-treatment'
-title: |
-    Five Minute Summary: Difference in Differences with a Continuous
-    Treatment
+permalink: /posts/five-minute-did-continuous-treatment
+title: "Five Minute Summary: Difference in Differences with a Continuous
+  Treatment"
 ---
 
 $$\newcommand{\E}{\mathbb{E}}$$
 
+```{=html}
 <style>
 s {text-decoration:none; color: red;}
 </style>
-
+```
 [Andrew Goodman-Bacon](https://goodman-bacon.com), [Pedro
 Sant'Anna](https://pedrohcgs.github.io), and I have just posted a new
 working paper [Differences in Differences with a Continuous
@@ -60,8 +60,7 @@ fairly large number of discrete values) in addition to truly continuous
 treatments. Below, I'll talk about the truly continuous case, but the
 paper has details about the multi-valued discrete treatment case.
 
-Baseline case with two time periods
-===================================
+# Baseline case with two time periods
 
 Let's start with the simplest case for DID where there are two time
 periods, no units participate in the treatment in the first time period,
@@ -112,7 +111,8 @@ $$
     ATT(d|d) = \E[ \Delta Y_t | D=d] - \E[\Delta Y_t | D=0]
 $$
 
-This seems straightforward, <s>but there is a big caveat</s>
+This seems straightforward, `<s>`{=html}but there is a big
+caveat`</s>`{=html}
 
 While $$ATT(d|d)$$ is the effect of dose $$d$$ among units that
 experienced dose $$d$$, most applications in economics want to answer
@@ -231,8 +231,7 @@ poor estimates of the average causal response. Our suggestion is to
 avoid the TWFE regression here and instead just directly estimate the
 parameters of interest.
 
-The Rest of the Paper...
-========================
+# The Rest of the Paper...
 
 -   The previous discussion seemed quite negative, but one positive
     thing is that, unlike the binary treatment case, you can still do
@@ -287,8 +286,23 @@ The Rest of the Paper...
     first three problems with TWFE mentioned above. But that, under a
     standard parallel trends assumption, DID includes selection bias
     terms is a **fundamental problem** in the case with a
-    multi-valued/continuous treatment. In fact, this would be <s>my main
-    takeaway from our paper --- in a DID setup, comparing effects across
-    different doses likely requires substantially stronger assumptions
-    than what most applied researchers in economics think that they are
-    making.</s>
+    multi-valued/continuous treatment. In fact, this would be
+    `<s>`{=html}my main takeaway from our paper --- in a DID setup,
+    comparing effects across different doses likely requires
+    substantially stronger assumptions than what most applied
+    researchers in economics think that they are making.`</s>`{=html}
+
+<script src="https://giscus.app/client.js"
+        data-repo="bcallaway11/bcallaway11.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOBG-Tgc4COCq4"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -202,3 +202,18 @@ period. Particularly, in every pre-treatment period, we would have
 over-estimated the effect of participating in the treatment (if the
 treatment had started in that period) – this happens because of the
 linear violations of parallel trends in all periods.
+
+<script src="https://giscus.app/client.js"
+        data-repo="bcallaway11/bcallaway11.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOBG-Tgc4COCq4"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

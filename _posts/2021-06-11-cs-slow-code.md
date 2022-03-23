@@ -4,15 +4,15 @@ categories:
 - Difference in Differences
 - R
 - did package
-comments: True
-date: '2021-06-11'
+comments: true
+date: 2021-06-11
 layout: single
 output:
   md_document:
-    preserve_yaml: True
+    preserve_yaml: true
     variant: markdown
-permalink: '/posts/cs-code-slow'
-title: 'Is our code slow...?'
+permalink: /posts/cs-code-slow
+title: Is our code slow...?
 ---
 
 I just ran into the [`did_imputation` Stata
@@ -23,7 +23,7 @@ alternatives to two-way fixed effects in de Chaisemartin and
 D'Haultfoeuille (2020), Sun and Abraham (2020), and Callaway and
 Sant'Anna (2020) --- so you can see estimates all in the same plot:
 
-<img src="/assets/images/cs_slow.jpeg">
+`<img src="/assets/images/cs_slow.jpeg">`{=html}
 
 This is great, as users can display several of these new estimators
 along the same plot. What catches *my* eye here though is how slow our
@@ -38,13 +38,11 @@ Stata version is, at the moment, a brand new proof-of-concept and still
 in beta mode. Let's see what happens if we try the same simulations but
 in R using the `did` package instead of Stata.
 
-Same simulations but in R
-=========================
+# Same simulations but in R
 
-Step 1: Generate the same data
-------------------------------
+## Step 1: Generate the same data
 
-``` {.r}
+``` r
 time.periods <- 15
 n <- 300
 
@@ -65,8 +63,7 @@ panel_data$Y <- panel_data$id + 3*panel_data$tp +
   tau*panel_data$D + rnorm(nrow(panel_data))
 ```
 
-Step 2: Use `did` package
--------------------------
+## Step 2: Use `did` package
 
 For this part, let's try two different things. First, we'll try the
 default version of our code where we first compute all possible
@@ -78,7 +75,7 @@ particularly nice in the context of event studies because they provide
 robustness to multiple hypothesis testing (since we are estimating
 effects of the treatment at different lengths of exposure).
 
-``` {.r}
+``` r
 library(did)
 
 # with 1000 bootstrap iterations
@@ -95,11 +92,11 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.924   0.044   1.968
+    ##   1.766   0.052   1.805
 
 Second, let's try the same thing but with analytical standard errors.
 
-``` {.r}
+``` r
 # with analytical standard errors
 current_time <- proc.time()
 out2 <- att_gt(yname="Y",
@@ -113,10 +110,9 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.279   0.000   1.280
+    ##   0.802   0.003   0.793
 
-Conclusion
-==========
+# Conclusion
 
 This seems like mostly good news. Our main code is in the R `did`
 package, and, if you run that, our code delivers estimates of all
@@ -133,14 +129,13 @@ uses a different bootstrap procedure than the R code does (which I
 suspect is the main reason for the differences in computational time),
 but I expect the Stata code to be running much faster soon.
 
-References
-==========
+# References
 
 -   Borusyak, Kirill, Xavier Jaravel, and Jann Spiess. "Revisiting Event
     Study Designs: Robust and Efficient Estimation." Working Paper
     (2021).
 
--   Callaway, Brantly, and Pedro HC Sant’Anna.
+-   Callaway, Brantly, and Pedro HC Sant'Anna.
     "Difference-in-differences with multiple time periods." Journal of
     Econometrics (2020).
 
@@ -151,3 +146,18 @@ References
 -   Sun, Liyang, and Sarah Abraham. "Estimating dynamic treatment
     effects in event studies with heterogeneous treatment effects."
     Journal of Econometrics (2020).
+
+<script src="https://giscus.app/client.js"
+        data-repo="bcallaway11/bcallaway11.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOBG-Tgc4COCq4"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

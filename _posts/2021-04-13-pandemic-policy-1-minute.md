@@ -2,22 +2,21 @@
 author: brant
 categories:
 - Econometrics
-- 'Covid-19'
+- Covid-19
 - Policy Evaluation
 - Panel Data
-date: '2021-05-16'
+comments: true
+date: 2021-05-16
 layout: single
 output:
   md_document:
-    preserve_yaml: True
+    preserve_yaml: true
     variant: markdown
-permalink: '/posts/five-minute-pandemic-policy'
-title: 'Five Minute Summary: Policy Evaluation during a Pandemic'
-comments: true
+permalink: /posts/five-minute-pandemic-policy
+title: "Five Minute Summary: Policy Evaluation during a Pandemic"
 ---
 
-Introduction
-------------
+## Introduction
 
 [Tong Li](https://my.vanderbilt.edu/tlwebpage/) and I just posted a new
 working paper called [Policy Evaluation during a
@@ -44,8 +43,7 @@ unconfoundedness-type identification strategies are likely to be more
 appropriate than DID-type identification strategies when it comes to
 identifying effects of Covid-19 related policies.
 
-DID or Unconfoundedness for Evaluating Policies during a Pandemic?
-------------------------------------------------------------------
+## DID or Unconfoundedness for Evaluating Policies during a Pandemic?
 
 The key issue is that epidemic models from the epidemiology literature
 are highly nonlinear. A leading example is stochastic SIRD model (SIRD
@@ -81,8 +79,7 @@ is much different from, say, applications in labor economics where it
 seems much more reasonable to think that an individual's earnings are
 related to their unobserved, time invariant "skill".
 
-Does the identification strategy actually matter?
--------------------------------------------------
+## Does the identification strategy actually matter?
 
 The short answer is: yes.
 
@@ -121,8 +118,7 @@ paper). You can immediately see that this approach works much better.
 
 ![](/files/pandemic-policy/unc_es_example3.jpg)
 
-The Rest of the Paper...
-------------------------
+## The Rest of the Paper...
 
 -   We propose doubly robust estimators of policy effects. These sorts
     of estimators are attractive in this case because they provide
@@ -159,3 +155,18 @@ The Rest of the Paper...
     orders on Covid-19 cases and recreational travel. We find that the
     results are quite sensitive to which methodological approach one
     chooses.
+
+<script src="https://giscus.app/client.js"
+        data-repo="bcallaway11/bcallaway11.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOBG-Tgc4COCq4"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
