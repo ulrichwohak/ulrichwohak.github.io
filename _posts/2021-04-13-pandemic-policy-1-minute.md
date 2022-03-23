@@ -11,7 +11,7 @@ layout: single
 output:
   md_document:
     preserve_yaml: true
-    variant: markdown
+    variant: gfm+tex_math_dollars
 permalink: /posts/five-minute-pandemic-policy
 title: "Five Minute Summary: Policy Evaluation during a Pandemic"
 ---
@@ -30,14 +30,14 @@ In that paper, we ended up proposed a matching estimator, but we got a
 lot of comments asking: *Why not difference-in-differences?*
 
 We became quite interested in answering that question. Originally, we
-just "had the sense" that DID was not the right tool to use here. But
+just “had the sense” that DID was not the right tool to use here. But
 that has developed into a fully fledged paper now.
 
 And our answer turns out to be the same as before: to us, it seems like
 a lot better idea to carefully condition on pre-treatment pandemic
 related variables (e.g., number of cases, fraction of the population
 still susceptible, population size, and perhaps other variables like
-population density or demographics) rather than try to "difference out"
+population density or demographics) rather than try to “difference out”
 location-specific fixed effects. In other words, we think
 unconfoundedness-type identification strategies are likely to be more
 appropriate than DID-type identification strategies when it comes to
@@ -58,7 +58,7 @@ where $$\lambda, \gamma,$$ and $$\beta$$ are parameters related to the
 recovery rate, death rate, and infection rate, respectively; $$N_l$$ is
 the number of individuals in a particular location, $$U_{lt}$$ is an
 idiosyncratic shock, and variables indexed by $$\bullet(0)$$ are
-"potential outcomes" (the values those variables would take if the
+“potential outcomes” (the values those variables would take if the
 policy were not implemented).
 
 You can immediately see that this is a *much different* model from the
@@ -71,20 +71,20 @@ $$
 where $$\theta_t$$ is a time fixed effect and $$\eta_i$$ is an
 individual fixed effect.
 
-This shouldn't be a big surprise either --- pandemics are much different
+This shouldn’t be a big surprise either — pandemics are much different
 from many of the panel data sorts of applications that we commonly
 consider in economics. In particular, the spread of a pandemic is not
-really related to a particular location's "pandemic fixed effect"; this
+really related to a particular location’s “pandemic fixed effect”; this
 is much different from, say, applications in labor economics where it
-seems much more reasonable to think that an individual's earnings are
-related to their unobserved, time invariant "skill".
+seems much more reasonable to think that an individual’s earnings are
+related to their unobserved, time invariant “skill”.
 
 ## Does the identification strategy actually matter?
 
 The short answer is: yes.
 
 In the paper we consider both simulations related to this and an
-application on shelter-in-place orders. Just to keep things short, let's
+application on shelter-in-place orders. Just to keep things short, let’s
 just consider the simulations here.
 
 For the simulations, for simplicity, we consider the case where the
@@ -118,7 +118,7 @@ paper). You can immediately see that this approach works much better.
 
 ![](/files/pandemic-policy/unc_es_example3.jpg)
 
-## The Rest of the Paper...
+## The Rest of the Paper…
 
 -   We propose doubly robust estimators of policy effects. These sorts
     of estimators are attractive in this case because they provide
@@ -130,10 +130,9 @@ paper). You can immediately see that this approach works much better.
     evaluate policies while partially circumventing the challenge of
     estimating a full pandemic model. Basically, we get to the case
     where you need to compare locations that implemented the policy to
-    locations that didn't implement the policy (or implemented it later)
+    locations that didn’t implement the policy (or implemented it later)
     conditional on having the same pre-policy characteristics that are
-    related to the pandemic --- economists know a lot about this
-    setting.
+    related to the pandemic — economists know a lot about this setting.
 
 -   We also consider the case where a researcher is interested in
     understanding the effect of a Covid-19 related policy on an economic
@@ -147,7 +146,7 @@ paper). You can immediately see that this approach works much better.
         covariate deliver consistent estimates of ATT-type parameters in
         this case.
 
-    -   We propose a way to "adjust" for the policy affecting cases and
+    -   We propose a way to “adjust” for the policy affecting cases and
         deliver a reasonable ATT-type effect of the policy on economic
         outcomes.
 

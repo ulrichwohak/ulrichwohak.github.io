@@ -10,9 +10,9 @@ layout: single
 output:
   md_document:
     preserve_yaml: true
-    variant: markdown
+    variant: gfm+tex_math_dollars
 permalink: /posts/cs-code-slow
-title: Is our code slow...?
+title: Is our code slow…?
 ---
 
 I just ran into the [`did_imputation` Stata
@@ -20,22 +20,22 @@ command](https://github.com/borusyak/did_imputation) which, mainly,
 contains the code for implementing the ideas in Borusyak, Jaravel, and
 Spiess (2021). Interestingly, the new package provides calls to recent
 alternatives to two-way fixed effects in de Chaisemartin and
-D'Haultfoeuille (2020), Sun and Abraham (2020), and Callaway and
-Sant'Anna (2020) --- so you can see estimates all in the same plot:
+D’Haultfoeuille (2020), Sun and Abraham (2020), and Callaway and
+Sant’Anna (2020) — so you can see estimates all in the same plot:
 
-`<img src="/assets/images/cs_slow.jpeg">`{=html}
+<img src="/assets/images/cs_slow.jpeg">
 
 This is great, as users can display several of these new estimators
 along the same plot. What catches *my* eye here though is how slow our
 code appears to be: taking over two minutes to run compared to about 1
 second for other approaches. This is not even a very complicated
 simulation either; there are 300 units and 15 time periods. If our code
-doesn't run fast in this case, it is a bad sign!
+doesn’t run fast in this case, it is a bad sign!
 
 The other thing that I immediately notice is that `did_imputation` is
 written in Stata, and the main version of our code is written in R. Our
 Stata version is, at the moment, a brand new proof-of-concept and still
-in beta mode. Let's see what happens if we try the same simulations but
+in beta mode. Let’s see what happens if we try the same simulations but
 in R using the `did` package instead of Stata.
 
 # Same simulations but in R
@@ -65,7 +65,7 @@ panel_data$Y <- panel_data$id + 3*panel_data$tp +
 
 ## Step 2: Use `did` package
 
-For this part, let's try two different things. First, we'll try the
+For this part, let’s try two different things. First, we’ll try the
 default version of our code where we first compute all possible
 group-time average treatment effects (including pre-treatment ones),
 then use these to compute an event study. In addition, we default to
@@ -92,9 +92,9 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   1.766   0.052   1.805
+    ##   1.867   0.036   1.897
 
-Second, let's try the same thing but with analytical standard errors.
+Second, let’s try the same thing but with analytical standard errors.
 
 ``` r
 # with analytical standard errors
@@ -110,7 +110,7 @@ proc.time() - current_time
 ```
 
     ##    user  system elapsed 
-    ##   0.802   0.003   0.793
+    ##   0.840   0.000   0.828
 
 # Conclusion
 
@@ -131,20 +131,20 @@ but I expect the Stata code to be running much faster soon.
 
 # References
 
--   Borusyak, Kirill, Xavier Jaravel, and Jann Spiess. "Revisiting Event
-    Study Designs: Robust and Efficient Estimation." Working Paper
+-   Borusyak, Kirill, Xavier Jaravel, and Jann Spiess. “Revisiting Event
+    Study Designs: Robust and Efficient Estimation.” Working Paper
     (2021).
 
--   Callaway, Brantly, and Pedro HC Sant'Anna.
-    "Difference-in-differences with multiple time periods." Journal of
+-   Callaway, Brantly, and Pedro HC Sant’Anna.
+    “Difference-in-differences with multiple time periods.” Journal of
     Econometrics (2020).
 
--   de Chaisemartin, Clément, and Xavier d'Haultfoeuille. "Two-way fixed
-    effects estimators with heterogeneous treatment effects." American
+-   de Chaisemartin, Clément, and Xavier d’Haultfoeuille. “Two-way fixed
+    effects estimators with heterogeneous treatment effects.” American
     Economic Review 110.9 (2020): 2964-96.
 
--   Sun, Liyang, and Sarah Abraham. "Estimating dynamic treatment
-    effects in event studies with heterogeneous treatment effects."
+-   Sun, Liyang, and Sarah Abraham. “Estimating dynamic treatment
+    effects in event studies with heterogeneous treatment effects.”
     Journal of Econometrics (2020).
 
 <script src="https://giscus.app/client.js"

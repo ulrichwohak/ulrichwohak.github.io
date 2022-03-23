@@ -13,7 +13,7 @@ layout: single
 output:
   md_document:
     preserve_yaml: true
-    variant: markdown
+    variant: gfm+tex_math_dollars
 permalink: /posts/five-minute-did-continuous-treatment
 title: "Five Minute Summary: Difference in Differences with a Continuous
   Treatment"
@@ -21,13 +21,12 @@ title: "Five Minute Summary: Difference in Differences with a Continuous
 
 $$\newcommand{\E}{\mathbb{E}}$$
 
-```{=html}
 <style>
 s {text-decoration:none; color: red;}
 </style>
-```
+
 [Andrew Goodman-Bacon](https://goodman-bacon.com), [Pedro
-Sant'Anna](https://pedrohcgs.github.io), and I have just posted a new
+Sant’Anna](https://pedrohcgs.github.io), and I have just posted a new
 working paper [Differences in Differences with a Continuous
 Treatment](https://arxiv.org/abs/2107.02637). In the paper, we are
 interested in DID strategies when a treatment variable is
@@ -44,7 +43,7 @@ like:
 -   Can we propose alternative estimators with better properties?
 
 This has been an exciting collaboration as I have learned a whole lot
-from [Bacon's work on understanding two-way fixed effects (TWFE)
+from [Bacon’s work on understanding two-way fixed effects (TWFE)
 regressions with a staggered, binary
 treatment](https://doi.org/10.1016/j.jeconom.2021.03.014). Our (Pedro
 and me) [earlier paper](https://doi.org/10.1016/j.jeconom.2020.12.001)
@@ -52,22 +51,22 @@ proposed some alternatives to get around the issues with TWFE
 regressions in this context. Our new paper has both kinds of results all
 in one place.
 
-A note on terminology: what we mean by "continuous" is more like
-"continuous enough" that a researcher would include a single regressor
+A note on terminology: what we mean by “continuous” is more like
+“continuous enough” that a researcher would include a single regressor
 in their model rather than a sequence of dummy variables. So our results
-are applicable to treatments such as "years of education" (which takes a
+are applicable to treatments such as “years of education” (which takes a
 fairly large number of discrete values) in addition to truly continuous
-treatments. Below, I'll talk about the truly continuous case, but the
+treatments. Below, I’ll talk about the truly continuous case, but the
 paper has details about the multi-valued discrete treatment case.
 
 # Baseline case with two time periods
 
-Let's start with the simplest case for DID where there are two time
+Let’s start with the simplest case for DID where there are two time
 periods, no units participate in the treatment in the first time period,
 and some units become treated in the second time period with a
-continuous "dose" while other units remain untreated.
+continuous “dose” while other units remain untreated.
 
-Here's the notation I'll use:
+Here’s the notation I’ll use:
 
 -   Two time periods: $$t$$ and $$t-1$$
 
@@ -95,7 +94,7 @@ experienced dose $$d$$.
 
 **Parallel Trends Assumptions**
 
-With a continuous treatment, the analogue of the "standard" parallel
+With a continuous treatment, the analogue of the “standard” parallel
 trends assumption with a binary treatment is the following
 
 *Standard Parallel Trends:* For all possible values of the dose $$d$$
@@ -111,8 +110,7 @@ $$
     ATT(d|d) = \E[ \Delta Y_t | D=d] - \E[\Delta Y_t | D=0]
 $$
 
-This seems straightforward, `<s>`{=html}but there is a big
-caveat`</s>`{=html}
+This seems straightforward, <s>but there is a big caveat</s>
 
 While $$ATT(d|d)$$ is the effect of dose $$d$$ among units that
 experienced dose $$d$$, most applications in economics want to answer
@@ -151,8 +149,8 @@ This seems like a big issue.
 How can one get around the selection bias terms that show up above? We
 discuss a few possibilities in the paper (and it would also be
 interesting to think about partial identification in this context), but
-let's consider here making alternative identifying assumptions. Before
-doing that, let's introduce a couple of new possible parameters of
+let’s consider here making alternative identifying assumptions. Before
+doing that, let’s introduce a couple of new possible parameters of
 interest:
 
 $$
@@ -180,7 +178,7 @@ strong parallel trends is likely to be a much stronger assumption than
 the standard parallel trends assumption. This is primarily because it
 involves potential outcomes for all values of $$d$$ rather than just
 untreated potential outcomes. The payoff of making the stronger
-assumption is large though --- it gets rid of the selection bias terms
+assumption is large though — it gets rid of the selection bias terms
 that were our main problems above. In particular, if you compare
 $$ATE(d)$$ for different values of $$d$$, you just get a causal effect
 term
@@ -190,7 +188,7 @@ $$
 $$
 
 which means that it makes sense to interpret the differences causally.
-Similarly, $$ACR(d)$$ doesn't include selection bias terms either under
+Similarly, $$ACR(d)$$ doesn’t include selection bias terms either under
 strong parallel trends.
 
 What does all this mean? In a DID setup, if researchers want to
@@ -231,7 +229,7 @@ poor estimates of the average causal response. Our suggestion is to
 avoid the TWFE regression here and instead just directly estimate the
 parameters of interest.
 
-# The Rest of the Paper...
+# The Rest of the Paper…
 
 -   The previous discussion seemed quite negative, but one positive
     thing is that, unlike the binary treatment case, you can still do
@@ -278,7 +276,7 @@ parameters of interest.
         issue, unless a researcher is willing to impose a substantially
         stronger assumption (such as a multi-period version of the
         strong parallel trends assumption above), then the TWFE
-        regression continues to contain the "selection bias" terms
+        regression continues to contain the “selection bias” terms
         above.
 
 -   With multiple periods and variation in treatment timing, we propose
@@ -286,11 +284,11 @@ parameters of interest.
     first three problems with TWFE mentioned above. But that, under a
     standard parallel trends assumption, DID includes selection bias
     terms is a **fundamental problem** in the case with a
-    multi-valued/continuous treatment. In fact, this would be
-    `<s>`{=html}my main takeaway from our paper --- in a DID setup,
-    comparing effects across different doses likely requires
-    substantially stronger assumptions than what most applied
-    researchers in economics think that they are making.`</s>`{=html}
+    multi-valued/continuous treatment. In fact, this would be <s>my main
+    takeaway from our paper — in a DID setup, comparing effects across
+    different doses likely requires substantially stronger assumptions
+    than what most applied researchers in economics think that they are
+    making.</s>
 
 <script src="https://giscus.app/client.js"
         data-repo="bcallaway11/bcallaway11.github.io"

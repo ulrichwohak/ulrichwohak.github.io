@@ -11,7 +11,7 @@ layout: single
 output:
   md_document:
     preserve_yaml: true
-    variant: markdown_github
+    variant: gfm+tex_math_dollars
 permalink: /posts/event-study-universal-v-varying-base-period
 title: Universal vs. Varying Base Period in Event Studies
 ---
@@ -64,10 +64,8 @@ either a `varying` (the default) or `universal` base period.
 A couple of other things that are also worth mentioning:
 
 -   In post-treatment periods, the base period is the period immediately
-    before treatment both cases
-    ⟹
-    the only place where this difference matters is in pre-treatment
-    periods.
+    before treatment both cases $$\implies$$ the only place where this
+    difference matters is in pre-treatment periods.
 
 -   In pre-treatment periods, either case is just a linear combination
     of the other, so they essentially are just alternative ways of
@@ -142,21 +140,14 @@ ggpubr::ggarrange(p1_varying, p1_universal, nrow=1)
 
 The plot on the left uses a varying base period while the plot on the
 right uses a universal base period. The estimated treatment effects when
-*e* = 0
-are numerically identical. The pre-treatment estimates are not
+$$e=0$$ are numerically identical. The pre-treatment estimates are not
 numerically identical (they are based on different paths of outcomes in
 pre-treatment periods for the treated group relative to the untreated
 group), but (as expected) neither provides any evidence against parallel
 trends. Finally, notice that using a varying base period provides an
-estimate when
-*e* = 0
-, but does not provide an estimate when
-*e* =  − 4
-; using a universal base period provides an estimate when
-*e* =  − 4
-but not when
-*e* =  − 1
-.
+estimate when $$e=0$$, but does not provide an estimate when $$e=-4$$;
+using a universal base period provides an estimate when $$e=-4$$ but not
+when $$e=-1$$.
 
 **Example 2: Anticipation Effects**
 

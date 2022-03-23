@@ -2,7 +2,7 @@
 title: "Five Minute Summary: Policy Evaluation during a Pandemic"
 output:
   md_document:
-    variant: "markdown"
+    variant: "gfm+tex_math_dollars"
     preserve_yaml: TRUE
 author: "brant"
 date: '2021-05-16'
@@ -77,7 +77,6 @@ The last figure involves estimating the effect of the policy by comparing locati
 * We also have an application about the effects of shelter-in-place orders on Covid-19 cases and recreational travel.  We find that the results are quite sensitive to which methodological approach one chooses.
 	
 
-```{=markdown}
 <script src="https://giscus.app/client.js"
         data-repo="bcallaway11/bcallaway11.github.io"
         data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
@@ -92,4 +91,3 @@ The last figure involves estimating the effect of the policy by comparing locati
         crossorigin="anonymous"
         async>
 </script>
-```

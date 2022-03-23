@@ -2,7 +2,7 @@
 title: "Five Minute Summary: Difference in Differences with a Continuous Treatment"
 output:
   md_document:
-    variant: "markdown"
+    variant: "gfm+tex_math_dollars"
     preserve_yaml: TRUE
 include-before:
 - '$$\newcommand{\E}{\mathbb{E}}$$'
@@ -167,7 +167,6 @@ That the weights are always positive is a good thing (especially compared to rec
 	
 * With multiple periods and variation in treatment timing, we propose alternative estimation strategies to TWFE.  These can alleviate the first three problems with TWFE mentioned above.  But that, under a standard parallel trends assumption, DID includes selection bias terms is a **fundamental problem** in the case with a multi-valued/continuous treatment.  In fact, this would be <s>my main takeaway from our paper --- in a DID setup, comparing effects across different doses likely requires substantially stronger assumptions than what most applied researchers in economics think that they are making.</s>
 
-```{=markdown}
 <script src="https://giscus.app/client.js"
         data-repo="bcallaway11/bcallaway11.github.io"
         data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
@@ -182,4 +181,3 @@ That the weights are always positive is a good thing (especially compared to rec
         crossorigin="anonymous"
         async>
 </script>
-```

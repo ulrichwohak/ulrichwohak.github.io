@@ -10,7 +10,7 @@ layout: single
 output:
   md_document:
     preserve_yaml: true
-    variant: markdown
+    variant: gfm+tex_math_dollars
 permalink: /posts/fms-did-time-varying-covariates
 title: "Five Minute Summary: Difference in differences with time-varying
   covariates"
@@ -19,12 +19,12 @@ title: "Five Minute Summary: Difference in differences with time-varying
 $$\newcommand{\E}{\mathbb{E}}$$
 
 My colleague [Carol Caetano](http://carolinacaetano.net/), and two UGA
-grad students [Hugo Sant'Anna
+grad students [Hugo Sant’Anna
 Rodrigues](https://entr.uga.edu/directory/people/hugo-rodrigues) and
 Stroud Payne just posted [a new working
 paper](https://arxiv.org/abs/2202.02903) about DID with time varying
 covariates. This is a topic that has been in the back of my mind for a
-long time --- and I get a lot of
+long time — and I get a lot of
 [questions](https://github.com/bcallaway11/did/issues/71) about time
 varying covariates from people using the [`did`
 package](https://bcallaway11.github.io/did/).
@@ -36,11 +36,11 @@ distinct issues from those that show up in the literature on TWFE
 regressions with multiple periods and variation in treatment timing
 (e.g., [Goodman-Bacon
 (2021)](https://doi.org/10.1016/j.jeconom.2021.03.014), [de Chaisemartin
-and d'Haultfoeuille (2020)](https://doi.org/10.1257/aer.20181169), and
+and d’Haultfoeuille (2020)](https://doi.org/10.1257/aer.20181169), and
 [Borusyak, Jaravel, and Spiess
 (2021)](https://arxiv.org/abs/2108.12419))
 
-In this paper, we have worked out a lot of these issues -- particularly,
+In this paper, we have worked out a lot of these issues – particularly,
 in the case with exactly two time periods (which is a case where TWFE
 regressions work well under unconditional parallel trends). We also
 provide alternative strategies that (i) are able to get around these
@@ -74,34 +74,34 @@ two-way fixed effects (TWFE) regression:
     this sort of TWFE regression uses already treated units as the
     comparison group, and therefore suffers from all well-known
     weaknesses in this case. Both Goodman-Bacon (2021) and de
-    Chaisemartin and d'Haultfoeuille (2020) already have results along
-    these lines, so I'm going to only talk about the case with two time
+    Chaisemartin and d’Haultfoeuille (2020) already have results along
+    these lines, so I’m going to only talk about the case with two time
     periods below (which is a case where, at least in the case of
     unconditional parallel trends, TWFE regressions work fine).
 
-2.  TWFE regressions won't work well if the time-varying covariates are
-    affected by the treatment. This issue is often referred to as a "bad
-    control" problem. It seems to be standard practice just not to
+2.  TWFE regressions won’t work well if the time-varying covariates are
+    affected by the treatment. This issue is often referred to as a “bad
+    control” problem. It seems to be standard practice just not to
     include covariates that are potentially affected by the treatment. I
-    agree that it's a bad idea to include a time-varying covariate that
+    agree that it’s a bad idea to include a time-varying covariate that
     is itself affected by the treatment, but I am less sure that a good
     solution is to just not include it.
 
     For example, suppose that a labor economist is studying the effect
-    of a treatment on a person's earnings and thinks parallel trends
-    holds after conditioning on a person's occupation, but occupation is
+    of a treatment on a person’s earnings and thinks parallel trends
+    holds after conditioning on a person’s occupation, but occupation is
     potentially affected by the treatment (there is tons of work in
     labor economics that would be concerned with this issue). Both
     ignoring occupation and including occupation run into issues. One
     helpful way to think about this is to try to condition on *untreated
-    potential occupation* --- that is, what occupation would have
-    occurred if a person had not been treated. TWFE regressions don't
-    naturally accommodate this, but we propose some solutions for this
-    case (I'll come back to this below).
+    potential occupation* — that is, what occupation would have occurred
+    if a person had not been treated. TWFE regressions don’t naturally
+    accommodate this, but we propose some solutions for this case (I’ll
+    come back to this below).
 
 3.  TWFE regressions like this are *highly* sensitive to the functional
     form. Since we are considering the case with two periods (and, like
-    the "textbook" version of DID, where no units are treated yet in the
+    the “textbook” version of DID, where no units are treated yet in the
     first period), we can write
 
     $$
@@ -135,16 +135,16 @@ two-way fixed effects (TWFE) regression:
     Sevier County which increased from about 90,000 to about 99,000. But
     Sevier County is more than twice as big as Oconee County. This is
     probably not what we had in mind when we said we wanted to condition
-    on county population. Maybe this is just bad luck, let's check the
+    on county population. Maybe this is just bad luck, let’s check the
     county with the next most similar population change. It is Shelby
-    County --- this is Memphis! --- which increased from 928,500 to
-    938,800. I don't think anyone would think that comparing paths of
-    outcomes for Shelby County and Oconee County is what any researcher
-    has in mind for DID conditioning on county population. As a
-    side-comment, if you switch to, say, the change in log population
-    over time, you do not do much better either --- in that case, the
-    closest match is Montgomery County, TN which has over 5 times the
-    population of Oconee County.
+    County — this is Memphis! — which increased from 928,500 to 938,800.
+    I don’t think anyone would think that comparing paths of outcomes
+    for Shelby County and Oconee County is what any researcher has in
+    mind for DID conditioning on county population. As a side-comment,
+    if you switch to, say, the change in log population over time, you
+    do not do much better either — in that case, the closest match is
+    Montgomery County, TN which has over 5 times the population of
+    Oconee County.
 
     Perhaps somewhat surprisingly TWFE regressions also require strong
     functional form assumptions on the propensity score (see paper for
@@ -155,9 +155,9 @@ two-way fixed effects (TWFE) regression:
     covariates*. However, conditioning on time-invariant covariates in
     the parallel trends assumption is important in many applications.
     For example, if you are a labor economist studying the effect of
-    some treatment on people's earnings, the most important covariates
+    some treatment on people’s earnings, the most important covariates
     to condition on in the parallel trends assumption are all likely to
-    be time invariant --- e.g., demographics, education, etc.
+    be time invariant — e.g., demographics, education, etc.
 
 5.  $$\alpha$$ is hard to interpret in the presence of treatment effect
     heterogeneity. Even if none of the issues above apply in a
@@ -165,9 +165,9 @@ two-way fixed effects (TWFE) regression:
     (particularly, if they can vary across different values of the
     covariates), (under some additional conditions) $$\alpha$$ will be
     equal to a weighted average of conditional ATT parameters but they
-    will suffer from the "weight reversal" property pointed out in
+    will suffer from the “weight reversal” property pointed out in
     [Sloczynski (2020)](https://doi.org/10.1162/rest_a_00953) in a
-    different context --- conditional ATTs for values of the covariates
+    different context — conditional ATTs for values of the covariates
     that are uncommon for the treated group relative to the untreated
     group get lots of weight, and the opposite happens for relatively
     common values of the covariates.
@@ -178,10 +178,10 @@ their application, then a TWFE regression would recover the ATT.
 **Existing work in econometrics**
 
 Most work on DID under conditional parallel trends (e.g., [Abadie
-(2005)](https://doi.org/10.1111/0034-6527.00321), [Sant'Anna and Zhao
+(2005)](https://doi.org/10.1111/0034-6527.00321), [Sant’Anna and Zhao
 (2020)](https://doi.org/10.1016/j.jeconom.2020.06.003), and [Chang
 (2020)](https://doi.org/10.1093/ectj/utaa001)) considers the case with
-time-invariant covariates or uses "pre-treatment" values of time-varying
+time-invariant covariates or uses “pre-treatment” values of time-varying
 covariates (which effectively just makes time-varying covariates time
 invariant by using their value in the pre-treatment period). This
 already solves most of the above issues: they can be adapted to handle
@@ -191,7 +191,7 @@ solve (4) above because they include time-invariant covariates, and they
 recover the overall ATT directly rather than a hard-to-interpret
 weighted average of conditional ATTs as in (5).
 
-**What's new in our paper**
+**What’s new in our paper**
 
 1.  First, in order to address (2), where the time-varying covariates
     could themselves be affected by the treatment, we provide specific
@@ -217,7 +217,7 @@ weighted average of conditional ATTs as in (5).
 
     This condition may or may not be reasonable in particular
     applications, but it is the sort of thing that reseachers ought to
-    think about. It is also "pre-testable" (i.e., you can look at data
+    think about. It is also “pre-testable” (i.e., you can look at data
     in pre-treatment periods and potentially find evidence for or
     against it).
 
@@ -239,7 +239,7 @@ weighted average of conditional ATTs as in (5).
     we provide a doubly robust expression for that ATT that does not
     rely on those sorts of functional form assumptions. These
     expressions involve outcome regressions and propensity scores that
-    depend on both $$X_{t^*}$$ and $$X_{t^*-1}$$ --- these can be
+    depend on both $$X_{t^*}$$ and $$X_{t^*-1}$$ — these can be
     challenging to estimate well because $$X_{t^*}$$ and $$X_{t^*-1}$$
     are likely to be highly collinear in many applications. However, the
     doubly robust expression for the ATT allows us to connect to the
@@ -262,7 +262,7 @@ weighted average of conditional ATTs as in (5).
 
     Let me just give the example of what we propose to do in cases where
     the time-varying covariates evolve exogenously. Similar to the
-    "imputation" literature, we can exploit the connection between
+    “imputation” literature, we can exploit the connection between
     parallel trends assumptions and a model for untreated potential
     outcomes:
 
@@ -287,7 +287,7 @@ and $$\beta^*_{t^*} := (\beta_{t^*} - \beta_{t^*-1})$$. In my view, this
 is particularly attractive specification for untreated potential
 outcomes in terms of time-varying covariates. It includes both the
 initial level of the covariates (which is similar to including the
-"pre-treatment" value of the covariate) as well as the change in
+“pre-treatment” value of the covariate) as well as the change in
 covariates over time. And, for example, (up to the parametric
 assumptions) this expression would avoid the issues of comparing
 counties with similar changes in population over time but very
@@ -323,48 +323,48 @@ group (as in the previous display) to compute the ATT.
 **Conclusion**
 
 In my view, the sorts of TWFE regressions that show up in many
-applications in economics have a number of limitations -- when these
-TWFE regressions include time-varying covariates, we are arguing that
-they are likely to have a number of disadvantages even in "textbook"
-cases with only two time periods. Fortunately, it is quite
-straightforward to use other approaches (that are not much more
-complicated) that can essentially avoid all of these issues.
+applications in economics have a number of limitations – when these TWFE
+regressions include time-varying covariates, we are arguing that they
+are likely to have a number of disadvantages even in “textbook” cases
+with only two time periods. Fortunately, it is quite straightforward to
+use other approaches (that are not much more complicated) that can
+essentially avoid all of these issues.
 
-We don't have code yet, but we are working on it. If you have
+We don’t have code yet, but we are working on it. If you have
 comments/questions, please feel free to get in touch.
 
 **References**
 
--   Abadie, Alberto. "Semiparametric difference-in-differences
-    estimators." The Review of Economic Studies 72.1 (2005): 1-19.
+-   Abadie, Alberto. “Semiparametric difference-in-differences
+    estimators.” The Review of Economic Studies 72.1 (2005): 1-19.
 
--   Borusyak, Kirill, Xavier Jaravel, and Jann Spiess. "Revisiting event
-    study designs: Robust and efficient estimation." arXiv preprint
+-   Borusyak, Kirill, Xavier Jaravel, and Jann Spiess. “Revisiting event
+    study designs: Robust and efficient estimation.” arXiv preprint
     arXiv:2108.12419 (2021).
 
--   Chang, Neng-Chieh. "Double/debiased machine learning for
-    difference-in-differences models." The Econometrics Journal 23.2
+-   Chang, Neng-Chieh. “Double/debiased machine learning for
+    difference-in-differences models.” The Econometrics Journal 23.2
     (2020): 177-191.
 
--   de Chaisemartin, Clément, and Xavier d'Haultfoeuille. "Two-way fixed
-    effects estimators with heterogeneous treatment effects." American
+-   de Chaisemartin, Clément, and Xavier d’Haultfoeuille. “Two-way fixed
+    effects estimators with heterogeneous treatment effects.” American
     Economic Review 110.9 (2020): 2964-96.
 
--   Gardner, John. "Two-stage differences in differences." (2021).
+-   Gardner, John. “Two-stage differences in differences.” (2021).
 
--   Goodman-Bacon, Andrew. "Difference-in-differences with variation in
-    treatment timing." Journal of Econometrics (2021).
+-   Goodman-Bacon, Andrew. “Difference-in-differences with variation in
+    treatment timing.” Journal of Econometrics (2021).
 
--   Liu, Licheng, Ye Wang, and Yiqing Xu. "A practical guide to
+-   Liu, Licheng, Ye Wang, and Yiqing Xu. “A practical guide to
     counterfactual estimators for causal inference with time-series
-    cross-sectional data." arXiv preprint arXiv:2107.00856 (2021).
+    cross-sectional data.” arXiv preprint arXiv:2107.00856 (2021).
 
--   Sant'Anna, Pedro HC, and Jun Zhao. "Doubly robust
-    difference-in-differences estimators." Journal of Econometrics 219.1
+-   Sant’Anna, Pedro HC, and Jun Zhao. “Doubly robust
+    difference-in-differences estimators.” Journal of Econometrics 219.1
     (2020): 101-122.
 
--   Słoczyński, Tymon. "Interpreting ols estimands when treatment
-    effects are heterogeneous: Smaller groups get larger weights." The
+-   Słoczyński, Tymon. “Interpreting ols estimands when treatment
+    effects are heterogeneous: Smaller groups get larger weights.” The
     Review of Economics and Statistics (2020): 1-27.
 
 <script src="https://giscus.app/client.js"

@@ -2,7 +2,7 @@
 title: "Five Minute Summary: Difference in differences with time-varying covariates"
 output:
   md_document:
-    variant: "markdown"
+    variant: "gfm+tex_math_dollars"
     preserve_yaml: TRUE
 author: "brant"
 date: '2022-02-08'
@@ -146,7 +146,6 @@ We don't have code yet, but we are working on it.  If you have comments/question
 
 * Słoczyński, Tymon. "Interpreting ols estimands when treatment effects are heterogeneous: Smaller groups get larger weights." The Review of Economics and Statistics (2020): 1-27.
 
-```{=markdown}
 <script src="https://giscus.app/client.js"
         data-repo="bcallaway11/bcallaway11.github.io"
         data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
@@ -161,4 +160,3 @@ We don't have code yet, but we are working on it.  If you have comments/question
         crossorigin="anonymous"
         async>
 </script>
-```
