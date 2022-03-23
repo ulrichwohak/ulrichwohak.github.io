@@ -5,7 +5,6 @@ categories:
 - Policy Evaluation
 - Panel Data
 - TWFE Regressions
-comments: true
 date: 2022-02-08
 layout: single
 output:
@@ -334,6 +333,22 @@ complicated) that can essentially avoid all of these issues.
 We don't have code yet, but we are working on it. If you have
 comments/questions, please feel free to get in touch.
 
+```{=html}
+<script src="https://giscus.app/client.js"
+        data-repo="bcallaway11/bcallaway11.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOBG-Tgc4COCq4"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+```
 **References**
 
 -   Abadie, Alberto. "Semiparametric difference-in-differences
