@@ -146,6 +146,7 @@ We don't have code yet, but we are working on it.  If you have comments/question
 
 * Słoczyński, Tymon. "Interpreting ols estimands when treatment effects are heterogeneous: Smaller groups get larger weights." The Review of Economics and Statistics (2020): 1-27.
 
+```
 <script src="https://giscus.app/client.js"
         data-repo="bcallaway11/bcallaway11.github.io"
         data-repo-id="MDEwOlJlcG9zaXRvcnk3NDQyMTEyMQ=="
@@ -160,3 +161,4 @@ We don't have code yet, but we are working on it.  If you have comments/question
         crossorigin="anonymous"
         async>
 </script>
+```
