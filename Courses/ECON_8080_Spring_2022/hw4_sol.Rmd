@@ -1,0 +1,333 @@
+---
+output:  pdf_document
+fontsize: 11pt
+indent: true
+header-includes:
+ - \usepackage{amsmath,amssymb,setspace}
+ - \newcommand{\E}{\textrm{E}}
+ - \newcommand{\var}{\textrm{var}}
+ - \newcommand{\cov}{\textrm{cov}}
+ - \newcommand{\corr}{\textrm{corr}}
+ - \newcommand{\independent}{\perp}
+ - \usepackage[margin=1in]{geometry}
+ - \usepackage{setspace}
+ - \usepackage[most]{tcolorbox}
+ - \newtcolorbox{discussionbox}[1][]{sharp corners, enhanced, colback=white, attach title to upper,#1}
+ - \usepackage{bm}
+---
+
+\onehalfspacing
+
+# Homework 4 Solutions
+
+## 7.7
+
+### (a) 
+
+$\beta$ is defined as the coefficient of the linear projection of $Y^*$ on $X$.  Thus, $\beta = \E[XX']^{-1} \E[XY^*]$.  Now, let's define 
+\begin{align*}
+\tilde{\beta} = \underset{b}{\textrm{argmin }} \E[(Y-X'b)^2]
+\end{align*}
+so that $\tilde{\beta}$ is the coefficient from the linear projection of $Y$ on $X$.  Solving this, we get that
+\begin{align*}
+        \tilde{\beta} &= \E[XX']^{-1} \E[XY] \\
+        &= \E[XX']^{-1}\E[X (Y^*+u)] \\
+        &= \E[XX']^{-1}\E[XY^*] + \E[XX']^{-1}\underbrace{\E[Xu]}_{=0} \\
+        &= \beta
+\end{align*}
+Thus, $\tilde{\beta}=\beta$.  
+
+I think the above is the correct answer to the question, but there is one more thing that is worth pointing out.  As in the problem, let's define $\hat{\beta}$ as the estimate that comes from running a regression of $Y$ on $X$, and additionally define $\hat{\beta}^*$ as the (infeasible) regression coefficient that you would get if you could run the regression of $Y^*$ on $X$.  Note that
+\begin{align*}
+        \hat{\beta}^* = \left(\frac{1}{n}\sum_{i=1}^n X_i X_i'\right)^{-1} \frac{1}{n} \sum_{i=1}^n X_i Y_i^*
+\end{align*}
+and
+\begin{align}
+        \hat{\beta} &= \left(\frac{1}{n}\sum_{i=1}^n X_i X_i'\right)^{-1} \frac{1}{n} \sum_{i=1}^n X_i Y_i \nonumber \\
+        &= \left(\frac{1}{n}\sum_{i=1}^n X_i X_i'\right)^{-1} \frac{1}{n} \sum_{i=1}^n X_i (Y_i^* + u_i) \label{eqn:hatbeta}
+\end{align}
+so, in general, $\hat{\beta} \neq \hat{\beta}^*$; that is, if we were to observe $Y_i^*$, we would not get numerically estimates from the regression of $Y$ on $X$ as from the regression of $Y^*$ on $X$.
+
+### (b)
+
+From Equation \ref{eqn:hatbeta}, we can write
+
+\begin{align*}
+        \hat{\beta} &=  \left(\frac{1}{n}\sum_{i=1}^n X_i X_i'\right)^{-1} \frac{1}{n} \sum_{i=1}^n X_i Y_i^* + \left(\frac{1}{n}\sum_{i=1}^n X_i X_i'\right)^{-1} \frac{1}{n} \sum_{i=1}^n X_i u_i \\
+        & \xrightarrow{p} \E[XX']^{-1} \E[XY^*] + 0 \\
+        &= \beta
+\end{align*}
+where the second equality holds by the law of large numbers and the continuous mapping theorem.  This implies that, despite the measurement error, $\hat{\beta}$ is consistent for $\beta$.
+
+### (c)
+
+Plugging in $Y_i^* = X_i'\beta+e_i$ into Equation \ref{eqn:hatbeta} and multiplying by $\sqrt{n}$, we have that
+\begin{align*}
+        \sqrt{n}(\hat{\beta} - \beta) &= \left(\frac{1}{n} \sum_{i=1}^n X_iX_i'\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i=1}^n X_i (e_i + u_i) \\
+        &= \E[XX']^{-1} \frac{1}{\sqrt{n}} \sum_{i=1}^n X_i (e_i + u_i) + o_p(1) \\
+        &\xrightarrow{d} N(0, \E[XX']^{-1} \Omega \E[XX']^{-1})
+\end{align*}
+where
+\begin{align*}
+        \Omega = \E[XX'(e+u)^2]
+\end{align*}
+This is related, but different, from the case without measurement error; recall that, in that case $\Omega = \E[XX'e^2]$.  
+
+Altogether, this suggests that, when there is this relatively simple kind of measurement error in the outcome, using the measured-with-error outcome still delivers consistent estimates of $\beta$, but the asymptotic variance changes; it is likely to be bigger.
+
+## 7.17
+
+### (a) 
+
+To start with, let's write $\theta = r(\beta_1, \beta_2) = \beta_1 - \beta_2$.  The key step is to derive an expression for $\sqrt{n}(\hat{\theta} - \theta)$.  Using a delta method type of argument, notice that we have that
+\begin{align}
+        r(\hat{\beta}_1, \hat{\beta}_2) = r(\beta_1, \beta_2) + \nabla r(\bar{\beta}_1, \bar{\beta}_2)'\begin{pmatrix} \hat{\beta}_1 - \beta_1 \\ \hat{\beta}_2 - \beta_2 \end{pmatrix} \label{eqn:r}
+\end{align}
+where 
+\begin{align*}
+        \nabla r(\bar{b}_1, \bar{b}_2) &= \left. \begin{bmatrix} \frac{\partial r(b_1,b_2)}{\partial b_1} \\[10pt] \frac{\partial r(b_1,b_2)}{\partial b_2} \end{bmatrix} \right|_{b_1=\bar{b}_1, b_2=\bar{b}_2} \\
+        &= \begin{bmatrix} 1 \\[10pt] -1 \end{bmatrix}
+\end{align*}
+In other words, $\nabla r(\bar{b}_1, \bar{b}_2)$ is the vector of partial derivatives of $r$ with respect to each of its arguments evaluated at $\bar{b}_1$ and $\bar{b}_2$.  For the particular $r$ in our problem, the vector of partial derivatives is just equal to $(1,-1)'$ no matter the values of $\bar{b}_1$ and $\bar{b}_2$.  Plugging this back into Equation \ref{eqn:r} and multiplying by $\sqrt{n}$, we have that
+\begin{align*}
+        \sqrt{n}(\hat{\theta} - \theta) &= \begin{bmatrix} 1 \\[10pt] -1 \end{bmatrix}' \sqrt{n} \begin{pmatrix} \hat{\beta}_1 - \beta_1 \\ \hat{\beta}_2 - \beta_2 \end{pmatrix} \\
+        & \xrightarrow{d} N(0,V)
+\end{align*}
+(as a small side-comment, in the first line there is no $o_p(1)$ term at the end of that equation --- that line holds exactly from the previous part because the vector of partial derivatives of $r$ does not depend on the values of $\bar{b}_1$ and $\bar{b}_2$) and where
+\begin{align*}
+        V &= \begin{bmatrix} 1 \\[10pt] -1 \end{bmatrix}' \mathbf{V}_\beta \begin{bmatrix} 1 \\[10pt] -1 \end{bmatrix} \\
+        &= \begin{pmatrix} (V_{11} - V_{21}) & (V_{12} - V_{22})\end{pmatrix} \begin{bmatrix} 1 \\[10pt] -1 \end{bmatrix} \\
+        &= V_{11} - V_{21} - V_{12} + V_{22}
+\end{align*}
+where $V_{ij}$ denotes the element in the ith row and jth column in $\mathbf{V}_\beta$.  This is the main theoretical result that we needed to show, but we would still need to estimate $V$ in order to come up with a confidence interval.  Before doing that, it is useful to note that we can write a $2\times 2$variance matrix, like $\mathbf{V}_\beta$ as
+\begin{align*}
+        \mathbf{V}_{\beta} = \begin{bmatrix} V_{11} & V_{12} \\ V_{21} & V_{22} \end{bmatrix} = \begin{bmatrix} V_{11} & \rho \sqrt{V_{11}} \sqrt{V_{22}} \\ \rho \sqrt{V_{11}} \sqrt{V_{22}} & V_{22} \end{bmatrix}
+\end{align*}
+As a side-comment, this holds because the diagonal elements of this matrix are variance, and the off diagonals are covariances (and recalling that $\cov(X,Y) = \corr(X,Y) \sqrt{\var(X)}{\sqrt{\var(Y)}}$ --- which just holds from the definition of correlation).  This suggests that,
+\begin{align*}
+        \hat{V} = \hat{V}_{11} - 2 \hat{\rho} \sqrt{\hat{V}_{11}}\sqrt{\hat{V}_{22}} + \hat{V}_{22} 
+\end{align*}
+which further implies that
+\begin{align*}
+        \frac{\hat{V}}{n} &= \frac{\hat{V}_{11}}{n} - 2 \hat{\rho} \frac{\sqrt{\hat{V}_{11}}}{\sqrt{n}} \frac{\sqrt{\hat{V}_{22}}}{\sqrt{n}} + \frac{\hat{V}_{22}}{n} \\
+        &= \textrm{se}(\hat{\beta}_1)^2 - 2 \hat{\rho}\, \textrm{se}(\hat{\beta}_1) \, \textrm{se}(\hat{\beta}_2) + \textrm{se}(\hat{\beta}_2)^2
+\end{align*}
+Finally, we can write down a 95\% confidence interval as
+\begin{align*}
+        \hat{C} &= \left[\hat{\theta} \pm 1.96 \sqrt{\frac{\hat{V}}{n}}\right] \\
+        &= \left[\hat{\theta} \pm 1.96 \sqrt{\textrm{se}(\hat{\beta}_1)^2 - 2 \hat{\rho}\, \textrm{se}(\hat{\beta}_1) \, \textrm{se}(\hat{\beta}_2) + \textrm{se}(\hat{\beta}_2)^2}\right]
+\end{align*}
+where the first line is just the usual confidence interval (i.e., estimate plus or minus critical value time standard error), and the second equality plugs in the expression for $\hat{V}/n$ derived above.
+
+### (b)
+
+No, it is not possible to calculate $\hat{\rho}$ from the information given in the problem.  Besides the estimates of $\hat{\beta}_1$ and $\hat{\beta}_2$, the only other information that we have is about $\textrm{se}(\hat{\beta}_1)$ and $\textrm{se}(\hat{\beta}_2)$ --- which does not tell us about their correlation.  
+
+### (c)
+
+I think the way to think about this problem is to think about the largest possible confidence interval given the information that we have.  If this confidence interval does not include 0, then it would support the author's claim.  As a side-comment, this is actually a really interesting question (at least in my view) because: on the one hand, you can immediately see that the 95% confidence interval for $\beta_1$ would not include the estimated value of $\beta_2$ (which is probably what the author is thinking), on the other hand, if you compute both confidence intervals for $\beta_1$ and $\beta_2$, they overlap (which would suggest that they are not different from each other).  These are just heuristic arguments though, and our calculations above indicate that it is actually more complicated than either of these scenarios.  Anyway...the widest possible confidence interval here will occur when $\hat{\rho} = 0$ (you can see this because it shows up in the negative term in the square root).  Therefore, the widest possible confidence interval is given by
+\begin{align*}
+        \hat{C}^{wide} &= \left[\hat{\theta} \pm 1.96 \sqrt{\textrm{se}(\hat{\beta}_1)^2 + \textrm{se}(\hat{\beta}_2)^2}\right] \\
+        &= \left[ 0.2 \pm 1.96 \sqrt{ 0.07^2 + 0.07^2} \right] \\
+        &= [0.006, 0.394]
+\end{align*}
+This does not include 0, which suggests that the author's claim is correct; the difference between $\hat{\beta}_1$ and $\hat{\beta}_2$ is (just barely) statistically significant.
+
+## 7.28
+
+### (a)
+
+I am going to include a little bit of extra detail about comparing "manually" calculated standard errors with those coming directly from R as I think this is interesting.  For part of the problem, I'll compare to results from the R package `estimatr` which is popular among economists for computing heteroskedasticity robust standard errors.
+
+```{r}
+# read data
+library(haven)
+cps <- read_dta("cps09mar.dta")
+
+# construct subset of white, male, Hispanic
+data <- subset(cps, race==1 & female==0 & hisp==1)
+
+# construct experience and wage
+data$exp <- data$age - data$education - 6
+data$wage <- data$earnings/(data$hours*data$week)
+
+# run regression
+Y <- log(data$wage)
+X <- cbind(1, data$education, data$exp, data$exp^2/100)
+bet <- solve(t(X)%*%X)%*%t(X)%*%Y
+round(bet,3)
+
+# construct standard errors
+ehat <- as.numeric(Y - X%*%bet)
+Xe <- X*ehat
+n <- nrow(data)
+Omeg <- t(Xe)%*%Xe/n
+XX <- t(X)%*%X/n
+V <- solve(XX)%*%Omeg%*%solve(XX)
+se <- sqrt(diag(V))/sqrt(n)
+round(data.frame(beta=bet, se=se),3)
+
+# compare to R's lm function
+reg <- lm(log(wage) ~ education + exp + I(exp^2/100), data=data)
+summary(reg)
+
+# Notice that estimates of beta are the same but
+# standard errors are different
+
+library(estimatr)
+reg2 <- lm_robust(log(wage) ~ education + exp + I(exp^2/100), data=data, se_type="HC0")
+summary(reg2)
+# these are exactly the same now
+
+# Homoskedasticity standard errors
+sigma2 <- mean(ehat^2)
+V0 <- sigma2 * solve(XX)
+se0 <- sqrt(diag(V0))/sqrt(n)
+se0
+# these are very, very close to R's lm standard errors
+# but not exactly the same
+
+# Homoskedasticity w/ degree of freedom adjustment
+k <- 4 # number of regressors (including intercept)
+s2 <- sum(ehat^2)/(n-k)
+Vs <- s2 * solve(XX)
+ses <- sqrt(diag(Vs))/sqrt(n)
+ses
+# these are exactly the same now
+```
+
+### (e)
+
+```{r}
+# compute regression intervals and 95% confidence interval
+x <- c(1,12,20,20^2/100)
+m <- t(x)%*%bet
+m
+Vm <- t(x)%*%V%*%x
+sem <- sqrt(Vm)/sqrt(n)
+L <- m - 1.96*sem
+U <- m + 1.96*sem
+paste0("[",round(L,3),", ", round(U,3), "]")
+```
+
+## Extra Question: Monte Carlo Simulations
+
+### (a)
+
+Given our discussion in class (and given that $\mathbb{H}_0$ is true here), we would expect/hope to reject about 5% of the time.
+
+### (b) 
+
+```{r}
+# function to run a single simulation
+sim <- function() {
+  # draw X1
+  X1 <- rexp(n)
+  
+  # draw the error term
+  e <- mixtools::rnormmix(n, lambda=c(.5,.5), mu=c(-2,2), sigma=c(1,1))
+  
+  ## construct Y
+  Y <- b0 + b1*X1 + e
+  
+  ## estimate bet1 and V and construct t-stat
+  X <- cbind(1,X1)
+  bet <- solve(t(X)%*%X)%*%t(X)%*%Y
+  ehat <- as.numeric(Y-X%*%bet)
+  Xe <- X*ehat
+  XX <- t(X)%*%X/n
+  Omeg <- t(Xe)%*%Xe/n
+  V <- solve(XX)%*%Omeg%*%solve(XX)
+  bet1 <- bet[2,1]
+  t_stat <- sqrt(n)*(bet1 - H0)/sqrt(V[2,2])
+  
+  # return whether or not reject
+  1*(abs(t_stat) > qnorm(.975))
+}
+
+# function to run many simulations
+# @param n_sims is the number of simulations to run
+run_mc <- function(n_sims=1000) {
+  
+  # run n_sims simulations and store in a vector
+  mc_res <- sapply(1:n_sims, function(s) {
+    sim()
+  })
+  
+  # print rejection probability
+  cat("rej. prob  : ", mean(mc_res), "\n")
+}
+
+
+# run the simulations
+# set values of parameters and number of observations
+set.seed(1234)
+b0 <- 0
+b1 <- 1
+H0 <- 1
+n <- 100
+
+run_mc()
+```
+
+We reject 7.1% of the time here.  This looks like we are slightly over-rejecting (relative to the fraction of time that we'd like to), but this seems to at least be working pretty well.
+
+### (c)
+
+```{r}
+# n=10
+n <- 10
+run_mc()
+
+
+# n=50
+n <- 50
+run_mc()
+
+# n=500
+n <- 500
+run_mc()
+
+# n=1000
+n <- 1000
+run_mc()
+```
+
+These results are quite interesting.  When $n=10$, we reject $\mathbb{H}_0$ 25.6% of the time --- in other words, despite being true, we reject the null about 25% of the time when we only have 10 observations.  This suggests that our asymptotic approximation arguments for the limiting distribution of $\sqrt{n}(\hat{\beta}-\beta)$ are not working very well when $n=10$.  This should not be surprising though because $n$ is quite small here.
+
+The performance of inference procedure is better, though we still over-reject, when $n=50$.  By the time $n=500$ or $n=1000$, it looks like our inference procedure is working quite well.
+
+### (d)
+
+In this case $\mathbb{H}_0$ is false, so we'd like to reject $\mathbb{H}_0$.  We expect to have more power (i.e., be able to reject a false null) as the number of observations increases.
+
+```{r}
+set.seed(1234)
+b0 <- 0
+b1 <- 1
+H0 <- 0
+
+# n=10
+n <- 10
+run_mc()
+
+# n=50
+n <- 50
+run_mc()
+
+# n=100
+n <- 100
+run_mc()
+
+# n=500
+n <- 500
+run_mc()
+
+# n=1000
+n <- 1000
+run_mc()
+```
+
+This is exactly what we find.  When $n=10$, we reject only 44% of the time; when $n=50$, we reject 84% of the time; when $n=100$, we reject almost 99% of the time; and for higher values of $n$, we reject 100% of the time.
+
+If you are interested, it would interesting to experiment with different values of `b1` and/or `H0` here and also see how that affects the power of the test.
