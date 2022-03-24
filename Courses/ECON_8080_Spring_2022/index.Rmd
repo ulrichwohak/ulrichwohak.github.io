@@ -37,7 +37,7 @@ We will cover the following topics:
 
 2. [Inference/Hypothesis Testing](02_hypothesis_testing.html)
 
-3. [Resampling Methods]
+3. [Resampling Methods](03_resampling_methods.html)
 
 4. [Alternative Approaches to Causal Inference]
 
