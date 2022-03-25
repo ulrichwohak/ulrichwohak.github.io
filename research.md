@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Publications
 
-1. [Treatment Effects in Interactive Fixed Effects Models with a Small Number of Time Periods](https://arxiv.org/abs/2006.15780) [[Supplementary Appendix](files/IFE/Callaway_Karami_2022_appendix.pdf)] (with Sonia Karami, Forthcoming at *Journal of Econometrics*)
+1. [Treatment Effects in Interactive Fixed Effects Models with a Small Number of Time Periods](https://doi.org/10.1016/j.jeconom.2022.02.001) [[Arxiv](https://arxiv.org/abs/2006.15780)] [[Supplementary Appendix](files/IFE/Callaway_Karami_2022_appendix.pdf)] (with Sonia Karami, Forthcoming at *Journal of Econometrics*)
 
     * Code: [`ife` R package, on GitHub](https://github.com/bcallaway11/ife)
 
