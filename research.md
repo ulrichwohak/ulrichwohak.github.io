@@ -40,6 +40,8 @@ permalink: /research/
 
 ## Working Papers
 
+* [Difference-in-Differences for Policy Evaluation](https://arxiv.org/abs/2203.15646)
+
 * [Difference in Differences with Time Varying Covariates](https://arxiv.org/abs/2202.02903) [[5 Minute Summary](posts/fms-did-time-varying-covariates)] (with Carolina Caetano, Stroud Payne, and Hugo Sant'Anna Rodrigues)
 
 * [Nonlinear Approaches to Intergenerational Income Mobility allowing for Measurement Error](http://arxiv.org/abs/2107.09235) (with Tong Li and Irina Murtazashvili, submitted)
