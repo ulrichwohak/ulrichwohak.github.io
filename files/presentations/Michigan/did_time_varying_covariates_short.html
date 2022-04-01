@@ -18,7 +18,7 @@ class: center, middle, inverse, title-slide
 ---
 
 
-# Motivation
+# Introduction
 
 
 `$$\newcommand{\E}{\mathbb{E}}
@@ -83,66 +83,70 @@ border-top: 80px solid #BA0C2F;
 
 
 
-There has been a lot of recent work/interest in DID!
+We consider the case where the &lt;span class=&quot;alert&quot;&gt;parallel trends assumption holds after conditioning on covariates&lt;/span&gt; 
 
 --
 
-A number of papers have &lt;span class=&quot;alert&quot;&gt;diagnosed&lt;/span&gt; issues with very commonly used two-way fixed effects (TWFE) regressions to implement DID identification strategies:
-
-`$$Y_{it} = \theta_t + \eta_i + \alpha D_{it} + v_{it}$$`
-
-* de Chaisemartin and d&#39;Haultfoueille (2020), Borusyak, Jaravel, and Spiess (2021) Goodman-Bacon (2021), Sun and Abraham (2021)
+Including covariates in the parallel trends assumption can often make DID identification strategies more plausible (Heckman, Ichimura, Todd (1997), Abadie (2005))
 
 --
 
-Summary of Issues:
+We consider some empirically relevant cases where:
 
-* With (i) multiple periods and (ii) variation in treatment timing, &lt;span class=&quot;alert&quot;&gt;treatment effect heterogeneity&lt;/span&gt; can lead to poor estimates of treatment effects
+1. Both time-varying and time-invariant covariates
+    
+2. For the time-varying covariates, we&#39;ll consider cases where
 
-* Weights on underlying parameters are driven by estimation method
+   * They evolve exogenously with respect to the treatment
+   
+   * They can be affected by the treatment (&quot;bad controls&quot;)
 
 ---
 
-# Motivation
+# Introduction
 
-There have also been a number of papers &lt;span class=&quot;alert&quot;&gt;fixing&lt;/span&gt; these issues
-
-* Callaway and Sant&#39;Anna (2021), Cengiz, Dube, Lindner, and Zipperer (2019), Gardner (2021), Wooldridge (2021)
-
-* `\(+\)` previous papers
-
---
-
-Basic idea:
-
-* Separate identification and estimation.  Target underlying treatment effect parameters directly.
-
-* Choose your own weights `\(\implies\)` can recover overall `\(ATT\)`, event studies, or other target parameters of interest
-
----
-
-# This paper
-
-We consider the case where the parallel trends assumption holds after conditioning on covariates where empirical work has traditionally run the TWFE regression:
+This is a setting where empirical work has traditionally run the TWFE regression:
 
 `$$Y_{it} = \theta_t + \eta_i + \alpha D_{it} + X_{it}&#39;\beta + v_{it}$$`
 
 --
 
-In addition we allow for:
+In contrast, work in econometrics literature on DID typically *only* includes either 
 
-1. Both time-varying and time-invariant covariates
+* Time invariant covariates 
     
-2. The covariates themselves to be affected by the treatment (&quot;bad controls&quot;)
+* &quot;Pre-treatment&quot; values of time-varying covariates
 
 --
 
-We are going to show:
+We show a number of issues related to using TWFE regressions in this context 
 
-1. A number of issues related to using TWFE regressions in this context 
+- These show up even in &quot;friendly&quot; settings for TWFE such as 
 
-2. Alternative (and simple) approaches can be used to get around these issues
+    (i) The &quot;textbook&quot; case with only two time periods 
+    
+    (ii) The case where covariates are not affected by the treatment
 
+---
+
+# Introduction 
+
+We also propose alternative (and simple) approaches can be used to get around these issues:
+
+--
+
+* They can side-step &quot;functional form&quot; issues with the TWFE regression
+
+--
+
+* Under additional assumptions that effectively treat time-varying covariates in a dual role as an &quot;outcome&quot; and a covariate:
+
+   * Provide sufficient conditions for the &quot;econometrics&quot; strategy of conditioning only on &quot;pre-treatment&quot; time-varying covariates 
+   
+   * Provide alternative strategies in other cases
+   
+   * This part can allow for the time-varying covariates to be themselves affected by the treatment
+    
 ---
 
 # Examples
@@ -155,13 +159,11 @@ We are going to show:
 
 --
     
-**Covariates Affected by Treatment:** Shelter-in-place orders
+**Covariates Affected by Treatment:** Job Displacement
 
-* Effects on various outcomes (e.g., mobility and labor market outcomes)
+* Paths of earnings (in absence of job displacement) likely depend on occupation, industry, union status
     
-* Paths of these outcomes (in absence of policy) likely depend on the number of Covid-19 cases
-    
-* But Covid-19 cases is *target* of policy `\(\implies\)` likely affected by treatment
+* But all of these are likely affected by job displacement (i.e., often thought of as &quot;bad controls&quot;)
 
 &lt;!--
 
@@ -172,28 +174,6 @@ We are going to show:
 
 --&gt;
 
----
-
-
-# Econometrics Lit. vs Empirical Work
-
-As a side-comment, there has been an interesting difference between most empirical work on DID under conditional parallel trends and the econometrics literature
-
---
-
-* Empirical work: typically (though not always) *only* includes time-varying covariates
-
---
-
-* Econometrics literature has mainly considered the ease with either:
-
-    * Time-invariant covariates
-
-    * &quot;Pre-treatment&quot; covariates - which effectively turns time-varying covariates into time-invariant covariates
-    
-    * See, for example, Abadie (2005), Sant&#39;Anna and Zhao (2020), among others
-    
-    
 ---
 
 
@@ -260,7 +240,7 @@ Potential outcomes notation
   
 * Treatment indicator: `\(D_i\)`
 
-* Potential outcomes: `\(Y_{it^*}(0)\)` and `\(Y_{it^*}(1)\)`
+* Potential outcomes: `\(Y_{it^*}(1)\)` and `\(Y_{it^*}(0)\)`
 
 * Observed outcomes: `\(Y_{it^*}\)` and `\(Y_{it^*-1}\)`
 
@@ -269,7 +249,7 @@ Potential outcomes notation
 
 # Notation for Covariates
 
-* Potential covariates: `\(X_{it^*}(0)\)` and `\(X_{it^*}(1)\)` (for today: scalar)
+* Potential covariates: `\(X_{it^*}(1)\)` and `\(X_{it^*}(0)\)` (for today: scalar)
 
 * Observed covariates: `\(X_{it^*}\)` and `\(X_{it^*-1}\)`
 
@@ -515,9 +495,9 @@ We show a number of weaknesses of this sort of TWFE regression (even in the case
 We show a number of weaknesses of this sort of TWFE regression (even in the case with only two time periods!):
 
 
-**Issue 3:** Highly sensitive to (potentially strong) functional form assumptions that include
+**Issue 3:** Sensitive to (potentially strong) functional form assumptions that include
 
-* The parallel trends assumption and conditional ATTs only depending on the change in covariates over time (rather than, e.g., their level)
+* The parallel trends assumption and conditional ATTs only depending on the change in covariates over time (rather than, e.g., their level) 
 
 * Functional form assumptions on the propensity score (the probability of participating in the treatment conditional on covariates)
 
