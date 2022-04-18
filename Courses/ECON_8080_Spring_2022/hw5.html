@@ -173,16 +173,16 @@ pre code {
 \]</span></p>
 <p><strong>Due:</strong> At the start of class on Tuesday, April 19. Please turn in a hard copy.</p>
 <ol style="list-style-type: decimal">
-<li><p>Hansen 25.15, for this question, you need to code the probit estimator yourself; i.e., you cannot use built-in R functions such as <code>glm</code>. Hint: you can use R’s optimization routines such as <code>optim</code>. In addition to what is asked in 25.15,</p>
+<li><p>Hansen 25.15, for this question, you need to code the probit estimator yourself (compute both estimates of the parameters and their standard errors); i.e., you cannot use built-in R functions such as <code>glm</code>. Hint: you can use R’s optimization routines such as <code>optim</code>. In addition to what is asked in 25.15,</p>
 <ul>
 <li><p>compare the estimates that you get to those coming from the <code>glm</code> function</p></li>
 <li><p>report average partial effects (which the book refers to as average marginal effects) for each regressor</p></li>
 <li><p>compute the standard error of each partial effect (again, use your own code to compute these). For computing standard errors of the partial effects, you have two options:</p>
 <p><strong>Option 1:</strong> Analytical Standard Errors, hint: Obtaining the standard errors for this part is challenging. One thing to notice is that <span class="math display">\[\begin{align*}
- \sqrt{n}(\widehat{APE} - APE) &amp;= \sqrt{n}\left( \frac{1}{n} \sum_{i=1}^n \phi(x_i&#39;\hat{\beta}) \hat{\beta} - \E[\phi(x&#39;\beta) \beta] \right) \\
- &amp;= \sqrt{n}\left( \frac{1}{n} \sum_{i=1}^n \phi(x_i&#39;\hat{\beta}) \hat{\beta} - \frac{1}{n} \sum_{i=1}^n \phi(x_i&#39;\hat{\beta}) \beta \right) \\
- &amp; + \sqrt{n} \left(\frac{1}{n} \sum_{i=1}^n \phi(x_i&#39;\hat{\beta}) \beta - \frac{1}{n} \sum_{i=1}^n \phi(x_i&#39;\beta) \beta\right) \\
- &amp; + \sqrt{n} \left( \frac{1}{n} \sum_{i=1}^n \phi(x_i&#39;\beta) \beta - \E[\phi(x&#39;\beta) \beta] \right)
+ \sqrt{n}(\widehat{APE} - APE) &amp;= \sqrt{n}\left( \frac{1}{n} \sum_{i=1}^n \phi(X_i&#39;\hat{\beta}) \hat{\beta} - \E[\phi(X&#39;\beta) \beta] \right) \\
+ &amp;= \sqrt{n}\left( \frac{1}{n} \sum_{i=1}^n \phi(X_i&#39;\hat{\beta}) \hat{\beta} - \frac{1}{n} \sum_{i=1}^n \phi(X_i&#39;\hat{\beta}) \beta \right) \\
+ &amp; + \sqrt{n} \left(\frac{1}{n} \sum_{i=1}^n \phi(X_i&#39;\hat{\beta}) \beta - \frac{1}{n} \sum_{i=1}^n \phi(X_i&#39;\beta) \beta\right) \\
+ &amp; + \sqrt{n} \left( \frac{1}{n} \sum_{i=1}^n \phi(X_i&#39;\beta) \beta - \E[\phi(X&#39;\beta) \beta] \right)
  \end{align*}\]</span></p>
 <p>which holds just by adding and subtracting some terms. Figuring out the asymptotic distributions for the first and last lines is not too hard, but the middle expression requires using some kind of mean value theorem type of argument (as we have done before in the context of the delta method).</p>
 <p><strong>Option 2:</strong> This is also a place where it might make sense to use the bootstrap. You can use the bootstrap to compute standard errors for the average partial effect.</p>
