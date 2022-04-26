@@ -25,7 +25,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [HW 4](hw4.html), due Thursday, March 24 [[[solutions](hw4_sol.pdf)]], [[[Rmarkdown file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_8080_Spring_2022/hw4_sol.Rmd)]], [[[H 7.12 solution](h7-12_sol.pdf)]]
 
-* [HW 5](hw5.html), due Tuesday, April 19
+* [HW 5](hw5.html), due Tuesday, April 19 [[[solutions](hw5_sol.pdf)]], [[[Rmarkdown file]((https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_8080_Spring_2022/hw5_sol.Rmd))]]
+
+* [HW 6](hw6.html), due Tuesday, May 3
 
 # Course Material
 
