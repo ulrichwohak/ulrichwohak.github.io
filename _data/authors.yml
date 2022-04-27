@@ -10,7 +10,7 @@ Brantly Callaway:
       icon: "fas fa-fw fa-link"
       url: "https://brantlycallaway.com"
     - label: "Github"
-      icon: "fab fa-github"
+      icon: "fa fa-github"
       url: "https://github.com/bcallaway11"
     - label: "Google Scholar"
       icon: "fas fa-graduation-cap"
