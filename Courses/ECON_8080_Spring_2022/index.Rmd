@@ -47,9 +47,7 @@ We will cover the following topics:
 
 5. [Alternative Approaches to Causal Inference](05_alternative_causal_inference.html)
 
-6. [Panel Data Models]
-
-7. [Causal Inference with Panel Data]
+6. [Panel Data Approaches to Causal Inference](06_panel_data_causal_inference.html)
 
 8. If we have time, an introduction to [Quantile Regression]
 
