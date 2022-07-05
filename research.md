@@ -52,7 +52,7 @@ permalink: /research/
 
     * Code: [`ppe` R package, on GitHub](https://github.com/bcallaway11/ppe)
 	
-* [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) (with Tong Li, Revise and Resubmit)
+* [Evaluating Policies Early in a Pandemic: Bounding Policy Effects with Nonrandomly Missing Data](https://arxiv.org/abs/2005.09605) [[Supplementary Appendix](/files/CL-Covid-Bounds/Callaway_Li_Covid_Bounds_2022_Supplementary_Appendix.pdf)] (with Tong Li, Revise and Resubmit)
 
 
 ## Resting Papers
