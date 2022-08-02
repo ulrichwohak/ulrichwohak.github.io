@@ -6,20 +6,20 @@ permalink: /research/
 
 ## Publications
 
-1. [Difference-in-Differences for Policy Evaluation][[Arxiv](https://arxiv.org/abs/2203.15646)] (Forthcoming at *Handbook of Labor, Human Resources and Population Economics*)
+1. [ifference-in-Differences for Policy Evaluation [[arXiv](https://arxiv.org/abs/2203.15646)] (Forthcoming at *Handbook of Labor, Human Resources and Population Economics*)
 
-2. [Treatment Effects in Interactive Fixed Effects Models with a Small Number of Time Periods](https://doi.org/10.1016/j.jeconom.2022.02.001) [[Arxiv](https://arxiv.org/abs/2006.15780)] [[Supplementary Appendix](files/IFE/Callaway_Karami_2022_appendix.pdf)] (with Sonia Karami, Forthcoming at *Journal of Econometrics*)
+2. [Treatment Effects in Interactive Fixed Effects Models with a Small Number of Time Periods](https://doi.org/10.1016/j.jeconom.2022.02.001) [[arXiv](https://arxiv.org/abs/2006.15780)] [[Supplementary Appendix](files/IFE/Callaway_Karami_2022_appendix.pdf)] (with Sonia Karami, Forthcoming at *Journal of Econometrics*)
 
     * Code: [`ife` R package, on GitHub](https://github.com/bcallaway11/ife)
 
 
-3. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) [[Arxiv](https://arxiv.org/abs/2006.04968)] (with Afrouz Azadikhah Jahromi, *Empirical Economics*, Vol. 62, No. 1, pp. 213-245, 2022.) 
+3. [Heterogeneous Effects of Job Displacement on Earnings](https://doi.org/10.1007/s00181-020-01961-w) [[arXiv](https://arxiv.org/abs/2006.04968)] (with Afrouz Azadikhah Jahromi, *Empirical Economics*, Vol. 62, No. 1, pp. 213-245, 2022.) 
 
-4. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) [[Arxiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/Callaway_SantAnna_2020_supp.pdf)] (with Pedro H.C. Sant'Anna, *Journal of Econometrics*, Vol. 225, No. 2, pp. 200-230, 2021.) 
+4. [Difference-in-Differences with Multiple Time Periods](https://doi.org/10.1016/j.jeconom.2020.12.001) [[arXiv](https://arxiv.org/abs/1803.09015)] [[Supplementary Appendix](https://pedrohcgs.github.io/files/Callaway_SantAnna_2020_supp.pdf)] (with Pedro H.C. Sant'Anna, *Journal of Econometrics*, Vol. 225, No. 2, pp. 200-230, 2021.) 
 
     * Code: [`did` R package](https://bcallaway11.github.io/did/)
 
-5. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://doi.org/10.1016/j.jeconom.2020.02.005) [[Arxiv](https://arxiv.org/abs/2008.08117)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (*Journal of Econometrics*, Vol. 222, No. 2, pp. 861-881, 2021.)
+5. [Bounds on Distributional Treatment Effect Parameters using Panel Data with an Application on Job Displacement](https://doi.org/10.1016/j.jeconom.2020.02.005) [[arXiv](https://arxiv.org/abs/2008.08117)] [[Supplementary Appendix](files/DTE/supplementary-appendix.pdf)] (*Journal of Econometrics*, Vol. 222, No. 2, pp. 861-881, 2021.)
 
     * Code: [`csabounds` R package](https://bcallaway11.github.io/csabounds/)
 
@@ -33,7 +33,7 @@ permalink: /research/
 
 8. [Local Intergenerational Elasticities](http://www.accessecon.com/Pubs/EB/2019/Volume39/EB-19-V39-I2-P88.pdf) [[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3233873)] [[Supplementary Appendix](http://www.accessecon.com/pubs/EB/tempPDF/file_Supplemental_0_0_120174_temp.pdf)] (with Weige Huang, *Economics Bulletin*, Vol. 39, No. 2, pp. 919-928, 2019)
 
-9. [Quantile Treatment Effects in Difference in Differences Models under Dependence Restrictions and with only Two Time Periods](https://www.sciencedirect.com/science/article/pii/S0304407618301027) (with Tong Li and Tatsushi Oka, *Journal of Econometrics*, 206(2), pp. 395-413, 2018) [[Arxiv Version](https://arxiv.org/pdf/1702.03618.pdf)]
+9. [Quantile Treatment Effects in Difference in Differences Models under Dependence Restrictions and with only Two Time Periods](https://www.sciencedirect.com/science/article/pii/S0304407618301027) (with Tong Li and Tatsushi Oka, *Journal of Econometrics*, 206(2), pp. 395-413, 2018) [[arXiv Version](https://arxiv.org/pdf/1702.03618.pdf)]
 
     * Code: [`ddid2` method in R `qte` package](http://bcallaway11.github.io/qte/articles/ddid2.html)
 
