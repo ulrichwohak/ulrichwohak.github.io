@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Publications
 
-1. Difference-in-Differences for Policy Evaluation [[Draft Version](Callaway-Chapter-2022/main.pdf)] (Forthcoming at *Handbook of Labor, Human Resources and Population Economics*)
+1. Difference-in-Differences for Policy Evaluation [[Draft Version](files/Callaway-Chapter-2022/main.pdf)] (Forthcoming at *Handbook of Labor, Human Resources and Population Economics*)
 
 2. [Treatment Effects in Interactive Fixed Effects Models with a Small Number of Time Periods](https://doi.org/10.1016/j.jeconom.2022.02.001) [[arXiv](https://arxiv.org/abs/2006.15780)] [[Supplementary Appendix](files/IFE/Callaway_Karami_2022_appendix.pdf)] (with Sonia Karami, Forthcoming at *Journal of Econometrics*)
 
