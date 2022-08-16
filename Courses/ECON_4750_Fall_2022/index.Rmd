@@ -11,62 +11,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Course Notes](https://bcallaway11.github.io/econ_4750_notes/)
 
-- [Course Schedule](https://bcallaway11.github.io/Courses/ECON_4750_Fall_2021/tentative_schedule.html)
-
-
-<span style="color:red;">**Final Exam Date/Time:**</span> &nbsp; &nbsp; &nbsp; **1:50pm Section:** 12:00-3:00, Friday, Dec. 10 &nbsp; &nbsp; &nbsp; || &nbsp; &nbsp; &nbsp; **3:00pm Section:** 3:30-6:30, Wednesday, Dec. 15
-
 # Homeworks
 
-- [HW 1](hw1.html), due Friday Sept. 10, [solutions](hw1_sol.html)
-
-- [HW 2](hw2.html), due Friday Sept. 24, [solutions](hw2_sol.html)
-
-- [HW 3](hw3.html), due Friday Oct. 15, [solutions](hw3_sol.html)
-
-- [HW 4](hw4.html), due Monday Nov. 1, [solutions](hw4_sol.html)
-
-- [HW 5](hw5.html), due Tuesday Dec. 7, [solutions](hw5_sol.html)
+None yet...
 
 # Projects
 
-- [Project 1](project1.html), due Friday, Nov. 19
+None yet...
 
-   - [house_price_train.csv](house_price_train.csv)
-   
-   - [house_price_test.csv](house_price_test.csv)
-   
-   - [data_description.txt](data_description.txt)
-   
-   - Code for predicting diamond prices: [[1:50pm code](predicting_diamond_prices150.html)] [[3:00pm code](predicting_diamond_prices300.html)]
-
-- [Project 2](project2.html), due Tuesday, Dec. 7
-
-    - [jtrain_observational.dta](jtrain_observational.dta)   [[description](jtrain_observational_description.txt)]
-    
-    - [jtrain_experimental.dta](jtrain_experimental.dta)    [[description](jtrain_experimental_description.txt)]
-   
 # Slides
 
 - First Week: [What is Econometrics?](l1.html)
 
-# Additional materials for Midterm 1
-
-- [Study Guide](midterm1_study_guide.html)
-
-- [Extra Questions/Practice Exam](midterm1_extra_questions.pdf)
-
-# Additional materials for Midterm 2
-
-- [Study Guide](midterm2_study_guide.html)
-
-- [Extra Questions](midterm2_extra_questions.html), [Solutions](midterm2_extra_questions_sol.html)
-
-# Additional materials for Final Exam
-
-- [Study Guide](final_study_guide.html)
-
-- [Extra Questions](final_extra_questions.html), [Solutions](final_extra_questions_sol.html)
 
 # Data
 
@@ -106,38 +62,4 @@ This list only includes data that needs to be downloaded from the course website
 
 # Code Challenges
 
-- [Aug 27](code_challenge1.html)
-- [Sep 3](code_challenge2.html)
-- [Sep 10](code_challenge3.html)
-- [Sep 17](code_challenge4.html)
-- [Sep 24](code_challenge5.html)
-- [Oct 1](code_challenge6.html)
-- [Oct 15](code_challenge7.html)
-- [Oct 22](code_challenge8.html)
-- [Nov 5](code_challenge9.html)
-- [Nov 12](code_challenge10.html)
-
-## 1:50pm Standings
-
-```{r echo=FALSE}
-library(fontawesome)
-regular_season_champ <- fa(name = "award", fill="red")
-```
-
-`r regular_season_champ` = regular season champ
-
-| Out of State | Rural | Forsyth/Gwinnet | Cobb | Everyone Else | Professor `r regular_season_champ`|
-|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 1 | 2 | 1 | 2 | 1 | 4 |
-
-<center><img src="bracket150-2.png" width=400></center>
-
-## 3:00pm Standings
-
-`r regular_season_champ` = regular season champ
-
-| Golf | Tennis | Basketball | Other | Professor `r regular_season_champ`|
-|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 3 | 2 | 0 | 3 | 3 |
-
-<center><img src="bracket300-2.png" width=400></center>
+None yet...
