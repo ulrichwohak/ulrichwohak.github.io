@@ -1,0 +1,43 @@
+---
+title: "ECON 8070 Course Material"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- [Syllabus](syllabus.pdf)
+
+# Homeworks
+
+
+# Course Material
+
+We will cover the following topics:
+
+(<span style="color: red; font-weight: bold;">Note:</span> Some of the material will be updated/expanded as we move through the semester.  Some of the topics at the end of the semester are tentative.)
+
+0. [Introduction to R](introduction_to_R.html)
+
+1. [Probability Theory](01_probability.html)
+
+    - Introduction
+    - Random Variables
+    - Parametric Distributions
+    - Multivariate Distributions
+
+2. [Statistics]
+
+    - Sampling
+    - Law of Large Numbers
+    - Central Limit Theorem
+    - Method of Moments Estimation
+    - Inference
+    
+3. [Linear Regression]
+
+# Slides
+
+- First Week: [Introduction to ECON 8070](introduction_slides.html)
+
