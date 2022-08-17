@@ -19,10 +19,11 @@ None yet...
 
 None yet...
 
-# Slides
+# Additional Course Materials
 
-- First Week: [What is Econometrics?](l1.html)
+- First Week Slides: [What is Econometrics?](l1.html)
 
+- [firm_data.csv](firm_data.csv) | [firm_data.RData](firm_data.RData) | [firm_data.dta](firm_data.dta)
 
 # Data
 
