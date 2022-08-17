@@ -27,7 +27,7 @@ We will cover the following topics:
     - Parametric Distributions
     - Multivariate Distributions
 
-2. [Statistics]
+2. [Statistics](02_statistics.html)
 
     - Sampling
     - Law of Large Numbers
