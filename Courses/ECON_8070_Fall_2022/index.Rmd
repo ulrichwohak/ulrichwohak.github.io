@@ -11,6 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Homeworks
 
+[HW 1](hw1.html), due Thursday, Sep. 1
+
+* Data: [fertilizer_2000.RData](fertilizer_2000.RData) [[[description](fertilizer_description.txt)]]
 
 # Course Material
 

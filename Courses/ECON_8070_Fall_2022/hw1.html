@@ -11,7 +11,7 @@
 
 
 
-<title>ECON 8070 Course Material</title>
+<title>Homework 1</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -361,54 +361,50 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">ECON 8070 Course Material</h1>
+<h1 class="title toc-ignore">Homework 1</h1>
 
 </div>
 
 
-<ul>
-<li><a href="syllabus.pdf">Syllabus</a></li>
-</ul>
-<div id="homeworks" class="section level1">
-<h1>Homeworks</h1>
-<p><a href="hw1.html">HW 1</a>, due Thursday, Sep. 1</p>
-<ul>
-<li>Data: <a href="fertilizer_2000.RData">fertilizer_2000.RData</a> [[<a href="fertilizer_description.txt">description</a>]]</li>
-</ul>
-</div>
-<div id="course-material" class="section level1">
-<h1>Course Material</h1>
-<p>We will cover the following topics:</p>
-<p>(<span style="color: red; font-weight: bold;">Note:</span> Some of
-the material will be updated/expanded as we move through the semester.
-Some of the topics at the end of the semester are tentative.)</p>
-<ol start="0" style="list-style-type: decimal">
-<li><p><a href="introduction_to_R.html">Introduction to R</a></p></li>
-<li><p><a href="01_probability.html">Probability Theory</a></p>
-<ul>
-<li>Introduction</li>
-<li>Random Variables</li>
-<li>Parametric Distributions</li>
-<li>Multivariate Distributions</li>
-</ul></li>
-<li><p><a href="02_statistics.html">Statistics</a></p>
-<ul>
-<li>Sampling</li>
-<li>Law of Large Numbers</li>
-<li>Central Limit Theorem</li>
-<li>Method of Moments Estimation</li>
-<li>Inference</li>
-</ul></li>
-<li><p>[Linear Regression]</p></li>
+<p><strong>Due:</strong> At the start of class on Thursday, September 1.
+Please turn in a hard copy.</p>
+<p><strong>Question 1</strong> Download the data
+<code>fertilizer_2000.RData</code> from the course website to answer
+this question (there is also a description file on the course
+website).</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>How many observations does this data contain?</p></li>
+<li><p>Data about what country is provided in the 21st row?</p></li>
+<li><p>What is the average per capita GDP across all countries in the
+data?</p></li>
+<li><p>What is the average precipitation among countries that have
+higher than average per capita GDP?</p></li>
 </ol>
-</div>
-<div id="slides" class="section level1">
-<h1>Slides</h1>
-<ul>
-<li>First Week: <a href="introduction_slides.html">Introduction to ECON
-8070</a></li>
-</ul>
-</div>
+<p><strong>Question 2</strong> The Fibonacci sequence is the sequence of
+numbers <span class="math inline">\(0,1,1,2,3,5,8,13,21,34,55,\ldots\)</span> that
+comes from starting with <span class="math inline">\(0\)</span> and
+<span class="math inline">\(1\)</span> and where each subsequent number
+is the sum of the previous two. For example, the 5 in the sequence comes
+from adding 2 and 3; the 55 in the sequence comes from adding 21 and
+34.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Write a function called <code>fibonacci</code> that takes in a
+number <code>n</code> and computes the nth element in the Fibonacci
+sequence. For example <code>fibonacci(5)</code> should return
+<code>3</code> and <code>fibonacci(8)</code> should return
+<code>13</code>. Use your function to compute the 16th element of the
+Fibonacci sequence.</p></li>
+<li><p>Consider an alternative sequence where, starting with the third
+element, each element is computed as the sum of the previous two
+elements (the same as with the Fibonacci sequence) but where the first
+two elements can be arbitrary. Write a function
+<code>alt_seq(a,b,n)</code> where <code>a</code> is the first element in
+the sequence, <code>b</code> is the second element in the sequence, and
+<code>n</code> is which element in the sequence to return. For example,
+if <span class="math inline">\(a=3\)</span> and <span class="math inline">\(b=7\)</span>, then the sequence would be <span class="math inline">\(3,7,10,17,27,44,71,\ldots\)</span> and
+<code>alt_seq(a=3,b=7,n=4) = 17</code>. Use your function to compute the
+16th element of the this alternative sequence for <span class="math inline">\(a=5\)</span> and <span class="math inline">\(b=9\)</span>.</p></li>
+</ol>
 
 
 
