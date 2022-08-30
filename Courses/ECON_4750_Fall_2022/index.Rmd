@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Homeworks
 
-None yet...
+[HW 1](hw1.html), due Tuesday, Sept. 6
 
 # Projects
 
