@@ -9,11 +9,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Syllabus](syllabus.pdf)
 
+<span style="color:red"><b>Midterm 1 date changed to September 27</b></span>
+
 - [Course Notes](https://bcallaway11.github.io/econ_4750_notes/)
 
 # Homeworks
 
-[HW 1](hw1.html), due Tuesday, Sept. 6
+[HW 1](hw1.html), due Tuesday, Sept. 6, [[[solutions](hw1_sol.html)]], [[[Rmd file](hw1_sol.Rmd)]]
 
 # Projects
 
