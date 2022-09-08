@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Homeworks
 
-[HW 1](hw1.html), due Thursday, Sep. 1, [[[solutions](hw1_sol.pdf)]], [[[Rmd file](hw1_sol.Rmd)]]
+[HW 1](hw1.html), due Thursday, Sep. 1, [[[solutions](hw1_sol.pdf)]], [[[Rmd file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_8070_Fall_2022/hw1_sol.Rmd)]]
 
 * Data: [fertilizer_2000.RData](fertilizer_2000.RData) [[[description](fertilizer_description.txt)]]
 
