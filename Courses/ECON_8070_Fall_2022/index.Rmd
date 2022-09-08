@@ -9,11 +9,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Syllabus](syllabus.pdf)
 
+<span style="color:red"><b>Midterm 1 date changed to September 27</b></span>
+
 # Homeworks
 
-[HW 1](hw1.html), due Thursday, Sep. 1
+[HW 1](hw1.html), due Thursday, Sep. 1, [[[solutions](hw1_sol.pdf)]], [[[Rmd file](hw1_sol.Rmd)]]
 
 * Data: [fertilizer_2000.RData](fertilizer_2000.RData) [[[description](fertilizer_description.txt)]]
+
+[HW 2](hw2.html), due Thursday, Sep. 15
 
 # Course Material
 
