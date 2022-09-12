@@ -32,7 +32,4 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "bcallaway11"
+
