@@ -73,4 +73,4 @@ This list only includes data that needs to be downloaded from the course website
 
 # Code Challenges
 
-* [Sep. 20](code_challenge1.html)
+* [Sep. 20]
