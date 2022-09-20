@@ -29,6 +29,12 @@ None yet...
 
 - [firm_data.csv](firm_data.csv) | [firm_data.RData](firm_data.RData) | [firm_data.dta](firm_data.dta)
 
+**Additional Materials for Midterm 1**
+
+* [Study Guide](midterm1_study_guide.html)
+
+* [Additional Practice Questions](midterm1_extra_questions.pdf)
+
 # Data
 
 This list only includes data that needs to be downloaded from the course website.  Other data is listed in the Course Notes along with steps to access the data and a link to a description of the data.
@@ -67,4 +73,4 @@ This list only includes data that needs to be downloaded from the course website
 
 # Code Challenges
 
-None yet...
+* [Sep. 20](code_challenge1.html)
