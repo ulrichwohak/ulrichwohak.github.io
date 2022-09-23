@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [HW 1](hw1.html), due Tuesday, Sept. 6, [[[solutions](hw1_sol.html)]], [[[Rmd file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_4750_Fall_2022/hw1_sol.Rmd)]]
 
-[HW 2](hw2.html), due Thursday, Sept. 22
+[HW 2](hw2.html), due Thursday, Sept. 22, [[[solutions](hw2_sol.html)]], [[[Rmd file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_4750_Fall_2022/hw1_sol.Rmd)]]
 
 # Projects
 
@@ -34,6 +34,8 @@ None yet...
 * [Study Guide](midterm1_study_guide.html)
 
 * [Additional Practice Questions](midterm1_extra_questions.pdf), [[[solutions](midterm1_extra_questions_sol.pdf)]]
+
+* Additional office hours: Friday 1:30-3:00 (Zoom only, please contact me by email if you would like to meet during this time), Monday 9:30-11:00 (in person, Amos B408).
 
 # Data
 

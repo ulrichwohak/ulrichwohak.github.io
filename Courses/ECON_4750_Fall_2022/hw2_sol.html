@@ -11,7 +11,7 @@
 
 
 
-<title>ECON 4750 Course Material</title>
+<title>Homework 2 Solutions</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -361,79 +361,156 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">ECON 4750 Course Material</h1>
+<h1 class="title toc-ignore">Homework 2 Solutions</h1>
 
 </div>
 
 
-<ul>
-<li><a href="syllabus.pdf">Syllabus</a></li>
-</ul>
-<p><span style="color:red"><b>Midterm 1 date changed to September
-27</b></span></p>
-<ul>
-<li><a href="https://bcallaway11.github.io/econ_4750_notes/">Course
-Notes</a></li>
-</ul>
-<div id="homeworks" class="section level1">
-<h1>Homeworks</h1>
-<p><a href="hw1.html">HW 1</a>, due Tuesday, Sept. 6, [[<a href="hw1_sol.html">solutions</a>]], [[<a href="https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_4750_Fall_2022/hw1_sol.Rmd">Rmd
-file</a>]]</p>
-<p><a href="hw2.html">HW 2</a>, due Thursday, Sept. 22, [[<a href="hw2_sol.html">solutions</a>]], [[<a href="https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_4750_Fall_2022/hw1_sol.Rmd">Rmd
-file</a>]]</p>
+<div id="ch.-3-coding-question-1" class="section level1">
+<h1>Ch. 3, Coding Question 1</h1>
+<pre class="r"><code>library(ggplot2)
+set.seed(1234) # setting the seed means that we will get the same results
+x &lt;- rexp(100) # make 100 draws from an exponential distribution
+
+ggplot(data=data.frame(x=x),
+       mapping=aes(x=x)) +
+  geom_histogram() +
+  theme_bw()</code></pre>
+<p><img src="data:image/png;base64,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Ued23xV3RkBVCKgKAS2jzu2+K+6MgKoQUBUCWkad231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcenvMIAIqQ0AzCKhbndt9V1x6e8wgAipDQDMIqFud231XXHp7zCACKkNAMwioW53bfVdcx/ZOAl9g4DWUn0FAVQhoGXVu911xHds7CXyBgddQfgYBVSGgZdS53XfFdWzvJPAFBl5D+RkEVIWAllHndt8V17G9k8AXGHgN5WcQUBUCWkad231X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" width="672" /></p>
 </div>
-<div id="projects" class="section level1">
-<h1>Projects</h1>
-<p>None yet…</p>
+<div id="ch.-3-extra-question-1" class="section level1">
+<h1>Ch. 3, Extra Question 1</h1>
+<p><strong>Part a</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+  \mathbb{E}[Y] &amp;= \mathbb{E}[5+9X] \\
+  &amp;= \mathbb{E}[5] + \mathbb{E}[9X] \\
+  &amp;= 5 + 9\mathbb{E}[X] \\
+  &amp;= 95
+\end{aligned}
+\]</span></p>
+<p>where the first equality holds by the definition of <span class="math inline">\(Y\)</span>, the second equality holds because
+expectations can pass through sums, the third equality holds because the
+expectation of a constant is just the constant itself and because
+constants can come outside of expectations, and the last equality holds
+because <span class="math inline">\(\mathbb{E}[X]=10\)</span>.</p>
+<p><strong>Part b</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+  \mathrm{var}(Y) &amp;= \mathrm{var}(5+9X) \\
+  &amp;= \mathrm{var}(9X) \\
+  &amp;= 81 \mathrm{var}(X) \\
+  &amp;= 162
+\end{aligned}
+\]</span></p>
+<p>where the first equality holds by the definition of <span class="math inline">\(Y\)</span>, the second equality holds because
+<span class="math inline">\(5\)</span> is a constant and doesn’t
+contribute to the variance, the third equality holds because constants
+can come out of the variance (after squaring it), and the last equality
+holds because <span class="math inline">\(\mathrm{var}(X)=2\)</span>.</p>
 </div>
-<div id="additional-course-materials" class="section level1">
-<h1>Additional Course Materials</h1>
-<ul>
-<li><p>First Week Slides: <a href="l1.html">What is
-Econometrics?</a></p></li>
-<li><p><a href="firm_data.csv">firm_data.csv</a> | <a href="firm_data.RData">firm_data.RData</a> | <a href="firm_data.dta">firm_data.dta</a></p></li>
-</ul>
-<p><strong>Additional Materials for Midterm 1</strong></p>
-<ul>
-<li><p><a href="midterm1_study_guide.html">Study Guide</a></p></li>
-<li><p><a href="midterm1_extra_questions.pdf">Additional Practice
-Questions</a>, [[<a href="midterm1_extra_questions_sol.pdf">solutions</a>]]</p></li>
-<li><p>Additional office hours: Friday 1:30-3:00 (Zoom only, please
-contact me by email if you would like to meet during this time), Monday
-9:30-11:00 (in person, Amos B408).</p></li>
-</ul>
+<div id="ch.-3-extra-question-2" class="section level1">
+<h1>Ch. 3, Extra Question 2</h1>
+<p><span class="math display">\[
+\begin{aligned}
+  \mathrm{var}(bX) &amp;= \mathbb{E}\big[ (bX - \mathbb{E}[bX])^2 \big]
+\\
+  &amp;= \mathbb{E}\big[ (bX - b\mathbb{E}[X])^2 \big] \\
+  &amp;= \mathbb{E}\Big[ \big(b(X-\mathbb{E}[X])\big)^2\Big] \\
+  &amp;= \mathbb{E}\big[b^2 (X-\mathbb{E}[X])^2\big] \\
+  &amp;= b^2 \mathbb{E}\big[(X-\mathbb{E}[X])^2\big] \\
+  &amp;= b^2 \mathrm{var}(X)
+\end{aligned}
+\]</span></p>
+<p>where the first equality holds by the definition of variance, the
+second equality holds because <span class="math inline">\(b\)</span> can
+come out of the inside expectation because it is a constant, the third
+equality factors out the <span class="math inline">\(b\)</span> from
+both terms, the fourth equality squares the inside terms, the fifth
+equality holds because <span class="math inline">\(b^2\)</span> is a
+constant and can therefore come out of the expectation, the last
+equality holds because <span class="math inline">\(\var(X) =
+\mathbb{E}[(X-\mathbb{E}[X])^2]\)</span> (which is just the definition
+of the variance of <span class="math inline">\(X\)</span>).</p>
 </div>
-<div id="data" class="section level1">
-<h1>Data</h1>
-<p>This list only includes data that needs to be downloaded from the
-course website. Other data is listed in the Course Notes along with
-steps to access the data and a link to a description of the data.</p>
-<ul>
-<li><p><a href="data/acs.RData">acs</a> [<a href="data/acs_description.txt">description</a>]</p></li>
-<li><p><a href="data/banks.RData">banks</a> [<a href="data/banks_description.txt">description</a>]</p></li>
-<li><p><a href="data/birthweight_smoking.dta">Birthweight_Smoking</a>
-[<a href="https://www.princeton.edu/~mwatson/Stock-Watson_3u/Students/EE_Datasets/Birthweight_Smoking_Description.pdf">description</a>]</p></li>
-<li><p><a href="data/diamond_train.RData">diamond_train</a> [<a href="https://www.kaggle.com/shivam2503/diamonds/">description</a>]</p></li>
-<li><p><a href="data/diamond_test.RData">diamond_test</a> [<a href="https://www.kaggle.com/shivam2503/diamonds/">description</a>]</p></li>
-<li><p><a href="data/fertilizer_2000.RData">fertilizer_2000</a> [<a href="data/fertilizer_description.txt">description</a>]</p></li>
-<li><p><a href="data/fertilizer_panel.RData">fertilizer_panel</a> [<a href="data/fertilizer_description.txt">description</a>]</p></li>
-<li><p><a href="data/house.RData">house</a> [<a href="data/house_description.txt">description</a>]</p></li>
-<li><p><a href="data/intergenerational_mobility.RData">intergenerational_mobility</a>
-[<a href="data/intergenerational_mobility_description.txt">description</a>]</p></li>
-<li><p><a href="data/Lead_Mortality.RData">Lead_Mortality</a> [<a href="http://www.princeton.edu/~mwatson/Stock-Watson_3u/Students/EE_Datasets/Lead_Mortality_Description.pdf">description</a>]</p></li>
-<li><p><a href="data/mlda.RData">mlda</a> [<a href="data/mlda_description.txt">description</a>]</p></li>
-<li><p><a href="data/mutual_funds.RData">mutual_funds</a> [<a href="data/mutual_funds_description.txt">description</a>]</p></li>
-<li><p><a href="data/rand_hie.RData">rand_hie</a> [<a href="data/rand_hie_description.txt">description</a>]</p></li>
-<li><p><a href="data/titanic_training.csv">titanic_training</a> [<a href="https://www.kaggle.com/c/titanic/data">description</a>]</p></li>
-<li><p><a href="data/titanic_testing.csv">titanic_testing</a> [<a href="https://www.kaggle.com/c/titanic/data">description</a>]</p></li>
-<li><p><a href="data/us_data.RData">us_data</a></p></li>
-</ul>
+<div id="ch.-3-extra-question-3" class="section level1">
+<h1>Ch. 3, Extra Question 3</h1>
+<p><strong>Part a</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+  \mathbb{E}[Y] &amp;= \mathbb{E}[Y|X=1] \mathrm{P}(X=1) +
+\mathbb{E}[Y|X=0]\mathrm{P}(X=0) \\
+  &amp;= \mathbb{E}[Y|X=1] \mathrm{P}(X=1) +
+\mathbb{E}[Y|X=0](1-\mathrm{P}(X=1)) \\
+  &amp;= 5\&#39; 4\&quot; (0.5) + 5\&#39; 9\&quot; (0.5) \\
+  &amp;= 5\&#39; 6.5\&quot;
+\end{aligned}
+\]</span></p>
+<p><strong>Part b</strong></p>
+<p>The answer from part a is related to the law of iterated expectations
+because the key step in that problem is to relate the overall
+expectation, <span class="math inline">\(\mathbb{E}[Y]\)</span>, to the
+conditional expectations, <span class="math inline">\(\mathbb{E}[Y|X=0]\)</span> and <span class="math inline">\(\mathbb{E}[Y|X=1]\)</span>. The law of iterated
+expectations says that unconditional expectations are equal to averages
+of conditional expectations, which is what we use in the first step of
+the answer for part a.</p>
 </div>
-<div id="code-challenges" class="section level1">
-<h1>Code Challenges</h1>
-<ul>
-<li><a href="code_challenge1.html">Sep. 20</a></li>
-</ul>
+<div id="ch.-3-extra-question-4" class="section level1">
+<h1>Ch. 3, Extra Question 4</h1>
+<p><strong>Part a</strong></p>
+<p><span class="math inline">\(f_X(21) = 0.1\)</span>. We know this
+because the sum of the pdfs across all possible values of <span class="math inline">\(X\)</span> must add up to 1.</p>
+<p><strong>Part b</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+  \mathbb{E}[X] &amp;= \sum_{x \in \mathcal{X}} x f_X(x) \\
+  &amp;= 2 f_X(2) + 7 f_X(7) + 13 f_X(13) + 21 f_X(21) \\
+  &amp;= 2 (0.5) + 7 (0.25) + 13 (0.15) + 21 (0.1) \\
+  &amp;= 6.8
+\end{aligned}
+\]</span></p>
+<p><strong>Part c</strong></p>
+<p>To calculate the variance, I’ll use the expression <span class="math inline">\(\mathrm{var}(X) = \mathbb{E}[X^2] -
+\mathbb{E}[X]^2\)</span>. Thus, the main new thing to calculate is <span class="math inline">\(\mathbb{E}[X^2]\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \mathbb{E}[X^2] &amp;= \sum_{x \in \mathcal{X}} x^2 f_X(x) \\
+  &amp;= 2^2 f_X(2) + 7^2 f_X(7) + 13^2 f_X(13) + 21^2 f_X(21) \\
+  &amp;= 4 (0.5) + 49 (0.25) + 169 (0.15) + 441 (0.1) \\
+  &amp;= 83.7
+\end{aligned}
+\]</span></p>
+<p>Since, we already calculated <span class="math inline">\(\mathbb{E}[X] = 6.8\)</span> in part a, this
+implies that <span class="math inline">\(\mathbb{E}[X]^2 =
+46.24\)</span>. Thus, <span class="math display">\[
+\begin{aligned}
+  \mathrm{var}(X) &amp;= 83.7 - 46.24 \\
+  &amp;= 37.46
+\end{aligned}
+\]</span></p>
+<p><strong>Part d</strong></p>
+<p><span class="math display">\[
+  F_X(1) = 0
+\]</span></p>
+<p>since the smallest possible value of <span class="math inline">\(X\)</span> is 2.</p>
+<p><span class="math display">\[
+\begin{aligned}
+  F_X(7) &amp;= f_X(2) + f_X(7) \\
+  &amp;= 0.75
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+  F_X(8) &amp;= f_X(2) + f_X(7) \\
+  &amp;= 0.75
+\end{aligned}
+\]</span> <span class="math display">\[
+  \begin{aligned}
+  F_X(25) &amp;= 1 \qquad
+  \end{aligned}
+\]</span></p>
+<p>since all possible values that <span class="math inline">\(X\)</span>
+can take are less than 25.</p>
 </div>
 
 
