@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [HW 2](hw2.html), due Thursday, Sep. 15, [[[solutions](hw2_sol.pdf)]], [[[Rmd file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_8070_Fall_2022/hw2_sol.Rmd)]]
 
-[Additional Practice Questions for Midterm 1](additional_practice_1.html), <span style="color: red; font-weight: bold;">These do not need to be turned in, I will post solutions for at least some of these problems</span>
+[Additional Practice Questions for Midterm 1](additional_practice_1.html), [[[partial solutions](additional_practice_1_partial_solutions.pdf)]] <span style="color: red; font-weight: bold;">These do not need to be turned in</span>
 
 # Course Material
 
