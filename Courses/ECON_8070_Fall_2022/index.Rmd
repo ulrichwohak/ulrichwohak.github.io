@@ -21,6 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Additional Practice Questions for Midterm 1](additional_practice_1.html), [[[partial solutions](additional_practice_1_partial_solutions.pdf)]] <span style="color: red; font-weight: bold;">These do not need to be turned in</span>
 
+[HW 3](hw3.html), due Thursday, Oct. 13
+
 # Course Material
 
 We will cover the following topics:

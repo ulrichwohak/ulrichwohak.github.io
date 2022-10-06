@@ -19,6 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [HW 2](hw2.html), due Thursday, Sept. 22, [[[solutions](hw2_sol.html)]], [[[Rmd file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_4750_Fall_2022/hw1_sol.Rmd)]]
 
+[HW 3](hw3.html), due Tuesday, Oct. 18
+
 # Projects
 
 None yet...
@@ -76,3 +78,5 @@ This list only includes data that needs to be downloaded from the course website
 # Code Challenges
 
 * [Sep. 20](code_challenge1.html)
+
+* [Sep. 29](code_challenge2.html)
