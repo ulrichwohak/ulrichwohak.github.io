@@ -350,6 +350,34 @@ We consider some empirically relevant cases where:
 
 ---
 
+# Examples
+
+**Covariates Evolving Exogenously:** Stand-your-ground laws (Cheng and Hoekstra (2013))
+
+* State-level data
+    
+* Time-varying covariates include population, demographics, median income
+
+--
+    
+**Covariates Affected by Treatment:** Job Displacement
+
+* Paths of earnings (in absence of job displacement) likely depend on occupation, industry, union status
+    
+* But all of these are likely affected by job displacement (i.e., often thought of as &quot;bad controls&quot;)
+
+&lt;!--
+
+
+**Example 3:** Job displacement
+
+* Occupation, industry, and union status are often thought of as &quot;bad controls&quot; in this literature.
+
+--&gt;
+
+---
+
+
 # Introduction
 
 This is a setting where empirical work has traditionally run the TWFE regression:
@@ -394,33 +422,6 @@ We also propose alternative (and simple) approaches can be used to get around th
    
    * This part can allow for the time-varying covariates to be themselves affected by the treatment
     
----
-
-# Examples
-
-**Covariates Evolving Exogenously:** Stand-your-ground laws (Cheng and Hoekstra (2013))
-
-* State-level data
-    
-* Time-varying covariates include population, demographics, median income
-
---
-    
-**Covariates Affected by Treatment:** Job Displacement
-
-* Paths of earnings (in absence of job displacement) likely depend on occupation, industry, union status
-    
-* But all of these are likely affected by job displacement (i.e., often thought of as &quot;bad controls&quot;)
-
-&lt;!--
-
-
-**Example 3:** Job displacement
-
-* Occupation, industry, and union status are often thought of as &quot;bad controls&quot; in this literature.
-
---&gt;
-
 ---
 
 
@@ -822,7 +823,7 @@ Instead of trying to estimate the bias terms directly (which is likely to be cha
 
 If we could come up with &quot;balancing weights&quot;, `\(\vartheta_0\)`, such that
 
-`$$\E[\vartheta_0(X_{t^*},X_{t^*-1},Z) \Delta Y_{t^*}(0)|D=0] = \E[\Delta Y_{t^*}(0) | D=1]$$`
+`$$\E[\Delta Y_{t^*}(0) | D=1] = \E[\vartheta_0(X_{t^*},X_{t^*-1},Z) \Delta Y_{t^*}(0)|D=0]$$`
 then, under the conditional parallel trends assumption, `$$ATT = \E[\Delta Y_{t^*}|D=1] - \E[\vartheta_0(X_{t^*},X_{t^*-1},Z) \Delta Y_{t^*}|D=0]$$`
 
 --
