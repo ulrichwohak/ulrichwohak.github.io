@@ -39,6 +39,14 @@ None yet...
 
 * Additional office hours: Friday 1:30-3:00 (Zoom only, please contact me by email if you would like to meet during this time), Monday 9:30-11:00 (in person, Amos B408).
 
+**Additional Materials for Midterm 1**
+
+* [Study Guide](midterm2_study_guide.html)
+
+* [Additional Practice Questions](midterm2_extra_questions.html), [[[solutions](midterm2_extra_questions_sol.html)]]
+
+* Additional office hours: Friday 1:00-2:00pm, Monday 9:30-10:30am (in person, Amos B408).
+
 # Data
 
 This list only includes data that needs to be downloaded from the course website.  Other data is listed in the Course Notes along with steps to access the data and a link to a description of the data.
