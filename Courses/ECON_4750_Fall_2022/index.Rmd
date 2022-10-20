@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [HW 2](hw2.html), due Thursday, Sept. 22, [[[solutions](hw2_sol.html)]], [[[Rmd file](https://github.com/bcallaway11/bcallaway11.github.io/blob/master/Courses/ECON_4750_Fall_2022/hw1_sol.Rmd)]]
 
-[HW 3](hw3.html), due Tuesday, Oct. 18
+[HW 3](hw3.html), due Tuesday, Oct. 18, [[[solutions](hw3_sol.html)]]
 
 # Projects
 
@@ -39,7 +39,7 @@ None yet...
 
 * Additional office hours: Friday 1:30-3:00 (Zoom only, please contact me by email if you would like to meet during this time), Monday 9:30-11:00 (in person, Amos B408).
 
-**Additional Materials for Midterm 1**
+**Additional Materials for Midterm 2**
 
 * [Study Guide](midterm2_study_guide.html)
 
