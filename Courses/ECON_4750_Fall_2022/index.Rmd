@@ -21,6 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [HW 3](hw3.html), due Tuesday, Oct. 18, [[[solutions](hw3_sol.html)]]
 
+[HW 4](hw4.html), due Tuesday, Nov. 8
+
 # Projects
 
 None yet...
