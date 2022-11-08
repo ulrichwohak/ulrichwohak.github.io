@@ -25,7 +25,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Projects
 
-None yet...
+[Project 1](project1.html), due Tuesday, Nov. 22
+
+- [house_price_train.csv](house_price_train.csv) &nbsp; | &nbsp; [house_price_test.csv](house_price_test.csv) &nbsp; | &nbsp; [data_description.txt](data_description.txt)
 
 # Additional Course Materials
 
