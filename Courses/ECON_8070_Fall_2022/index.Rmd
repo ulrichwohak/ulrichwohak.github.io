@@ -48,7 +48,13 @@ We will cover the following topics:
     - Method of Moments Estimation
     - Inference
     
-3. [Linear Regression]
+3. [Linear Regression](03_regression.html)
+
+    - Introduction/Review of Linear Algebra
+    - Conditional Expectation and Projection
+    - The Algebra of Least Squares
+    - Least Squares Regression
+    - Asymptotic Theory for Least Squares
 
 # Slides
 
