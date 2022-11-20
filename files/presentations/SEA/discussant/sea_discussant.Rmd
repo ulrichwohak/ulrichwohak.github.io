@@ -1,0 +1,168 @@
+---
+title: "Misclassification in Difference-in-Differences Models"
+subtitle: ""
+author: "Augustine Denteh and Desire Kedagni<br><br><br>"
+institute: ""
+date: "Comments from: Brantly Callaway <br>Southern Economics Association Conference, 2022"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: ["metropolis_alt.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+
+---
+
+# Introduction
+
+
+$$\newcommand{\E}{\mathbb{E}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\Var}{\mathrm{var}}
+\newcommand{\Cov}{\mathrm{cov}}
+\newcommand{\Corr}{\mathrm{corr}}
+\newcommand{\corr}{\mathrm{corr}}
+\newcommand{\L}{\mathrm{L}}
+\renewcommand{\P}{\mathrm{P}}
+\newcommand{\independent}{{\perp\!\!\!\perp}}$$
+
+
+<style type="text/css">
+
+border-top: 80px solid #BA0C2F;
+
+.inverse {
+  background-color: #BA0C2F;
+}
+
+.alert {
+    font-weight:bold; 
+    color: #BA0C2F;
+}
+
+.alert-blue {
+    font-weight: bold;
+    color: blue;
+}
+
+.remark-slide-content {
+    font-size: 23px;
+    padding: 1em 4em 1em 4em;
+}
+
+.highlight-red {
+ background-color:red;
+ padding:0.1em 0.2em;
+}
+
+.assumption-box {
+    background-color: rgba(222,222,222,.5);
+    font-size: x-large;
+    padding: 10px; 
+    border: 10px solid lightgray; 
+    margin: 10px;
+}
+
+.assumption-title {
+    font-size: x-large;
+    font-weight: bold;
+    display: block;
+    margin: 10px;
+    text-decoration: underline;
+    color: #BA0C2F;
+}
+</style>
+
+
+```{r echo=FALSE}
+step_by_step_eq <- function(eqlist, before="", after="", title=" ") {
+  
+  # drop slide pauses in before content
+  before_inner <- gsub("--", "", before)
+  
+  for (i in 2:length(eqlist)) {
+    eqlist[i] <- paste0(eqlist[i-1],"\\\\\n",eqlist[i])
+  }
+
+  out <- ""
+  for (i in 1:length(eqlist)) {
+    if (i > 1) out <- paste0(out, "count:false", "\n")
+    out <- paste0(out, "# ", title, "\n") # print title
+    # print before content
+    if (i == 1) out <- paste0(out, before, "\n") else out <- paste0(out, before_inner, "\n") 
+    out <- paste0(out, "$$\n\\begin{aligned}\n",eqlist[[i]],"\n\\end{aligned}\n$$\n\n") # print equation
+    if (i < length(eqlist)) out <- paste0(out, "---\n\n")
+  }
+  out <- paste0(out, after, "\n") # print after content
+  out <- paste0(out, "---\n")
+  cat(out)
+}
+```
+
+<br><br><br>
+
+<center><span class="alert">I totally agree with authors that misclassification is interesting/understudied in the context of DID</span></center>
+
+---
+
+# Main comment about Parallel Trends
+
+My only substantive comment is that I was unsure why the parallel trends assumption (Assumption 1) used the observed treatment status rather than "true" treatment status, i.e., why:
+
+$$\E[\Delta Y_t(0) | D=1] = \E[\Delta Y_t(0)|D=0]$$
+
+
+$$\textrm{rather than}$$
+
+$$\E[\Delta Y_t(0) | D^*=1] = \E[\Delta Y_t(0)|D^*=0]$$
+
+--
+
+To me: this seems like a surprising choice to me and asymmetric from the definition of $ATT := \E[Y_t(1) - Y_t(0) | D^*=1]$.  
+
+--
+
+I'm not sure how much this would change the conclusions in the paper (maybe not at all), but I encourage authors to think some about this case
+
+---
+
+# Minor Comments 1
+
+I think there is some <span class="alert">positive news</span> and perhaps it is worth emphasizing this more in the paper
+
+* Empirical researchers often have the intuition that misclassification $\implies$ attenuation bias
+
+* The paper provides <span class="alert">precise conditions</span> under which misclassification leads to attenuation bias.  To be fair, as emphasized in the paper, these are strong conditions, but <span class="alert">this is helpful for empirical researchers to know.</span>
+
+* Also, if you think of four groups divided by actual treatment status and misclassification status, it's <span class="alert">not sufficient that all four groups experience the same trends in untreated potential outcomes</span> (Assumption 2.2), you also need that misclassification is independent of treated potential outcome conditional on true treatment status 
+
+---
+
+# Minor Comments 2
+
+The paper emphasizes "mechanical misclassifications"
+
+- The example of using a proxy to define treatment (e.g., a location) seems like a good one to me and seems common in applications
+
+- I have a harder time following the examples about differences between the timing of a policy being voted on and when it is actually implemented.
+
+    - To me: this either has the flavor of anticipation
+    
+    - Or many applications are roughly: a researcher observes yearly data, but a policy was implemented in the middle of the year.  Should that year be counted as treated or untreated?  Is that misclassification or something else?
+
+---
+
+# Minor Comments 3
+
+* Important to be clear about what is different in this case relative to papers about misclassification with cross-sectional data and under unconfoundedness
+
+    - Good idea to make clear that the contribution of the paper (which it is!) is more than just replacing $Y$ (in levels) with $\Delta Y$ (in differences)
+    
+    - Perhaps can emphasize more the some features of DID: e.g., no one treated in the first period, targeting ATT, etc.  
+    
