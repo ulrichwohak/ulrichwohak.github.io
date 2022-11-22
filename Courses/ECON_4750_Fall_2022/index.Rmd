@@ -23,11 +23,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [HW 4](hw4.html), due Tuesday, Nov. 8, [[[solutions](hw4_sol.html)]]
 
+[HW 5](hw5.html), due Thursday, Dec. 1
+
 # Projects
 
 [Project 1](project1.html), due Tuesday, Nov. 22
 
 - [house_price_train.csv](house_price_train.csv) &nbsp; | &nbsp; [house_price_test.csv](house_price_test.csv) &nbsp; | &nbsp; [data_description.txt](data_description.txt)
+
+[Project 2](project2.html), This project is optional.  If you turn it in, it must be submitted by 11:59pm on Sunday, Dec. 11 (see details below).  
+
+- [jtrain_observational.dta](jtrain_observational.dta) &nbsp; | &nbsp; [jtrain_observational_description.txt](jtrain_observational_description.txt) &nbsp; | &nbsp; [jtrain_experimental.dta](jtrain_experimental.dta) &nbsp; | &nbsp; [jtrain_experimental_description.txt](jtrain_experimental_description.txt) 
+
+    On the syllabus, the project counts for 10% of your grade.  If you turn it in, your final grade will be calculated as on the syllabus.  If you do not turn it in, your grade will be out of 90 possible points.  For example, if you scored 75 on the first midterm, 85 on the second midterm, score 95 on the final, you have a 90 homework average, scored an 80 on the first project, and 100 attendance/participation score, but do not turn in the project, then your grade for the semester will be:
+    
+    `(.15*75 + .15*85 + .2*95 + .2*90 + .1*80 + .1*100)/.9 = 87.8`
+    
+    If you additionally turn in this project and make a 99 on it, then your grade for the semester will be
+    
+    `.15*75 + .15*85 + .2*95 + .2*90 + .1*80 + .1*100 + .1*99 = 88.9`
 
 # Additional Course Materials
 
