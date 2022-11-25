@@ -1,7 +1,7 @@
 Ulrich Wohak:
   name        : "Ulrich Wohak"
   bio         : "PhD Candidate @ WU Vienna"
-  avatar      : "/assets/images/profile_pic.jpg"
+  avatar      : "/assets/images/profile_pic.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
