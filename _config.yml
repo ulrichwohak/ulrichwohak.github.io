@@ -1,12 +1,8 @@
-#
-# This file contains configuration flags to customize your site
-#
-
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "default"
-title: Brantly Callaway
+title: "Ulrich Wohak"
 subtitle: ""
-author: "Brantly Callaway"
+author: "Ulrich Wohak"
 defaults:
   # _posts
   - scope:
@@ -32,4 +28,3 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-
