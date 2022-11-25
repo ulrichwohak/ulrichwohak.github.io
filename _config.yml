@@ -29,3 +29,4 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-seo-tag
+google_analytics: <Ulrich Wohak>
