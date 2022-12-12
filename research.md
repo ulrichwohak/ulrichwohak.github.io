@@ -10,7 +10,7 @@ permalink: /research/
 
   - *A preliminary version of this paper was presented at the European Parliaments FEMM committee workshop on 08/12/2022.*
   
-  -In this project we evaluate the causal impact of various tax reductions for mentrual hygiene products on prices as well as quantities purchased. We find close to full pass-through but muted effects on quantities purchased. 
+  - In this project we evaluate the causal impact of various tax reductions for mentrual hygiene products on prices as well as quantities purchased. We find close to full pass-through but muted effects on quantities purchased. 
 
 
 
