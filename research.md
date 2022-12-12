@@ -7,7 +7,7 @@ permalink: /research/
 ## Work in progress
 
 * Evaluating Tampon Tax Reforms using Transaction Based Scanner Data
-*
+
 In this project we evaluate the causal impact of various tax reductions for mentrual hygiene products on prices as well as quantities purchased. We find close to full pass-through but muted effects on quantities purchased. (Together with Klara Kinnl, ongoing work)
 
 A preliminary version of this paper was presented at the European Parliaments FEMM committee workshop on 08/12/2022.
