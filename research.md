@@ -12,6 +12,10 @@ permalink: /research/
   
   - In this project we evaluate the causal impact of various tax reductions for mentrual hygiene products on prices as well as quantities purchased. We find close to full pass-through but muted effects on quantities purchased. 
 
+  - We find that the tax reduction translates into prices dynamically over a period of at least 12 months.
+
+![Event_dd graph](/assets/images/event)dd_mhps.jpg)
+
 
 
 - ***Big-tech M&A, Venture Capital and Innovation*** (Together with Klaus Gugler and Florian Szücs)
