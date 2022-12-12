@@ -12,7 +12,7 @@ author_profile: true
   </tr>
 </table>
 
-Here goes some welcome text.
+I am a PhD Economics candidate at the Vienna University of Economics and Business (WU Wien). My research interests include empirical industrial organization and applied microeconometrics.
 
 <br>
 
