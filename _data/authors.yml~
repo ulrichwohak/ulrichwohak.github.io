@@ -1,7 +1,6 @@
 Ulrich Wohak:
-  name        : "Ulrich Wohak"
   bio         : "PhD Candidate @ WU Vienna"
-  avatar      : "/assets/images/profile_pic.jpg"
+  avatar      : "/assets/images/profile_pic.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -9,4 +8,6 @@ Ulrich Wohak:
     - label: "Github"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ulrichwohak"
-
+    - label: "Scholar"
+      icon: "fab fa-fw fa-google"
+      url: "https://scholar.google.at/citations?user=MSlSSj0AAAAJ&hl=en&oi=ao"
