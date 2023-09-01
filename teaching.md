@@ -25,6 +25,6 @@ permalink: /teaching/
 **Awards**
 
 - Recipient of the *Best Teacher Award*, 2022-2023 Academic Year in the MS Business Analytics program
-- 
+
 - Recipient of the *Outstanding Teaching Assistant Award*, 2021-2022 Academic Year in the MA Economic Policy program at CEU
 
