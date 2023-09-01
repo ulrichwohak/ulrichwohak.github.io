@@ -14,9 +14,9 @@ permalink: /research/
 
   - We find that the tax reduction translates into prices dynamically over a period of at least 12 months.
 
-![Event_dd graph](/assets/images/event_dd_mhps.jpg)
+<!--- ![Event_dd graph](/assets/images/event_dd_mhps.jpg) --->
 
-<img src="/assets/images/event_dd_mhps.jpg" width="200">
+<img src="/assets/images/event_dd_mhps.jpg" width="400">
 
 - ***Big-tech M&A, Venture Capital and Innovation*** (Together with Klaus Gugler and Florian Szücs, ongoing work)
 
