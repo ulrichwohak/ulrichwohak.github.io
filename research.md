@@ -16,7 +16,7 @@ permalink: /research/
 
 ![Event_dd graph](/assets/images/event_dd_mhps.jpg)
 
-
+<img src="/assets/images/event_dd_mhps.jpg" width="200">
 
 - ***Big-tech M&A, Venture Capital and Innovation*** (Together with Klaus Gugler and Florian Szücs, ongoing work)
 
