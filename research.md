@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Work in progress
 
-- ***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data*** (Together with Klara Kinnl, ongoing work)
+- ***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data*** (Together with [Klara Kinnl](https://sites.google.com/view/klarakinnl), ongoing work)
 
   - *A preliminary version of this paper was presented at the European Parliament's [FEMM committee workshop](https://www.europarl.europa.eu/committees/de/product/product-details/20221202WKS04761) on 08/12/2022.*
   
