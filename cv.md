@@ -4,4 +4,4 @@ title: CV
 permalink: /cv/
 ---
 
-[Link to CV](files/cv_wohak.pdf)
+[Download CV (.pdf)](files/cv_wohak.pdf)
