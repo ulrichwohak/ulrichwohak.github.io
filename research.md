@@ -17,7 +17,7 @@ permalink: /research/
 <!--- ![Event_dd graph](/assets/images/event_graph.jpg) --->
 
 <p align="center">
-  <img src="/assets/images/event_graph.jpg" width="400">
+  <img src="/assets/images/event_graph.jpg" width="600">
 </p>
 
 
