@@ -14,10 +14,10 @@ permalink: /research/
 
   - We find that the tax reduction translates into prices dynamically over a period of at least 12 months.
 
-<!--- ![Event_dd graph](/assets/images/event_dd_mhps.jpg) --->
+<!--- ![Event_dd graph](/assets/images/event_graph.jpg) --->
 
 <p align="center">
-  <img src="/assets/images/event_graph.jpeg" width="400">
+  <img src="/assets/images/event_graph.jpg" width="400">
 </p>
 
 
