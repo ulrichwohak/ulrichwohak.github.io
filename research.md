@@ -17,7 +17,7 @@ permalink: /research/
 <!--- ![Event_dd graph](/assets/images/event_dd_mhps.jpg) --->
 
 <p align="center">
-  <img src="/assets/images/event_graph.pdf" width="400">
+  <img src="/assets/images/event_graph.jpeg" width="400">
 </p>
 
 
