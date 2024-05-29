@@ -3,6 +3,7 @@ layout: single
 title: Research
 permalink: /research/
 ---
+
 ## Peer-reviewed publications
 - Gugler, K., Szücs, F., Wohak, U. (2024) *Using Natural Language Processing to Delineate Digital Markets*, Stanford Computational Antitrust. [Link (PDF)](https://law.stanford.edu/wp-content/uploads/2024/05/gugler-szucs-wohak.pdf)
 ## Work in progress
