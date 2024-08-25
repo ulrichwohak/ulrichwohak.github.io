@@ -18,4 +18,4 @@ I am a PhD Economics candidate at the Vienna University of Economics and Busines
 
 **Contact Information:**
 
-Email: ulrich.wohak [at] wu [dot] ac [dot] at
+Email: ulrich [dot] wohak [at] wu [dot] ac [dot] at
