@@ -15,7 +15,7 @@ permalink: /research/
   
 ## Under Review
 
-- ***Big-tech M&A, Venture Capital and Innovation*** (with Klaus Gugler and Florian Szücs), *R&R at International Journal of Industrial Organization*
+- ***Big-tech M&A, Venture Capital and Innovation*** (with [Klaus Gugler](https://www.wu.ac.at/en/economics/people/gugler-k) and [Florian Szücs](https://www.wu.ac.at/en/economics/people/szuecs-f)), *R&R at International Journal of Industrial Organization*
 
   - We investigate the effects of large technology acquisitions on venture capital investment and innovation in relevant markets covering the universe of all Google, Apple, Facebook, Amazon and Microsoft acquisitions. We find strong negative effects on venture capital investment but heterogeneous effects on innovation.
   - Latest version available [here](https://research.wu.ac.at/ws/portalfiles/portal/44832243/WP340.pdf)
