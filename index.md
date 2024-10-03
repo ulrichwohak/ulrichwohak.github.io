@@ -14,6 +14,8 @@ author_profile: true
 
 I am a PhD Economics candidate at the Vienna University of Economics and Business (WU Wien). My research interests include empirical industrial organization and applied microeconometrics.
 
+
+I am currently visiting Rafael Araujo at FGV-EESP in São Paulo until mid-December.
 <br>
 
 **Contact Information:**
