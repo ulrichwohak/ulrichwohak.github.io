@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Work in progress
 - Text-based Network Industry Classification: Update and Extensions
-- Attention in Procurement (with [Miklós Koren](https://koren.mk/), [Sergey Lychagin](https://scholar.google.com/citations?user=UftyIF8AAAAJ&hl=en), and [Adam Szeidl](https://adamszeidl.com/)
+- Attention in Procurement (with [Miklós Koren](https://koren.mk/), [Sergey Lychagin](https://scholar.google.com/citations?user=UftyIF8AAAAJ&hl=en), and [Adam Szeidl](https://adamszeidl.com/))
 - Causal Random Deforestation: A Global REDD+ Evaluation (with [Lucas Konrad](https://www.wu.ac.at/en/economics/people/konrad-l), [Lukas Vashold](https://www.vashold.eu/), and [Nikolas Kuschnig](https://www.kuschnig.eu/))
 - Pass-through in High Inflationary Environments: A Structural Approach (with [Klaus Gugler](https://www.wu.ac.at/en/economics/people/gugler-k), [Klara Kinnl](https://sites.google.com/view/klarakinnl), [Lukas Pirnbacher](https://www.wu.ac.at/en/economics/people/pirnbacher-l/), and [Florian Szücs](https://www.wu.ac.at/en/economics/people/szuecs-f))
 
