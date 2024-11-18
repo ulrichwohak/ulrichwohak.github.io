@@ -5,7 +5,7 @@ permalink: /research/
 ---
 
 ## Work in progress
-- Text-based Network Industry Classification: Update and Extensions
+- The Inflation Reduction Act: Short-Term Industry Dynamics and Local Impacts
 - Attention in Procurement (with [Miklós Koren](https://koren.mk/), [Sergey Lychagin](https://scholar.google.com/citations?user=UftyIF8AAAAJ&hl=en), and [Adam Szeidl](https://adamszeidl.com/))
 - Causal Random Deforestation: A Global REDD+ Evaluation (with [Lucas Konrad](https://www.wu.ac.at/en/economics/people/konrad-l), [Lukas Vashold](https://www.vashold.eu/), and [Nikolas Kuschnig](https://www.kuschnig.eu/))
 - Pass-through in High Inflationary Environments: A Structural Approach (with [Klaus Gugler](https://www.wu.ac.at/en/economics/people/gugler-k), [Klara Kinnl](https://sites.google.com/view/klarakinnl), [Lukas Pirnbacher](https://www.wu.ac.at/en/economics/people/pirnbacher-l/), and [Florian Szücs](https://www.wu.ac.at/en/economics/people/szuecs-f))
@@ -15,7 +15,7 @@ permalink: /research/
   
 ## Under Review
 
-- ***Big-tech M&A, Venture Capital and Innovation*** (with [Klaus Gugler](https://www.wu.ac.at/en/economics/people/gugler-k) and [Florian Szücs](https://www.wu.ac.at/en/economics/people/szuecs-f)), *R&R at International Journal of Industrial Organization*
+- ***Big-tech M&A, Venture Capital and Innovation*** (with [Klaus Gugler](https://www.wu.ac.at/en/economics/people/gugler-k) and [Florian Szücs](https://www.wu.ac.at/en/economics/people/szuecs-f)), *Resubmitted at International Journal of Industrial Organization*
 
   - We investigate the effects of large technology acquisitions on venture capital investment and innovation in relevant markets covering the universe of all Google, Apple, Facebook, Amazon and Microsoft acquisitions. We find strong negative effects on venture capital investment but heterogeneous effects on innovation.
   - Latest version available [here](https://research.wu.ac.at/ws/portalfiles/portal/44832243/WP340.pdf)
