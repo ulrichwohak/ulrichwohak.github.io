@@ -14,8 +14,6 @@ author_profile: true
 
 I am a PhD Economics candidate at the Vienna University of Economics and Business (WU Wien). My research interests include empirical industrial organization, applied microeconometrics and the application of machine-learning to causal questions.
 
-
-I am currently visiting [Rafael Araujo](https://rafaelcraraujo.github.io/) at FGV-EESP in São Paulo until mid-December.
 <br>
 
 **Contact Information:**
