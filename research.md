@@ -20,7 +20,7 @@ permalink: /research/
   - We investigate the effects of large technology acquisitions on venture capital investment and innovation in relevant markets covering the universe of all Google, Apple, Facebook, Amazon and Microsoft acquisitions. We find strong negative effects on venture capital investment but heterogeneous effects on innovation.
   - Latest version available [here](https://research.wu.ac.at/ws/portalfiles/portal/44832243/WP340.pdf)
 
-- ***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *Under review at Journal of Economics Behaviour and Organization*
+- ***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *Under review at Journal of Economic Behaviour and Organization*
 
   - *A preliminary version of this paper was presented at the European Parliament's [FEMM committee workshop](https://www.europarl.europa.eu/committees/de/product/product-details/20221202WKS04761) on 08/12/2022.*
   
