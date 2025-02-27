@@ -12,7 +12,7 @@ permalink: /research/
 
 ## Peer-reviewed publications
 
-***Start-up acquisitions, venture capital and innovation: A comparative study of Google, Apple, Facebook, Amazon and Microsoft (2025)*** Wohak, U., [Gugler, K.](https://www.wu.ac.at/en/economics/people/gugler-k), [Szücs, F.](https://www.wu.ac.at/en/economics/people/szuecs-f) (2025). *International Journal of Industrial Organization*. [DOI](https://doi.org/10.1016/j.ijindorg.2025.103148)
+***Start-up acquisitions, venture capital and innovation: A comparative study of Google, Apple, Facebook, Amazon and Microsoft (2025)*** Wohak, U., [Gugler, K.](https://www.wu.ac.at/en/economics/people/gugler-k), [Szücs, F.](https://www.wu.ac.at/en/economics/people/szuecs-f). *International Journal of Industrial Organization*. [DOI](https://doi.org/10.1016/j.ijindorg.2025.103148)
 <details>
   <summary>Abstract</summary>
    <p align="justify">We evaluate the impact of big-tech acquisitions on the incentives for venture capital (VC) investment and innovation. Using data on several hundred acquisitions by Google, Apple, Facebook, Amazon and Microsoft (GAFAM), we study the evolution of VC investment and patenting in affected technology fields relative to control groups. The results show a clear negative impact on VC investment, while the effect on innovation depends on the acquirer and period. Over time, the treatment effects on both outcomes improve, as GAFAM firms' product and tech-portfolios become more similar. Yet, around 14% of acquisitions impact both metrics negatively.</p>
