@@ -20,7 +20,11 @@ permalink: /research/
 
 ---
 
-- Gugler, K., Szücs, F., Wohak, U. (2024) *Using Natural Language Processing to Delineate Digital Markets*, Stanford Computational Antitrust. [Link (PDF)](https://law.stanford.edu/wp-content/uploads/2024/05/gugler-szucs-wohak.pdf)
+- ***Using Natural Language Processing to Delineate Digital Markets (2024)*** Wohak, U., [Gugler, K.](https://www.wu.ac.at/en/economics/people/gugler-k), [Szücs, F.](https://www.wu.ac.at/en/economics/people/szuecs-f). *Stanford Computational Antitrust*. [Link (PDF)](https://law.stanford.edu/wp-content/uploads/2024/05/gugler-szucs-wohak.pdf)
+<details>
+  <summary>Abstract</summary>
+   <p align="justify">Delineating relevant antitrust markets poses substantial challenges, particularly so in nascent, digital markets, where data on prices, quantities, and costs often are not available. This study evaluates a complementary approach using Natural Language Processing techniques along with business descriptions of relevant firms to define markets. Applying this method to a sample of start-up acquisitions, we find considerable overlap between our approach and expert assessments by the European Commission.</p>
+</details>
 
 ## Under Review
 
