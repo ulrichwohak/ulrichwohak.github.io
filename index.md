@@ -14,6 +14,8 @@ author_profile: true
 
 I am a PhD Economics candidate at the Vienna University of Economics and Business (WU Wien). My research interests include empirical industrial organization, applied microeconometrics and the application of machine-learning to causal questions.
 
+I am also a senior member at the Central European University's [MicroData](https://github.com/ceumicrodata) and contribute to expert witness report for the Austrian Cartel Court in Phase II mergers.
+
 <br>
 
 **Contact Information:**
