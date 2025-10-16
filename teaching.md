@@ -6,11 +6,15 @@ permalink: /teaching/
 
 **Regular Teaching**
 
-- Econometrics II (Fall 2023, Vienna University of Economics and Business)
+- Data Analysis 2: Finding Patterns with Regressions - Business Analytics track (Fall 2025, Central European University)
+
+- Econometrics II (Fall 2023, Fall 2025, Vienna University of Economics and Business)
 
 - Econometrics III (Spring 2022, Vienna University of Economics and Business)
 
-- Econometrics I (Fall 2021, Fall 2022, Vienna University of Economics and Business)
+- Econometrics I (Fall 2021, Fall 2022, Fall 2024, Vienna University of Economics and Business)
+  
+- Business Analytics (Spring 2023, Spring 2024, Spring 2025)
 
 - Industrial Organization (Spring 2021, Spring 2022, Vienna University of Economics and Business)
 
