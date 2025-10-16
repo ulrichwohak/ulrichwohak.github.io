@@ -12,10 +12,10 @@ author_profile: true
   </tr>
 </table>
 
-I am a PhD Economics candidate at the Vienna University of Economics and Business (WU Wien). My research interests include empirical industrial organization, applied microeconometrics and the application of machine-learning to causal questions.
+I am a Postdoctoral Researcher in Economics at Central European University. My research examines how managerial behavior and firm dynamics shape macroeconomic outcomes. I am also interested in questions relating to empirical industrial organization, applied microeconometrics, unstructured (text) data.
 
 <br>
 
 **Contact Information:**
 
-Email: ulrich [dot] wohak [at] wu [dot] ac [dot] at
+Email: wohaku [at] ceu [dot] edu
