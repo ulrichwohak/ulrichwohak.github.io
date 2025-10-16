@@ -21,6 +21,8 @@ permalink: /teaching/
 - Coding 1: Data Management and Analysis with Python (Fall 2023, Central European University)
 
 - Coding 1: Data Management and Analysis with R (Fall 2022, Central European University)
+  
+- Introduction to R (Spring, 2024, University of Montenegro)
 
 **Teaching assistance**
 
