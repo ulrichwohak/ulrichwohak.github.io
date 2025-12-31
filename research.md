@@ -12,7 +12,7 @@ permalink: /research/
 
 ## Peer-reviewed publications
 
-***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data (2025)*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *Journal of Economic Behavior and Organization* [DOI](https://doi.org/10.1016/j.jebo.2025.107356)
+***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data (2025)*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *Journal of Economic Behavior & Organization.* [DOI](https://doi.org/10.1016/j.jebo.2025.107356)
 
   - *A preliminary version of this paper was presented at the European Parliament's [FEMM committee workshop](https://www.europarl.europa.eu/committees/de/product/product-details/20221202WKS04761) on 08/12/2022.*
     
