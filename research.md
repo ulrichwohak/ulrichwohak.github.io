@@ -12,6 +12,17 @@ permalink: /research/
 
 ## Peer-reviewed publications
 
+- ***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data (2025)*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *aJournal of Economic Behaviour and Organization* [DOI](https://doi.org/10.1016/j.jebo.2025.107356)
+
+- <details>
+  <summary>Abstract</summary>
+   <p align="justify">We study price and volume effects of value-added tax (VAT) reductions for period products. We exploit varying treatment intensities and timing in several European countries and find that prices decrease by 10–13 %. This corresponds to full pass-through 12 months after the VAT reduction. The average effect on aggregate purchase volumes is statistically zero, and we find no evidence that low-income households are disproportionately affected by the reforms. We find homogeneous pass-through for market- and product-level competition measures and provide suggestive evidence that households’ propensity to purchase branded products increases in the months after the tax reform.</p>
+</details>
+
+  - *A preliminary version of this paper was presented at the European Parliament's [FEMM committee workshop](https://www.europarl.europa.eu/committees/de/product/product-details/20221202WKS04761) on 08/12/2022.*
+
+---
+
 ***Start-up acquisitions, venture capital and innovation: A comparative study of Google, Apple, Facebook, Amazon and Microsoft (2025)*** Wohak, U., [Gugler, K.](https://www.wu.ac.at/en/economics/people/gugler-k), [Szücs, F.](https://www.wu.ac.at/en/economics/people/szuecs-f). *International Journal of Industrial Organization*. [DOI](https://doi.org/10.1016/j.ijindorg.2025.103148)
 <details>
   <summary>Abstract</summary>
@@ -25,19 +36,3 @@ permalink: /research/
   <summary>Abstract</summary>
    <p align="justify">Delineating relevant antitrust markets poses substantial challenges, particularly so in nascent, digital markets, where data on prices, quantities, and costs often are not available. This study evaluates a complementary approach using Natural Language Processing techniques along with business descriptions of relevant firms to define markets. Applying this method to a sample of start-up acquisitions, we find considerable overlap between our approach and expert assessments by the European Commission.</p>
 </details>
-
-## Under Review
-
-- ***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *Forthcoming at Journal of Economic Behaviour and Organization*
-
-  - *A preliminary version of this paper was presented at the European Parliament's [FEMM committee workshop](https://www.europarl.europa.eu/committees/de/product/product-details/20221202WKS04761) on 08/12/2022.*
-  
-  - In this project we evaluate the causal impact of various tax reductions for mentrual hygiene products on prices as well as quantities purchased. We find close to full pass-through but muted effects on quantities purchased. 
-
-  - We find that the tax reduction translates into prices dynamically over a period of at least 12 months.
-
-<!--- ![Event_dd graph](/assets/images/event_graph.jpg) --->
-
-<p align="center">
-  <img src="/assets/images/event_graph.jpg" width="600">
-</p>
