@@ -14,12 +14,14 @@ permalink: /research/
 
 - ***Evaluating Tampon Tax Reforms using Transaction Based Scanner Data (2025)*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *aJournal of Economic Behaviour and Organization* [DOI](https://doi.org/10.1016/j.jebo.2025.107356)
 
-- <details>
+  - *A preliminary version of this paper was presented at the European Parliament's [FEMM committee workshop](https://www.europarl.europa.eu/committees/de/product/product-details/20221202WKS04761) on 08/12/2022.*
+    
+<details>
   <summary>Abstract</summary>
    <p align="justify">We study price and volume effects of value-added tax (VAT) reductions for period products. We exploit varying treatment intensities and timing in several European countries and find that prices decrease by 10–13 %. This corresponds to full pass-through 12 months after the VAT reduction. The average effect on aggregate purchase volumes is statistically zero, and we find no evidence that low-income households are disproportionately affected by the reforms. We find homogeneous pass-through for market- and product-level competition measures and provide suggestive evidence that households’ propensity to purchase branded products increases in the months after the tax reform.</p>
 </details>
 
-  - *A preliminary version of this paper was presented at the European Parliament's [FEMM committee workshop](https://www.europarl.europa.eu/committees/de/product/product-details/20221202WKS04761) on 08/12/2022.*
+
 
 ---
 
