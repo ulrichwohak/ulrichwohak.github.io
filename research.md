@@ -5,6 +5,7 @@ permalink: /research/
 ---
 
 ## Work in progress
+
 - A Random-Effects Model Reveals Strong Positive Sorting in CEO Labor Markets (with [Miklós Koren](https://koren.mk/), [Krisztina Orbán](https://sites.google.com/site/krisztinaorban/home), and [Álmos Telegdy](https://sites.google.com/site/almostelegdyhome/)), [DOI](https://zenodo.org/records/19048278)
 <details>
   <summary>Abstract</summary>
