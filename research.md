@@ -7,10 +7,10 @@ permalink: /research/
 ## Work in progress
 
 - A Random-Effects Model Reveals Strong Positive Sorting in CEO Labor Markets (with [Miklós Koren](https://koren.mk/), [Krisztina Orbán](https://sites.google.com/site/krisztinaorban/home), and [Álmos Telegdy](https://sites.google.com/site/almostelegdyhome/)), [DOI](https://zenodo.org/records/19048278)
-<details>
-  <summary>Abstract</summary>
-   <p align="justify">If markets allocate CEOs efficiently across firms, better managers should sort into better firms. The correlation between firm and manager quality is therefore central to understanding misallocation and aggregate productivity. Because manager quality is unobserved, the standard empirical strategy from matched worker-firm data is to estimate latent firm and worker effects and ask whether higher-quality workers sort to higher-quality firms. In CEO labor markets, however, careers are short and mobility is sparse, so fixed-effects estimates of latent quality are noisy and their implied correlation is badly biased. We instead model firm and manager effects as a Gaussian Markov random field on the bipartite CEO–firm network. Estimating four distributional parameters—rather than hundreds of thousands of individual effects—avoids limited mobility bias, while the sparsity of the precision matrix makes likelihood-based estimation feasible on the full network. Applied to Hungarian administrative data from 1990 to 2018, the model yields strong positive assortative matching (rho = 0.7). By contrast, two-way fixed effects on the same data imply rho = -0.6, and leave-one-out bias correction reduces the magnitude but does not resolve the discrepancy. In a model-based counterfactual, perfect sorting (rho = 1) would raise aggregate output by about 6%.</p>
-</details>
+  <details>
+    <summary>Abstract</summary>
+     <p align="justify">If markets allocate CEOs efficiently across firms, better managers should sort into better firms. The correlation between firm and manager quality is therefore central to understanding misallocation and aggregate productivity. Because manager quality is unobserved, the standard empirical strategy from matched worker-firm data is to estimate latent firm and worker effects and ask whether higher-quality workers sort to higher-quality firms. In CEO labor markets, however, careers are short and mobility is sparse, so fixed-effects estimates of latent quality are noisy and their implied correlation is badly biased. We instead model firm and manager effects as a Gaussian Markov random field on the bipartite CEO–firm network. Estimating four distributional parameters—rather than hundreds of thousands of individual effects—avoids limited mobility bias, while the sparsity of the precision matrix makes likelihood-based estimation feasible on the full network. Applied to Hungarian administrative data from 1990 to 2018, the model yields strong positive assortative matching (rho = 0.7). By contrast, two-way fixed effects on the same data imply rho = -0.6, and leave-one-out bias correction reduces the magnitude but does not resolve the discrepancy. In a model-based counterfactual, perfect sorting (rho = 1) would raise aggregate output by about 6%.</p>
+  </details>
 
 - The Directions of Technical Change (with [Miklós Koren](https://koren.mk/), and [Zsófia Bárány](https://sites.google.com/site/zsofiabarany/)), [DOI](https://zenodo.org/records/18664697)
 <details>
@@ -19,6 +19,10 @@ permalink: /research/
 </details>
 
 - The Inflation Reduction Act: Short-Term Industry Dynamics and Local Impacts
+<details>
+  <summary>Abstract</summary>
+   <p align="justify">This paper studies the short-run effects of the Inflation Reduction Act on firm behavior and the geography of clean-energy investment in the United States. Using firm-level product descriptions and tract-level investment data, I show that fossil-fuel firms have become more similar to renewable-energy firms since 2022. I further find that Energy Community designation increased local clean-energy capital expenditure by 7–8 percent, with the largest responses in hydrogen, electrolyzers, and critical minerals.</p>
+</details>
 - Attention in Procurement (with [Miklós Koren](https://koren.mk/), [Sergey Lychagin](https://scholar.google.com/citations?user=UftyIF8AAAAJ&hl=en), and [Adam Szeidl](https://adamszeidl.com/))
 - Causal Random Deforestation: A Global REDD+ Evaluation (with [Lucas Konrad](https://www.wu.ac.at/en/economics/people/konrad-l), [Lukas Vashold](https://www.vashold.eu/), and [Nikolas Kuschnig](https://www.kuschnig.eu/))
 
