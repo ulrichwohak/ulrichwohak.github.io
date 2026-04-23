@@ -14,7 +14,7 @@ permalink: /teaching/
 
 - Econometrics III (Spring 2022, Vienna University of Economics and Business)
   
-- Business Analytics (Spring 2023, Spring 2024, Spring 2025)
+- Business Analytics (Spring 2023, Spring 2024, Spring 2025, Spring 2026)
 
 - Industrial Organization (Spring 2021, Spring 2022, Vienna University of Economics and Business)
 
