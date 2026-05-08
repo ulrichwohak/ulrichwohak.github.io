@@ -12,7 +12,7 @@ author_profile: true
   </tr>
 </table>
 
-I am a Postdoctoral Researcher in Economics at Central European University. My research examines how managerial behavior and firm dynamics shape macroeconomic outcomes. I am also interested in questions relating to empirical industrial organization, applied microeconometrics, unstructured (text) data.
+I am a Postdoctoral Researcher in Economics at Central European University. My research examines how managerial behavior and firm dynamics shape macroeconomic outcomes. I am also interested in questions relating to empirical industrial organization, applied microeconometrics and unstructured (text) data.
 
 <br>
 
