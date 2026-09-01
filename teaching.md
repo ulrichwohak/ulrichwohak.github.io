@@ -6,6 +6,14 @@ permalink: /teaching/
 
 **Regular Teaching**
 
+- Coding 1: Introduction to Python (Fall 2026, Central European University)
+
+- Data Visualization and Storytelling (Fall 2026, Central European University)
+
+- Introduction to Stata (Fall 2026, Central European University)
+
+- Coding 2: Python for Data Analysis (Fall 2026, Central European University)
+
 - Data Analysis 2: Finding Patterns with Regressions - Business Analytics track (Fall 2025, Central European University)
 
 - Econometrics I (Fall 2021, Fall 2022, Fall 2024, Spring 2026, Vienna University of Economics and Business)
