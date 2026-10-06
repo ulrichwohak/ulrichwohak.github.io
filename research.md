@@ -6,13 +6,13 @@ permalink: /research/
 
 ## Working papers
 
-- Better executives work at better firms: A network method for measuring sorting (with [Miklós Koren](https://koren.mk/) and [Krisztina Orbán](https://sites.google.com/site/krisztinaorban/home)), [Current draft](/files/better-executives-work-at-better-firms.pdf)
+- Better Executives Work at Better Firms: Identifying Talent Sorting from Mobility Networks (with [Miklós Koren](https://koren.mk/) and [Krisztina Orbán](https://sites.google.com/site/krisztinaorban/home)), [Current draft](/files/better-executives-work-at-better-firms.pdf)
 
   CEU Brown Bag Seminar, 6 October 2026: [Slides](/files/ceu-brown-bag-2026-10-06-slides.pdf) · [Handout](/files/ceu-brown-bag-2026-10-06-handout.pdf)
 
   <details>
     <summary>Abstract</summary>
-     <p align="justify">Markets may allocate better executives to better firms, but sparse executive mobility makes this sorting difficult to measure. Our match-level leave-out comparison retains only 4.6% of executives after its mobility restrictions. We instead model firm and executive effects as a Gaussian Markov random field on the mobility network. The decline in outcome covariance with network distance identifies sorting. Applied to nearly the full Hungarian executive network, the estimator yields a positive correlation of 0.32; by contrast, fixed effects on their admissible subgraph yield a correlation of -0.59. Firm effects account for 47.7% of revenue variance, executive effects for 3.8%, and their sorting covariance for 8.9%. Random executive assignment would lower aggregate revenue by 16.5%.</p>
+     <p align="justify">Executive talent and firm productivity are complementary, so the allocation of executives across firms can affect aggregate output. We infer talent and productivity from business outcomes and executives’ moves across firms. Outcomes at firms connected by short sequences of executive moves covary more strongly than outcomes at firms connected by longer sequences. How quickly this covariance declines with distance identifies the correlation between executive talent and firm productivity. We apply the method to administrative records covering close to the universe of Hungarian corporations and their executives from 1990 to 2022. The data include more than one million firms and 1.3 million executives. We estimate a correlation of 0.5 between executive talent and firm productivity. In an accounting calculation, we remove this covariance while keeping the separate distributions of firm productivity and executive talent and the match shocks unchanged. Average revenue falls by 13%.</p>
   </details>
 
 - The Directions of Technical Change (with [Miklós Koren](https://koren.mk/), and [Zsófia Bárány](https://sites.google.com/site/zsofiabarany/)), [DOI](https://zenodo.org/records/18664697)
