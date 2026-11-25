@@ -33,7 +33,7 @@ permalink: /research/
 
 ## Peer-reviewed publications
 
-***Free the period? Evaluating tampon tax reforms using household scanner data (2025)*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *Journal of Economic Behavior & Organization.* [DOI](https://doi.org/10.1016/j.jebo.2025.107356)
+***Free the period? Evaluating tampon tax reforms using household scanner data (2026)*** (with [Klara Kinnl](https://sites.google.com/view/klarakinnl)), *Journal of Economic Behavior & Organization.* [DOI](https://doi.org/10.1016/j.jebo.2025.107356)
 
   - *A preliminary version of this paper was presented at the European Parliament's [FEMM committee workshop](https://www.europarl.europa.eu/committees/de/product/product-details/20221202WKS04761) on 08/12/2022.*
     
